@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://t81np4jd8kb4"]
+
+[ext_resource type="Texture2D" uid="uid://c5cbd0kedue44" path="res://Assets/EmptyHex.png" id="1_rk1in"]
+
+[node name="Dirt" type="Sprite2D" unique_id=809781163]
+position = Vector2(16, 24)
+texture = ExtResource("1_rk1in")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1177514245]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=62620103]
+visible = false
+polygon = PackedVector2Array(10, -8, 10, -8, 16, 3, 16, 13, 10, 24, -10, 24, -16, 13, -16, 3, -10, -8)

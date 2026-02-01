@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c8jahq3fliu6r"]
+
+[ext_resource type="Texture2D" uid="uid://dc5bhb1dpmxnf" path="res://Assets/Hex Tiles/Dirt.png" id="2_rwxq6"]
+
+[node name="Dirt" type="Sprite2D" unique_id=851671558]
+position = Vector2(0, -1)
+texture = ExtResource("2_rwxq6")

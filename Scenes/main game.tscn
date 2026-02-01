@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b6ffml4f22p5d"]
+
+[ext_resource type="PackedScene" uid="uid://tn7k1ga6mp3y" path="res://Scenes/grass.tscn" id="1_aitsa"]
+[ext_resource type="PackedScene" uid="uid://bfpiwf7kdwpjx" path="res://Scenes/camera_2d.tscn" id="2_iy01a"]
+
+[node name="Node2D" type="Node2D" unique_id=404876175]
+
+[node name="Node" type="Node" parent="." unique_id=994524721]
+
+[node name="Grass" parent="." unique_id=554943349 instance=ExtResource("1_aitsa")]
+position = Vector2(503, 260)
+
+[node name="Camera2D" parent="." unique_id=100745425 instance=ExtResource("2_iy01a")]
