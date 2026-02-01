@@ -1,10 +1,13 @@
-[gd_scene format=3 uid="uid://dnnka5th1gldj"]
+[gd_scene load_steps=3 format=3 uid="uid://bhrcm6lvfxib3"]
 
-[ext_resource type="Texture2D" uid="uid://ocqr4kaowgws" path="res://icon.svg" id="1_mtyf4"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="1_njov2"]
+[ext_resource type="PackedScene" uid="uid://n2nxc6vc5cji" path="res://Scenes/character_body_2d.tscn" id="2_2au82"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(185, 66)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_mtyf4")
+[node name="Dirt" parent="." instance=ExtResource("1_njov2")]
+position = Vector2(25, -33)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_2au82")]
+position = Vector2(76, -26)

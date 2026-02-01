@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://t81np4jd8kb4"]
+
+[ext_resource type="Texture2D" uid="uid://c5cbd0kedue44" path="res://Assets/EmptyHex.png" id="1_2p0br"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="EmptyHex" type="Sprite2D" parent="."]
+texture = ExtResource("1_2p0br")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(10, -8, 10, -8, 16, 3, 16, 13, 10, 24, -10, 24, -16, 13, -16, 3, -10, -8)

@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://tn7k1ga6mp3y"]
-
-[ext_resource type="Texture2D" uid="uid://cwxoqpkqanxw" path="res://Assets/Hex Tiles/Grass.png" id="1_ewrq5"]
-
-[node name="Grass" type="Sprite2D" unique_id=554943349]
-position = Vector2(426, 400)
-texture = ExtResource("1_ewrq5")
