@@ -1,17 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://brfmopvqbg58w"]
+[gd_scene format=3 uid="uid://brfmopvqbg58w"]
 
 [ext_resource type="PackedScene" uid="uid://tn7k1ga6mp3y" path="res://Scenes/grass1.tscn" id="1_vk57k"]
+[ext_resource type="PackedScene" uid="uid://okklodmm2vjt" path="res://Scenes/flag.tscn" id="2_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://ckcb5wgxbsfdr" path="res://Scenes/grass2.tscn" id="2_8ffim"]
 [ext_resource type="PackedScene" uid="uid://n2nxc6vc5cji" path="res://Scenes/character_body_2d.tscn" id="3_xfk5q"]
+[ext_resource type="PackedScene" uid="uid://cvfmdxl737b2n" path="res://Scenes/GUI.tscn" id="5_6444e"]
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" unique_id=313529633]
 position = Vector2(-45, -57)
 
-[node name="Node2D" parent="." instance=ExtResource("1_vk57k")]
+[node name="Node2D" parent="." unique_id=1542790744 instance=ExtResource("1_vk57k")]
 position = Vector2(492, 186)
 
-[node name="Node2D2" parent="." instance=ExtResource("2_8ffim")]
+[node name="flag" parent="Node2D" unique_id=111269361 instance=ExtResource("2_7p6j4")]
+position = Vector2(3, -6)
+
+[node name="Node2D2" parent="." unique_id=2022049618 instance=ExtResource("2_8ffim")]
 position = Vector2(280, 190)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_xfk5q")]
-position = Vector2(278, 180)
+[node name="Jack" parent="." unique_id=1770971256 instance=ExtResource("3_xfk5q")]
+position = Vector2(539, 67)
+
+[node name="Control" parent="." unique_id=954162312 instance=ExtResource("5_6444e")]
+offset_left = 88.0
+offset_top = 103.0
+offset_right = 88.0
+offset_bottom = 103.0

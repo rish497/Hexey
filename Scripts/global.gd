@@ -1,5 +1,5 @@
 extends Node
-
+var position := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,3 +28,6 @@ func set_hex_covered(hex_sprite: Sprite2D, covered: bool, top_height: int, full_
 			Vector2.ZERO,
 			Vector2(hex_sprite.texture.get_width(), full_height)
 		)
+
+	
+	
