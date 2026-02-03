@@ -1,28 +1,48 @@
-[gd_scene format=3 uid="uid://brfmopvqbg58w"]
+[gd_scene load_steps=10 format=3 uid="uid://brfmopvqbg58w"]
 
 [ext_resource type="PackedScene" uid="uid://tn7k1ga6mp3y" path="res://Scenes/grass1.tscn" id="1_vk57k"]
+[ext_resource type="Script" uid="uid://m0prc8cbsfw0" path="res://Scripts/level_1.gd" id="1_xrdnt"]
 [ext_resource type="PackedScene" uid="uid://okklodmm2vjt" path="res://Scenes/flag.tscn" id="2_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://ckcb5wgxbsfdr" path="res://Scenes/grass2.tscn" id="2_8ffim"]
 [ext_resource type="PackedScene" uid="uid://n2nxc6vc5cji" path="res://Scenes/character_body_2d.tscn" id="3_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://cvfmdxl737b2n" path="res://Scenes/GUI.tscn" id="5_6444e"]
+[ext_resource type="PackedScene" uid="uid://bypcrpogu5jea" path="res://Scenes/Portal.tscn" id="6_evi0p"]
+[ext_resource type="PackedScene" uid="uid://drunkmmubpeq6" path="res://Scenes/folder.tscn" id="7_lsmp6"]
+[ext_resource type="Script" uid="uid://cs3gydv2v7t3f" path="res://Scripts/portal.gd" id="8_wrinw"]
 
-[node name="Level 1" type="Node2D" unique_id=313529633]
+[node name="Level 1" type="Node2D"]
 position = Vector2(-45, -57)
+script = ExtResource("1_xrdnt")
 
-[node name="Node2D" parent="." unique_id=1542790744 instance=ExtResource("1_vk57k")]
-position = Vector2(492, 186)
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+layer = 10
 
-[node name="flag" parent="Node2D" unique_id=111269361 instance=ExtResource("2_7p6j4")]
-position = Vector2(3, -6)
+[node name="Control" parent="CanvasLayer3" instance=ExtResource("5_6444e")]
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
 
-[node name="Node2D2" parent="." unique_id=2022049618 instance=ExtResource("2_8ffim")]
-position = Vector2(280, 190)
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="Jack" parent="." unique_id=1770971256 instance=ExtResource("3_xfk5q")]
-position = Vector2(539, 67)
+[node name="grass1" parent="CanvasLayer2" instance=ExtResource("1_vk57k")]
+position = Vector2(191, 256)
 
-[node name="Control" parent="." unique_id=954162312 instance=ExtResource("5_6444e")]
-offset_left = 88.0
-offset_top = 103.0
-offset_right = 88.0
-offset_bottom = 103.0
+[node name="flag" parent="CanvasLayer2/grass1" instance=ExtResource("2_7p6j4")]
+position = Vector2(-6, 9)
+
+[node name="Portal" parent="CanvasLayer2/grass1" instance=ExtResource("6_evi0p")]
+position = Vector2(-7, 6)
+script = ExtResource("8_wrinw")
+
+[node name="Grass2" parent="CanvasLayer2" instance=ExtResource("2_8ffim")]
+position = Vector2(388, 259)
+
+[node name="Folder" parent="CanvasLayer2/Grass2" instance=ExtResource("7_lsmp6")]
+position = Vector2(1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Jack" parent="CanvasLayer" instance=ExtResource("3_xfk5q")]
+position = Vector2(716, -62)

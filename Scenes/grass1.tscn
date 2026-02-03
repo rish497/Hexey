@@ -1,105 +1,107 @@
-[gd_scene format=3 uid="uid://tn7k1ga6mp3y"]
+[gd_scene load_steps=4 format=3 uid="uid://tn7k1ga6mp3y"]
 
 [ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_bh0xn"]
 [ext_resource type="Texture2D" uid="uid://cwxoqpkqanxw" path="res://Assets/Hex Tiles/Grass.png" id="1_rabwl"]
 [ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="2_bh0xn"]
 
-[node name="Node2D" type="Node2D" unique_id=68568602]
+[node name="Grass1" type="Node2D" groups=["tile"]]
 script = ExtResource("1_bh0xn")
 
-[node name="Grass2" type="Sprite2D" parent="." unique_id=765810880]
+[node name="Grass2" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-11, -17)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass9" type="Sprite2D" parent="." unique_id=636584717]
+[node name="Grass9" type="Sprite2D" parent="."]
 position = Vector2(41, -17)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass3" type="Sprite2D" parent="." unique_id=131655818]
-position = Vector2(15, -5)
-texture = ExtResource("1_rabwl")
-
-[node name="Grass11" type="Sprite2D" parent="." unique_id=2016145298]
+[node name="Grass11" type="Sprite2D" parent="."]
 position = Vector2(67, -5)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass8" type="Sprite2D" parent="." unique_id=1403919087]
+[node name="Grass3" type="Sprite2D" parent="."]
+position = Vector2(15, -5)
+texture = ExtResource("1_rabwl")
+
+[node name="Grass8" type="Sprite2D" parent="."]
 position = Vector2(41, 7)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass4" type="Sprite2D" parent="." unique_id=362864577]
+[node name="Grass4" type="Sprite2D" parent="."]
 position = Vector2(-37, -5)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass5" type="Sprite2D" parent="." unique_id=711817260]
+[node name="Grass5" type="Sprite2D" parent="."]
 position = Vector2(-11, 7)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass10" type="Sprite2D" parent="." unique_id=619826880]
+[node name="Grass10" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(67, 19)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass6" type="Sprite2D" parent="." unique_id=466454420]
+[node name="Grass6" type="Sprite2D" parent="."]
 position = Vector2(-37, 19)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass7" type="Sprite2D" parent="." unique_id=1507218404]
+[node name="Grass7" type="Sprite2D" parent="."]
 position = Vector2(15, 19)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass12" type="Sprite2D" parent="." unique_id=1477418304]
+[node name="Grass12" type="Sprite2D" parent="."]
 position = Vector2(-11, 31)
 texture = ExtResource("1_rabwl")
 
-[node name="Grass13" type="Sprite2D" parent="." unique_id=250205938]
+[node name="Grass13" type="Sprite2D" parent="."]
 position = Vector2(41, 31)
 texture = ExtResource("1_rabwl")
 
-[node name="Dirt" parent="." unique_id=1189266983 instance=ExtResource("2_bh0xn")]
+[node name="Dirt" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(-11, -49)
 
-[node name="Dirt4" parent="." unique_id=1974403928 instance=ExtResource("2_bh0xn")]
+[node name="Dirt4" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(41, -49)
 
-[node name="Dirt2" parent="." unique_id=829811043 instance=ExtResource("2_bh0xn")]
+[node name="Dirt2" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(15, -37)
 
-[node name="Dirt5" parent="." unique_id=213080391 instance=ExtResource("2_bh0xn")]
+[node name="Dirt5" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(67, -37)
 
-[node name="Dirt3" parent="." unique_id=1145184831 instance=ExtResource("2_bh0xn")]
+[node name="Dirt3" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(-37, -37)
 
-[node name="Dirt6" parent="." unique_id=2022058708 instance=ExtResource("2_bh0xn")]
+[node name="Dirt6" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(-63, -25)
 
-[node name="Dirt7" parent="." unique_id=1522717536 instance=ExtResource("2_bh0xn")]
+[node name="Dirt7" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(-63, -1)
 
-[node name="Dirt8" parent="." unique_id=425189547 instance=ExtResource("2_bh0xn")]
+[node name="Dirt8" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(-63, 23)
 
-[node name="Dirt9" parent="." unique_id=1937362570 instance=ExtResource("2_bh0xn")]
+[node name="Dirt9" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(-37, 35)
 
-[node name="Dirt11" parent="." unique_id=600223738 instance=ExtResource("2_bh0xn")]
+[node name="Dirt11" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(15, 35)
 
-[node name="Dirt13" parent="." unique_id=1274269809 instance=ExtResource("2_bh0xn")]
+[node name="Dirt13" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(66, 33)
 
-[node name="Dirt10" parent="." unique_id=1074001327 instance=ExtResource("2_bh0xn")]
+[node name="Dirt10" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(-11, 47)
 
-[node name="Dirt12" parent="." unique_id=1665857 instance=ExtResource("2_bh0xn")]
+[node name="Dirt12" parent="." instance=ExtResource("2_bh0xn")]
 position = Vector2(41, 47)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1880436676]
-collision_layer = 2
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=404422990]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2(0, -2)
-polygon = PackedVector2Array(-73, -31, -21, -56, 7, -45, 32, -58, 49, -58, 77, -46, 83, -33, 81, 39, 77, 47, 52, 61, 27, 62, 23, 52, 23, 52, -5, 63, -18, 63, -29, 52, -75, 36)
+polygon = PackedVector2Array(-73, -31, -54, -32, -45, -42, -28, -43, -21, -56, -1, -54, 7, -45, 26, -44, 32, -58, 49, -58, 58, -43, 77, -46, 83, -33, 81, 39, 75, 59, 58, 61, 51, 72, 32, 72, 23, 60, 5, 59, -1, 71, -20, 70, -30, 60, -75, 45)
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]

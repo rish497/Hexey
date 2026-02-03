@@ -1,95 +1,92 @@
-[gd_scene format=3 uid="uid://ckcb5wgxbsfdr"]
+[gd_scene load_steps=4 format=3 uid="uid://ckcb5wgxbsfdr"]
 
 [ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_mnecg"]
-[ext_resource type="Texture2D" uid="uid://dc5bhb1dpmxnf" path="res://Assets/Hex Tiles/Dirt.png" id="2_mnecg"]
+[ext_resource type="Texture2D" uid="uid://cwxoqpkqanxw" path="res://Assets/Hex Tiles/Grass.png" id="2_mnecg"]
 [ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="4_ri43a"]
 
-[node name="Node2D" type="Node2D" unique_id=274491657]
+[node name="Grass2" type="Node2D"]
 script = ExtResource("1_mnecg")
 
-[node name="Dirt" type="Sprite2D" parent="." unique_id=1975678451]
+[node name="Grass2" type="Sprite2D" parent="."]
 position = Vector2(-26, -21)
 texture = ExtResource("2_mnecg")
 
-[node name="Dirt2" type="Sprite2D" parent="." unique_id=1793337780]
+[node name="Grass3" type="Sprite2D" parent="."]
 position = Vector2(26, -21)
 texture = ExtResource("2_mnecg")
 
-[node name="Dirt3" type="Sprite2D" parent="." unique_id=624327299]
+[node name="Grass" type="Sprite2D" parent="."]
 position = Vector2(0, -9)
 texture = ExtResource("2_mnecg")
 
-[node name="Dirt4" type="Sprite2D" parent="." unique_id=1480359841]
+[node name="Grass4" type="Sprite2D" parent="."]
 position = Vector2(-26, 3)
 texture = ExtResource("2_mnecg")
 
-[node name="Dirt5" type="Sprite2D" parent="." unique_id=1675415672]
+[node name="Grass5" type="Sprite2D" parent="."]
 position = Vector2(26, 3)
 texture = ExtResource("2_mnecg")
 
-[node name="Dirt6" type="Sprite2D" parent="." unique_id=1682578339]
+[node name="Grass6" type="Sprite2D" parent="."]
 position = Vector2(0, 15)
 texture = ExtResource("2_mnecg")
 
-[node name="Dirt7" type="Sprite2D" parent="." unique_id=821143840]
+[node name="Grass7" type="Sprite2D" parent="."]
 position = Vector2(-26, 27)
 texture = ExtResource("2_mnecg")
 
-[node name="Dirt8" type="Sprite2D" parent="." unique_id=2030602047]
+[node name="Grass8" type="Sprite2D" parent="."]
 position = Vector2(26, 27)
 texture = ExtResource("2_mnecg")
 
-[node name="CharacterBody2D" parent="." unique_id=1590030751 instance=ExtResource("4_ri43a")]
-position = Vector2(26, -53)
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 0
 
-[node name="CharacterBody2D3" parent="." unique_id=973211100 instance=ExtResource("4_ri43a")]
-position = Vector2(-26, -52)
-
-[node name="CharacterBody2D2" parent="." unique_id=2045418828 instance=ExtResource("4_ri43a")]
-position = Vector2(0, -41)
-
-[node name="CharacterBody2D4" parent="." unique_id=82933845 instance=ExtResource("4_ri43a")]
-position = Vector2(-51, -39)
-
-[node name="CharacterBody2D5" parent="." unique_id=1452455701 instance=ExtResource("4_ri43a")]
-position = Vector2(52, -41)
-
-[node name="CharacterBody2D6" parent="." unique_id=1020687932 instance=ExtResource("4_ri43a")]
-position = Vector2(52, -17)
-
-[node name="CharacterBody2D7" parent="." unique_id=1810518370 instance=ExtResource("4_ri43a")]
-position = Vector2(-51, -15)
-
-[node name="CharacterBody2D8" parent="." unique_id=648054526 instance=ExtResource("4_ri43a")]
-position = Vector2(52, 7)
-
-[node name="CharacterBody2D9" parent="." unique_id=881111449 instance=ExtResource("4_ri43a")]
-position = Vector2(-51, 9)
-
-[node name="CharacterBody2D10" parent="." unique_id=301601027 instance=ExtResource("4_ri43a")]
-position = Vector2(52, 31)
-
-[node name="CharacterBody2D11" parent="." unique_id=1703201708 instance=ExtResource("4_ri43a")]
-position = Vector2(1, 33)
-
-[node name="CharacterBody2D12" parent="." unique_id=539060878 instance=ExtResource("4_ri43a")]
-position = Vector2(-51, 33)
-
-[node name="CharacterBody2D13" parent="." unique_id=1855990680 instance=ExtResource("4_ri43a")]
-position = Vector2(-25, 45)
-
-[node name="CharacterBody2D14" parent="." unique_id=1088814953 instance=ExtResource("4_ri43a")]
-position = Vector2(27, 45)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=713702769]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=815808375]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-36, -61, -17, -61, -9, -50, 8, -50, 17, -61, 36, -60, 42, -50, 59, -50, 68, -36, 66, 35, 62, 46, 40, 47, 38, 54, 13, 59, 9, 47, -7, 49, -17, 60, -42, 57, -43, 47, -63, 44, -69, -38, -65, -46, -42, -49)
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=518819448]
+[node name="Dirt3" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(-26, -53)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" unique_id=45162385]
-polygon = PackedVector2Array(-36, -29, -17, -29, -10, -17, 10, -17, 16, -29, 36, -29, 40, -22, 36, -14, 36, -5, 40, 2, 36, 10, 36, 20, 40, 26, 37, 35, 17, 35, 11, 22, -11, 22, -17, 35, -36, 35, -40, 26, -35, 20, -36, 10, -40, 2, -36, -4, -35, -13, -40, -21)
+[node name="Dirt6" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(26, -53)
+
+[node name="Dirt4" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(0, -41)
+
+[node name="Dirt7" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(-52, -41)
+
+[node name="Dirt9" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(-52, -17)
+
+[node name="Dirt10" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(-52, 7)
+
+[node name="Dirt12" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(-52, 31)
+
+[node name="Dirt5" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(52, -41)
+
+[node name="Dirt8" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(52, -17)
+
+[node name="Dirt11" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(52, 7)
+
+[node name="Dirt13" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(52, 31)
+
+[node name="Dirt14" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(0, 31)
+
+[node name="Dirt15" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(-26, 43)
+
+[node name="Dirt16" parent="." instance=ExtResource("4_ri43a")]
+position = Vector2(26, 43)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

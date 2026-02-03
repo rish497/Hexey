@@ -1,5 +1,12 @@
 extends Node
-var position := false
+var position = false
+var level_pass=false
+var level_amount
+var folder_collected = 0
+var total_folder_collected = 0
+var last_position_state := false
+var max_z
+var player_top_z := 100000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,7 +15,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if level_pass == true:
+		print("You did it")
+		return
 
 func set_hex_covered(hex_sprite: Sprite2D, covered: bool, top_height: int, full_height: int) -> void:
 	if not hex_sprite or not hex_sprite.texture:
@@ -28,6 +37,4 @@ func set_hex_covered(hex_sprite: Sprite2D, covered: bool, top_height: int, full_
 			Vector2.ZERO,
 			Vector2(hex_sprite.texture.get_width(), full_height)
 		)
-
-	
 	
