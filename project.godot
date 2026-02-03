@@ -27,7 +27,7 @@ Transition="*res://Scenes/HexagonAnimationScreen.tscn"
 
 window/size/viewport_width=854
 window/size/viewport_height=480
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/snap/snap_2d_transforms_to_pixel=false
 window/canvas_textures/default_texture_filter=1
 

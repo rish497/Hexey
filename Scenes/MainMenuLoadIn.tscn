@@ -1,9 +1,68 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvkoji2hwmhwf"]
+[gd_scene load_steps=18 format=3 uid="uid://bvkoji2hwmhwf"]
 
 [ext_resource type="Script" uid="uid://b7blg1p1l3ixp" path="res://Scripts/main_menu_load_in.gd" id="1_8ig1f"]
-[ext_resource type="FontFile" uid="uid://doemeryj8qty1" path="res://Assets/editundo.ttf" id="2_7rih5"]
-[ext_resource type="Texture2D" uid="uid://dpa3jrkx11gh7" path="res://Assets/Untitled design (3).png" id="3_7rih5"]
-[ext_resource type="Texture2D" uid="uid://cwxoqpkqanxw" path="res://Assets/Hex Tiles/Grass.png" id="4_edw46"]
+[ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="2_gsoko"]
+[ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="3_x71ed"]
+[ext_resource type="Texture2D" uid="uid://dc5bhb1dpmxnf" path="res://Assets/Hex Tiles/Dirt.png" id="4_gsoko"]
+[ext_resource type="Texture2D" uid="uid://barbjr15hwrpi" path="res://Assets/Hex Tiles/Dirt_Pumpkins.png" id="5_v7dgv"]
+[ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="5_x71ed"]
+[ext_resource type="Texture2D" uid="uid://btpp1c7yxqf1v" path="res://Assets/Hex Tiles/Dirt_Sprouts.png" id="6_mfn8d"]
+[ext_resource type="Texture2D" uid="uid://cytbbaovgcuaf" path="res://Assets/New Piskel-1.png (1).png" id="8_0h3pn"]
+[ext_resource type="Texture2D" uid="uid://dfc22wkrc6eso" path="res://Assets/New Piskel-2.png (1).png" id="9_0h3pn"]
+[ext_resource type="Texture2D" uid="uid://dnaw5ttavgib8" path="res://Assets/New Piskel-3.png.png" id="10_34efx"]
+[ext_resource type="Texture2D" uid="uid://btwgnmx4kuh51" path="res://Assets/New Piskel-4.png.png" id="11_pchsi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdf4o"]
+bg_color = Color(0.7412128, 0.61000663, 0.4328959, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsoko"]
+bg_color = Color(0.8198885, 0.69451874, 0.5260411, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xdf4o"]
+shader = ExtResource("5_x71ed")
+
+[sub_resource type="QuadMesh" id="QuadMesh_gsoko"]
+size = Vector2(854, 480)
+center_offset = Vector3(427, 240, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34efx"]
+bg_color = Color(0.77254903, 0.67058825, 0.5294118, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+shadow_color = Color(0.7764706, 0.6745098, 0.53333336, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nj0f2"]
+bg_color = Color(0.77254903, 0.67058825, 0.5294118, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+shadow_color = Color(0.7764706, 0.6745098, 0.53333336, 1)
+shadow_size = 10
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,7 +80,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_7rih5")
+texture = ExtResource("2_gsoko")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -40,267 +99,342 @@ color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 9.0
-offset_right = 165.0
-offset_bottom = 68.0
+offset_left = 33.0
+offset_top = 34.0
+offset_right = 295.0
+offset_bottom = 101.0
 theme_override_constants/separation = 8
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_7rih5")
+theme_override_fonts/font = ExtResource("3_x71ed")
 theme_override_font_sizes/font_size = 18
 text = "Starting Systems..."
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_7rih5")
+theme_override_fonts/font = ExtResource("3_x71ed")
 theme_override_font_sizes/font_size = 18
 text = "Loading Scripts..."
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_7rih5")
+theme_override_fonts/font = ExtResource("3_x71ed")
 theme_override_font_sizes/font_size = 18
 text = "Getting User profile..."
 
 [node name="TypeSound" type="AudioStreamPlayer" parent="."]
 
-[node name="Label" type="Label" parent="."]
+[node name="H2" type="Node2D" parent="."]
+position = Vector2(219, 164)
+
+[node name="Grass" type="Sprite2D" parent="H2"]
+position = Vector2(-37, -69)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass2" type="Sprite2D" parent="H2"]
+position = Vector2(-37, -45)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass3" type="Sprite2D" parent="H2"]
+position = Vector2(-37, -21)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass13" type="Sprite2D" parent="H2"]
+position = Vector2(-11, -9)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass4" type="Sprite2D" parent="H2"]
+position = Vector2(-37, 3)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass5" type="Sprite2D" parent="H2"]
+position = Vector2(-37, 27)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass6" type="Sprite2D" parent="H2"]
+position = Vector2(-37, 51)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass7" type="Sprite2D" parent="H2"]
+position = Vector2(41, -57)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass8" type="Sprite2D" parent="H2"]
+position = Vector2(41, -33)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass9" type="Sprite2D" parent="H2"]
+position = Vector2(41, -9)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass14" type="Sprite2D" parent="H2"]
+position = Vector2(15, 3)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass10" type="Sprite2D" parent="H2"]
+position = Vector2(41, 15)
+texture = ExtResource("6_mfn8d")
+
+[node name="Grass11" type="Sprite2D" parent="H2"]
+position = Vector2(41, 39)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass12" type="Sprite2D" parent="H2"]
+position = Vector2(41, 63)
+texture = ExtResource("4_gsoko")
+
+[node name="E3" type="Node2D" parent="."]
+position = Vector2(306, 162)
+
+[node name="Grass15" type="Sprite2D" parent="E3"]
+position = Vector2(53, -60)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass16" type="Sprite2D" parent="E3"]
+position = Vector2(27, -48)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass17" type="Sprite2D" parent="E3"]
+position = Vector2(1, -36)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass18" type="Sprite2D" parent="E3"]
+position = Vector2(1, -12)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass19" type="Sprite2D" parent="E3"]
+position = Vector2(27, 0)
+texture = ExtResource("6_mfn8d")
+
+[node name="Grass20" type="Sprite2D" parent="E3"]
+position = Vector2(1, 12)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass21" type="Sprite2D" parent="E3"]
+position = Vector2(1, 36)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass22" type="Sprite2D" parent="E3"]
+position = Vector2(27, 48)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass23" type="Sprite2D" parent="E3"]
+position = Vector2(53, 60)
+texture = ExtResource("4_gsoko")
+
+[node name="X2" type="Node2D" parent="."]
+position = Vector2(431, 156)
+
+[node name="Grass24" type="Sprite2D" parent="X2"]
+position = Vector2(-28, -56)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass25" type="Sprite2D" parent="X2"]
+position = Vector2(25, -54)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass26" type="Sprite2D" parent="X2"]
+position = Vector2(-28, -32)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass27" type="Sprite2D" parent="X2"]
+position = Vector2(25, -30)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass28" type="Sprite2D" parent="X2"]
+position = Vector2(-2, -20)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass29" type="Sprite2D" parent="X2"]
+position = Vector2(-1, 4)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass30" type="Sprite2D" parent="X2"]
+position = Vector2(-1, 28)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass31" type="Sprite2D" parent="X2"]
+position = Vector2(-27, 40)
+texture = ExtResource("6_mfn8d")
+
+[node name="Grass32" type="Sprite2D" parent="X2"]
+position = Vector2(25, 40)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass33" type="Sprite2D" parent="X2"]
+position = Vector2(-27, 64)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass34" type="Sprite2D" parent="X2"]
+position = Vector2(25, 64)
+texture = ExtResource("4_gsoko")
+
+[node name="E4" type="Node2D" parent="."]
+position = Vector2(501, 163)
+
+[node name="Grass35" type="Sprite2D" parent="E4"]
+position = Vector2(50, -63)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass36" type="Sprite2D" parent="E4"]
+position = Vector2(24, -51)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass37" type="Sprite2D" parent="E4"]
+position = Vector2(-2, -39)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass38" type="Sprite2D" parent="E4"]
+position = Vector2(-2, -15)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass39" type="Sprite2D" parent="E4"]
+position = Vector2(24, -3)
+texture = ExtResource("6_mfn8d")
+
+[node name="Grass40" type="Sprite2D" parent="E4"]
+position = Vector2(-2, 9)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass41" type="Sprite2D" parent="E4"]
+position = Vector2(-2, 33)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass42" type="Sprite2D" parent="E4"]
+position = Vector2(24, 45)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass43" type="Sprite2D" parent="E4"]
+position = Vector2(50, 57)
+texture = ExtResource("4_gsoko")
+
+[node name="Y2" type="Node2D" parent="."]
+position = Vector2(641, 154)
+
+[node name="Grass44" type="Sprite2D" parent="Y2"]
+position = Vector2(-52, -55)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass45" type="Sprite2D" parent="Y2"]
+position = Vector2(52, -55)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass46" type="Sprite2D" parent="Y2"]
+position = Vector2(-42, -38)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass47" type="Sprite2D" parent="Y2"]
+position = Vector2(42, -39)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass48" type="Sprite2D" parent="Y2"]
+position = Vector2(-26, -19)
+texture = ExtResource("6_mfn8d")
+
+[node name="Grass49" type="Sprite2D" parent="Y2"]
+position = Vector2(26, -19)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass50" type="Sprite2D" parent="Y2"]
+position = Vector2(0, -7)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass51" type="Sprite2D" parent="Y2"]
+position = Vector2(0, 17)
+texture = ExtResource("4_gsoko")
+
+[node name="Grass52" type="Sprite2D" parent="Y2"]
+position = Vector2(0, 42)
+texture = ExtResource("5_v7dgv")
+
+[node name="Grass53" type="Sprite2D" parent="Y2"]
+position = Vector2(0, 66)
+texture = ExtResource("4_gsoko")
+
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -308.0
-offset_top = -161.0
-offset_right = 308.0
-offset_bottom = 112.0
+offset_left = -64.5
+offset_top = 51.0
+offset_right = 60.338715
+offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 200
-text = "HEXEY"
+theme_override_colors/font_color = Color(0.28641626, 0.22173724, 0.13227314, 1)
+theme_override_fonts/font = ExtResource("3_x71ed")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xdf4o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gsoko")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xdf4o")
+text = "LOGIN"
 
-[node name="H" type="Node" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Grass" type="Sprite2D" parent="H"]
-position = Vector2(154, 157)
-texture = ExtResource("4_edw46")
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_xdf4o")
+mesh = SubResource("QuadMesh_gsoko")
 
-[node name="Grass2" type="Sprite2D" parent="H"]
-position = Vector2(154, 181)
-texture = ExtResource("4_edw46")
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13348946
+anchor_top = 0.175
+anchor_right = 1.0
+anchor_bottom = 0.5229167
+offset_left = -63.0
+offset_right = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
 
-[node name="Grass3" type="Sprite2D" parent="H"]
-position = Vector2(154, 205)
-texture = ExtResource("4_edw46")
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nj0f2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nj0f2")
+icon = ExtResource("8_0h3pn")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Grass13" type="Sprite2D" parent="H"]
-position = Vector2(180, 217)
-texture = ExtResource("4_edw46")
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nj0f2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nj0f2")
+icon = ExtResource("9_0h3pn")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Grass4" type="Sprite2D" parent="H"]
-position = Vector2(154, 229)
-texture = ExtResource("4_edw46")
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nj0f2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nj0f2")
+icon = ExtResource("10_34efx")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Grass5" type="Sprite2D" parent="H"]
-position = Vector2(154, 253)
-texture = ExtResource("4_edw46")
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nj0f2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_34efx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nj0f2")
+icon = ExtResource("11_pchsi")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Grass6" type="Sprite2D" parent="H"]
-position = Vector2(154, 277)
-texture = ExtResource("4_edw46")
-
-[node name="Grass7" type="Sprite2D" parent="H"]
-position = Vector2(232, 169)
-texture = ExtResource("4_edw46")
-
-[node name="Grass8" type="Sprite2D" parent="H"]
-position = Vector2(232, 193)
-texture = ExtResource("4_edw46")
-
-[node name="Grass9" type="Sprite2D" parent="H"]
-position = Vector2(232, 217)
-texture = ExtResource("4_edw46")
-
-[node name="Grass14" type="Sprite2D" parent="H"]
-position = Vector2(206, 229)
-texture = ExtResource("4_edw46")
-
-[node name="Grass10" type="Sprite2D" parent="H"]
-position = Vector2(232, 241)
-texture = ExtResource("4_edw46")
-
-[node name="Grass11" type="Sprite2D" parent="H"]
-position = Vector2(232, 265)
-texture = ExtResource("4_edw46")
-
-[node name="Grass12" type="Sprite2D" parent="H"]
-position = Vector2(232, 289)
-texture = ExtResource("4_edw46")
-
-[node name="E" type="Node" parent="."]
-
-[node name="Grass4" type="Sprite2D" parent="E"]
-position = Vector2(352, 158)
-texture = ExtResource("4_edw46")
-
-[node name="Grass2" type="Sprite2D" parent="E"]
-position = Vector2(326, 170)
-texture = ExtResource("4_edw46")
-
-[node name="Grass3" type="Sprite2D" parent="E"]
-position = Vector2(300, 182)
-texture = ExtResource("4_edw46")
-
-[node name="Grass5" type="Sprite2D" parent="E"]
-position = Vector2(300, 206)
-texture = ExtResource("4_edw46")
-
-[node name="Grass6" type="Sprite2D" parent="E"]
-position = Vector2(326, 218)
-texture = ExtResource("4_edw46")
-
-[node name="Grass8" type="Sprite2D" parent="E"]
-position = Vector2(300, 230)
-texture = ExtResource("4_edw46")
-
-[node name="Grass9" type="Sprite2D" parent="E"]
-position = Vector2(300, 254)
-texture = ExtResource("4_edw46")
-
-[node name="Grass10" type="Sprite2D" parent="E"]
-position = Vector2(326, 266)
-texture = ExtResource("4_edw46")
-
-[node name="Grass11" type="Sprite2D" parent="E"]
-position = Vector2(352, 278)
-texture = ExtResource("4_edw46")
-
-[node name="X" type="Node" parent="."]
-
-[node name="Grass" type="Sprite2D" parent="X"]
-position = Vector2(411, 156)
-texture = ExtResource("4_edw46")
-
-[node name="Grass6" type="Sprite2D" parent="X"]
-position = Vector2(464, 158)
-texture = ExtResource("4_edw46")
-
-[node name="Grass2" type="Sprite2D" parent="X"]
-position = Vector2(411, 180)
-texture = ExtResource("4_edw46")
-
-[node name="Grass5" type="Sprite2D" parent="X"]
-position = Vector2(464, 182)
-texture = ExtResource("4_edw46")
-
-[node name="Grass3" type="Sprite2D" parent="X"]
-position = Vector2(437, 192)
-texture = ExtResource("4_edw46")
-
-[node name="Grass4" type="Sprite2D" parent="X"]
-position = Vector2(438, 216)
-texture = ExtResource("4_edw46")
-
-[node name="Grass7" type="Sprite2D" parent="X"]
-position = Vector2(438, 240)
-texture = ExtResource("4_edw46")
-
-[node name="Grass8" type="Sprite2D" parent="X"]
-position = Vector2(412, 252)
-texture = ExtResource("4_edw46")
-
-[node name="Grass9" type="Sprite2D" parent="X"]
-position = Vector2(464, 252)
-texture = ExtResource("4_edw46")
-
-[node name="Grass10" type="Sprite2D" parent="X"]
-position = Vector2(412, 276)
-texture = ExtResource("4_edw46")
-
-[node name="Grass11" type="Sprite2D" parent="X"]
-position = Vector2(464, 276)
-texture = ExtResource("4_edw46")
-
-[node name="E2" type="Node" parent="."]
-
-[node name="Grass7" type="Sprite2D" parent="E2"]
-position = Vector2(590, 151)
-texture = ExtResource("4_edw46")
-
-[node name="Grass12" type="Sprite2D" parent="E2"]
-position = Vector2(564, 163)
-texture = ExtResource("4_edw46")
-
-[node name="Grass13" type="Sprite2D" parent="E2"]
-position = Vector2(538, 175)
-texture = ExtResource("4_edw46")
-
-[node name="Grass14" type="Sprite2D" parent="E2"]
-position = Vector2(538, 199)
-texture = ExtResource("4_edw46")
-
-[node name="Grass15" type="Sprite2D" parent="E2"]
-position = Vector2(564, 211)
-texture = ExtResource("4_edw46")
-
-[node name="Grass16" type="Sprite2D" parent="E2"]
-position = Vector2(538, 223)
-texture = ExtResource("4_edw46")
-
-[node name="Grass17" type="Sprite2D" parent="E2"]
-position = Vector2(538, 247)
-texture = ExtResource("4_edw46")
-
-[node name="Grass18" type="Sprite2D" parent="E2"]
-position = Vector2(564, 259)
-texture = ExtResource("4_edw46")
-
-[node name="Grass19" type="Sprite2D" parent="E2"]
-position = Vector2(590, 271)
-texture = ExtResource("4_edw46")
-
-[node name="Y" type="Node" parent="."]
-
-[node name="Grass" type="Sprite2D" parent="Y"]
-position = Vector2(634, 149)
-texture = ExtResource("4_edw46")
-
-[node name="Grass4" type="Sprite2D" parent="Y"]
-position = Vector2(738, 149)
-texture = ExtResource("4_edw46")
-
-[node name="Grass2" type="Sprite2D" parent="Y"]
-position = Vector2(634, 173)
-texture = ExtResource("4_edw46")
-
-[node name="Grass5" type="Sprite2D" parent="Y"]
-position = Vector2(738, 173)
-texture = ExtResource("4_edw46")
-
-[node name="Grass3" type="Sprite2D" parent="Y"]
-position = Vector2(660, 185)
-texture = ExtResource("4_edw46")
-
-[node name="Grass6" type="Sprite2D" parent="Y"]
-position = Vector2(712, 185)
-texture = ExtResource("4_edw46")
-
-[node name="Grass7" type="Sprite2D" parent="Y"]
-position = Vector2(686, 197)
-texture = ExtResource("4_edw46")
-
-[node name="Grass8" type="Sprite2D" parent="Y"]
-position = Vector2(686, 221)
-texture = ExtResource("4_edw46")
-
-[node name="Grass9" type="Sprite2D" parent="Y"]
-position = Vector2(686, 246)
-texture = ExtResource("4_edw46")
-
-[node name="Grass10" type="Sprite2D" parent="Y"]
-position = Vector2(686, 270)
-texture = ExtResource("4_edw46")
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
