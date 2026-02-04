@@ -11,6 +11,22 @@ extends Control
 @onready var e_2: Node2D = $E4
 @onready var y: Node2D = $Y2
 @onready var button: Button = $Button
+@onready var profile_maker: Node2D = $ProfileMaker
+@onready var pfp1: Button = $ProfileMaker/HBoxContainer/Button2
+@onready var pfp2: Button = $ProfileMaker/HBoxContainer/Button3
+@onready var pfp3: Button = $ProfileMaker/HBoxContainer/Button4
+@onready var pfp4: Button = $ProfileMaker/HBoxContainer/Button5
+@onready var pfp_buttons := [
+	pfp1,
+	pfp2,
+	pfp3,
+	pfp4
+]
+@onready var selection_ring: Label = $ProfileMaker/SelectionRing
+var selected_pfp: Button = null
+@onready var profilename: LineEdit = $ProfileMaker/HBoxContainer2/LineEdit
+
+
 var button_target_y: float
 
 
@@ -33,6 +49,8 @@ func animate_button_in() -> void:
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
 func _ready() -> void:
+	for btn in pfp_buttons:
+		btn.pressed.connect(_on_pfp_pressed.bind(btn))
 	button.visible = false
 	color_rect.modulate.a = 1.0
 	generator.mix_rate = 44100
@@ -64,7 +82,7 @@ func _ready() -> void:
 	label_3.visible = false
 	
 	await animate_letters()
-	await get_tree().create_timer(.8).timeout
+	await get_tree().create_timer(.3).timeout
 	animate_button_in()
 
 func animate_letters() -> void:
@@ -75,9 +93,6 @@ func animate_letters() -> void:
 			.set_trans(Tween.TRANS_BACK)\
 			.set_ease(Tween.EASE_OUT)
 		await t.finished
-
-
-
 
 func typewriter(label: Label) -> void:
 	var full_text := label.text
@@ -154,3 +169,27 @@ func _on_button_pressed() -> void:
 		button_start_y + separate_offset,
 		1.10
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	await get_tree().create_timer(.5).timeout
+	_slide_from_side(profile_maker)
+func _slide_from_side(object_to_animate):
+	var tween := create_tween()
+	var target_position = Vector2(51, object_to_animate.position.y) 
+	var duration = 1.0 
+	tween.tween_property(
+		object_to_animate,
+		"position", 
+		target_position, 
+		duration
+		).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
+
+
+func _on_profile_submit_pressed() -> void:
+	Global.profile_name = profilename.text
+	await get_tree().create_timer(.4).timeout
+	Transition.change_scene(self, "MainPage")
+	
+func _on_pfp_pressed(btn: Button) -> void:
+	selected_pfp = btn
+	selection_ring.visible = true
+
+	selection_ring.global_position =btn.global_position + btn.size * 0.5 - selection_ring.size * 0.5

@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://dxoyvvxy6cwi7"]
 
-[ext_resource type="Shader" uid="uid://bvpjjjs08bmm3" path="res://HexagonTransitionScreen.gdshader" id="1_niw30"]
+[ext_resource type="Shader" uid="uid://lj5tbhhutami" path="res://HexagonAnimationScreen.gdshader" id="1_niw30"]
 [ext_resource type="Texture2D" uid="uid://dbxrxv3a74sto" path="res://Assets/Untitled_design__2_-removebg-preview.png" id="2_o0q8j"]
 [ext_resource type="Script" uid="uid://cymqv5q1ffvbt" path="res://Scripts/hexagon_animation_screen.gd" id="3_o0q8j"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qip2a"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7ndix"]
 shader = ExtResource("1_niw30")
 shader_parameter/mask = ExtResource("2_o0q8j")
 shader_parameter/scale = 0.0
 
-[sub_resource type="Animation" id="Animation_niw30"]
+[sub_resource type="Animation" id="Animation_o0q8j"]
 resource_name = "FadeToBlack"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_o0q8j"]
+[sub_resource type="Animation" id="Animation_qip2a"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,21 +41,23 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qip2a"]
 _data = {
-&"FadeToBlack": SubResource("Animation_niw30"),
-&"RESET": SubResource("Animation_o0q8j")
+&"FadeToBlack": SubResource("Animation_o0q8j"),
+&"RESET": SubResource("Animation_qip2a")
 }
 
-[node name="ColorRect" type="ColorRect"]
-material = SubResource("ShaderMaterial_qip2a")
+[node name="ColorRect" type="CanvasLayer"]
+layer = 20
+script = ExtResource("3_o0q8j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7ndix")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.973535, 0.9735351, 0.973535, 1)
-script = ExtResource("3_o0q8j")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
 libraries = {
 &"": SubResource("AnimationLibrary_qip2a")
 }
