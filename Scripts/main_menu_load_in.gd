@@ -1,5 +1,5 @@
 extends Control
-
+var profile_made = false
 @onready var label_1: Label = $VBoxContainer/Label
 @onready var label_2: Label = $VBoxContainer/Label2
 @onready var label_3: Label = $VBoxContainer/Label3
@@ -170,7 +170,11 @@ func _on_button_pressed() -> void:
 		1.10
 	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	await get_tree().create_timer(.5).timeout
-	_slide_from_side(profile_maker)
+	if profile_made == false:
+		_slide_from_side(profile_maker)
+	else:
+		Transition.change_scene(self, "MainPage")
+
 func _slide_from_side(object_to_animate):
 	var tween := create_tween()
 	var target_position = Vector2(51, object_to_animate.position.y) 

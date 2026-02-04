@@ -1,6 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://coro8nr3puw2d"]
+[gd_scene load_steps=16 format=3 uid="uid://coro8nr3puw2d"]
 
-[ext_resource type="Texture2D" uid="uid://ocqr4kaowgws" path="res://icon.svg" id="1_61ets"]
+[ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="1_61ets"]
+[ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="2_1ebr7"]
+[ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="3_ool47"]
+[ext_resource type="Texture2D" uid="uid://dyyve8s5i5hmu" path="res://Assets/New Piskel-7.png (1).png" id="4_meu2o"]
+[ext_resource type="Texture2D" uid="uid://du22ufxcgqgrb" path="res://Assets/New Piskel-6.png (1).png" id="5_meu2o"]
+[ext_resource type="Texture2D" uid="uid://dqoc8g3ojkhx8" path="res://Assets/New Piskel-10.png.png" id="6_puyhw"]
+[ext_resource type="Texture2D" uid="uid://bex2dbjty5ut1" path="res://Assets/New Piskel-9.png (1).png" id="7_hgaxc"]
+[ext_resource type="Texture2D" uid="uid://baxkech33fp1f" path="res://Assets/New Piskel-8.png (1).png" id="8_ibofp"]
+[ext_resource type="PackedScene" uid="uid://bwhkr533vv3my" path="res://Scenes/CorruptEffect.tscn" id="9_hgaxc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ool47"]
+shader = ExtResource("2_1ebr7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_q0spf"]
+size = Vector2(854, 480)
+center_offset = Vector3(427, 240, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0spf"]
+content_margin_right = 148.0
+content_margin_bottom = 6.0
+bg_color = Color(0.2634792, 0.26587328, 0.28240174, 1)
+border_width_top = 6
+border_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+expand_margin_top = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fup4q"]
+texture = ExtResource("4_meu2o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_puyhw"]
+texture = ExtResource("4_meu2o")
+modulate_color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s26l"]
+bg_color = Color(0.88355416, 0.77015686, 0.59955317, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5058824, 0.41568628, 0.29411766, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +53,161 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(478, 192)
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_61ets")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_ool47")
+mesh = SubResource("QuadMesh_q0spf")
+
+[node name="TaskBar" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.91
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.19998169
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.3456486, 0.34565854, 0.36797544, 1)
+theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_q0spf")
+text = "0 . 1 . 8320"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -17.5
+offset_right = -267.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
+icon = ExtResource("5_meu2o")
+icon_alignment = 1
+
+[node name="Button5" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 282.0
+offset_top = -17.5
+offset_right = 324.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
+icon = ExtResource("6_puyhw")
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 331.0
+offset_top = -17.5
+offset_right = 373.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
+icon = ExtResource("7_hgaxc")
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 381.0
+offset_top = -17.5
+offset_right = 423.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
+icon = ExtResource("8_ibofp")
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -416.0
+offset_top = -17.5
+offset_right = -313.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5058824, 0.41568628, 0.29411766, 1)
+theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_5s26l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5s26l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5s26l")
+text = "MENU"
+icon_alignment = 1
+
+[node name="errors" type="Node2D" parent="."]
+position = Vector2(0, 437)
+
+[node name="Node2D" parent="errors" instance=ExtResource("9_hgaxc")]
+position = Vector2(55, 4)
+scale = Vector2(1.3200006, 1.3200006)
+
+[node name="Node2D2" parent="errors" instance=ExtResource("9_hgaxc")]
+position = Vector2(739.00006, 26)
+scale = Vector2(1.3200006, 1.3200006)
+
+[node name="Node2D3" parent="errors" instance=ExtResource("9_hgaxc")]
+position = Vector2(829, -0.9999695)
+scale = Vector2(1.3200006, 1.3200006)
+
+[node name="ColorRect" type="ColorRect" parent="errors"]
+offset_left = 9.0
+offset_right = 113.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="errors"]
+offset_left = 683.0
+offset_top = -4.0
+offset_right = 856.0
+offset_bottom = 43.0
+color = Color(1, 1, 1, 0)

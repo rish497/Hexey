@@ -376,7 +376,7 @@ material = SubResource("ShaderMaterial_xdf4o")
 mesh = SubResource("QuadMesh_gsoko")
 
 [node name="ProfileMaker" type="Node2D" parent="."]
-position = Vector2(-826, 84)
+position = Vector2(-825, 126)
 
 [node name="SelectionRing" type="Label" parent="ProfileMaker"]
 visible = false
@@ -484,6 +484,22 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xdf4o")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gsoko")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xdf4o")
 text = "CREATE"
+
+[node name="ProfileCreator" type="Label" parent="ProfileMaker"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 222.0
+offset_top = -33.0
+offset_right = 513.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("3_x71ed")
+theme_override_font_sizes/font_size = 23
+text = "CREATE NEW PROFILE"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ProfileMaker/HBoxContainer2/ProfileSubmit" to="." method="_on_profile_submit_pressed"]

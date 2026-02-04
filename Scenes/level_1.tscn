@@ -15,7 +15,7 @@ position = Vector2(-45, -57)
 script = ExtResource("1_xrdnt")
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
-layer = 10
+layer = 9
 
 [node name="Control" parent="CanvasLayer3" instance=ExtResource("5_6444e")]
 offset_left = 3.0
