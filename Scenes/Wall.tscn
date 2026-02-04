@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://t81np4jd8kb4"]
 
-[ext_resource type="Texture2D" uid="uid://c5cbd0kedue44" path="res://Assets/EmptyHex.png" id="1_2p0br"]
 [ext_resource type="Script" uid="uid://0wenbt08a4fq" path="res://Scripts/wall.gd" id="1_8r34y"]
+[ext_resource type="Texture2D" uid="uid://tcvhhcuvf7l0" path="res://Assets/Grass-1.png.png" id="2_8r34y"]
 
 [node name="Wall" type="Node2D"]
 script = ExtResource("1_8r34y")
@@ -14,7 +14,7 @@ collision_mask = 3
 polygon = PackedVector2Array(10, -8, 10, -8, 16, 3, 10, 16, -10, 16, -16, 3, -10, -8)
 
 [node name="EmptyHex" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_2p0br")
+texture = ExtResource("2_8r34y")
 
 [node name="Area2D" type="Area2D" parent="."]
 

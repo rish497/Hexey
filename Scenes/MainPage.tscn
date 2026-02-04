@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://coro8nr3puw2d"]
+[gd_scene load_steps=20 format=3 uid="uid://coro8nr3puw2d"]
 
 [ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="1_61ets"]
 [ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="2_1ebr7"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bex2dbjty5ut1" path="res://Assets/New Piskel-9.png (1).png" id="7_hgaxc"]
 [ext_resource type="Texture2D" uid="uid://baxkech33fp1f" path="res://Assets/New Piskel-8.png (1).png" id="8_ibofp"]
 [ext_resource type="PackedScene" uid="uid://bwhkr533vv3my" path="res://Scenes/CorruptEffect.tscn" id="9_hgaxc"]
+[ext_resource type="Texture2D" uid="uid://dheyijpmivdxs" path="res://Assets/New Piskel-1.png (2).png" id="10_ibofp"]
+[ext_resource type="Texture2D" uid="uid://c25s6h6oqqcek" path="res://Assets/New Piskel-13.png (1).png" id="11_5s26l"]
+[ext_resource type="FontFile" uid="uid://cs6slgshuy18v" path="res://Assets/Minecraft.ttf" id="12_r14pv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ool47"]
 shader = ExtResource("2_1ebr7")
@@ -44,6 +47,9 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5s26l"]
+texture = ExtResource("11_5s26l")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -93,9 +99,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -309.0
+offset_left = -306.0
 offset_top = -17.5
-offset_right = -267.0
+offset_right = -269.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -112,12 +118,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 282.0
+offset_left = 288.0
 offset_top = -17.5
-offset_right = 324.0
+offset_right = 330.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.88, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
@@ -131,12 +138,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 331.0
+offset_left = 335.0
 offset_top = -17.5
-offset_right = 373.0
+offset_right = 377.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.88, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
@@ -156,6 +164,7 @@ offset_right = 423.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.88, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
@@ -211,3 +220,50 @@ offset_top = -4.0
 offset_right = 856.0
 offset_bottom = 43.0
 color = Color(1, 1, 1, 0)
+
+[node name="Window" type="Node2D" parent="."]
+position = Vector2(210, 292)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Window"]
+offset_left = -138.0
+offset_top = -83.0
+offset_right = 76.0
+offset_bottom = -62.0
+texture = ExtResource("10_ibofp")
+region_rect = Rect2(0, 0, 100, 11.740247)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Window"]
+offset_left = -138.0
+offset_top = -62.0
+offset_right = 76.0
+offset_bottom = 55.0
+texture = ExtResource("10_ibofp")
+region_rect = Rect2(0, 11.951731, 100, 48.20166)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="Button" type="Button" parent="Window"]
+offset_left = 60.0
+offset_top = -79.0
+offset_right = 72.0
+offset_bottom = -67.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5s26l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5s26l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5s26l")
+
+[node name="Label" type="Label" parent="Window"]
+offset_left = -133.0
+offset_top = -81.0
+offset_right = 55.0
+offset_bottom = -66.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_r14pv")
+theme_override_font_sizes/font_size = 11
+text = "LVL SELECT"
+vertical_alignment = 2

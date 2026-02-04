@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://dby7k8nlw6pfl"]
+
+[ext_resource type="Texture2D" uid="uid://dheyijpmivdxs" path="res://Assets/New Piskel-1.png (2).png" id="1_4vapd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [-26.0]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 17.0
+texture = ExtResource("1_4vapd")
+region_rect = Rect2(0, 0, 100, 11.740247)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_top = 17.0
+offset_right = 76.0
+offset_bottom = 66.0
+texture = ExtResource("1_4vapd")
+region_rect = Rect2(0, 11.951731, 100, 48.20166)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
