@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://da5o5yvamxgqm"]
+
+[ext_resource type="Texture2D" uid="uid://dheyijpmivdxs" path="res://Assets/New Piskel-1.png (2).png" id="1_808q2"]
+[ext_resource type="Texture2D" uid="uid://c25s6h6oqqcek" path="res://Assets/New Piskel-13.png (1).png" id="2_1ooxe"]
+[ext_resource type="FontFile" uid="uid://cs6slgshuy18v" path="res://Assets/Minecraft.ttf" id="3_eo2qm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5s26l"]
+texture = ExtResource("2_1ooxe")
+
+[node name="Window" type="Node2D"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = -163.0
+offset_top = -102.0
+offset_right = 176.0
+offset_bottom = -81.0
+texture = ExtResource("1_808q2")
+region_rect = Rect2(0, 0, 100, 11.740247)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="Button" type="Button" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 4.0
+offset_right = 335.0
+offset_bottom = 16.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5s26l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5s26l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5s26l")
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 193.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("3_eo2qm")
+theme_override_font_sizes/font_size = 11
+text = "LVL SELECT"
+vertical_alignment = 2
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = -163.0
+offset_top = -81.0
+offset_right = 176.0
+offset_bottom = 93.0
+texture = ExtResource("1_808q2")
+region_rect = Rect2(0, 11.951731, 100, 48.20166)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
