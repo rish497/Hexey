@@ -8,6 +8,7 @@ var last_position_state := false
 var max_z
 var player_top_z := 100000
 var profile_name: String
+var email_animation_played := false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

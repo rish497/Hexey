@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://o1i81v3n7g8h"]
+
+[ext_resource type="Texture2D" uid="uid://bpbqwmxo7jce3" path="res://Assets/New Piskel-15.png.png" id="1_lmdi0"]
+[ext_resource type="PackedScene" uid="uid://bwhkr533vv3my" path="res://Scenes/CorruptEffect.tscn" id="1_or60v"]
+[ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="2_fxpxb"]
+
+[node name="CIA(SelfMadeLogo)" type="Node2D"]
+scale = Vector2(0.76, 0.76)
+
+[node name="Node2D" parent="." instance=ExtResource("1_or60v")]
+position = Vector2(-63.894714, 71.73686)
+scale = Vector2(1.3737255, 1.3737255)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_or60v")]
+position = Vector2(78.21054, 67.789474)
+scale = Vector2(1.2589458, 1.2589458)
+
+[node name="Node2D3" parent="." instance=ExtResource("1_or60v")]
+position = Vector2(72.94736, -49.31579)
+scale = Vector2(1.3642122, 1.3642122)
+
+[node name="Node2D4" parent="." instance=ExtResource("1_or60v")]
+position = Vector2(-70.47363, -65.10526)
+scale = Vector2(1.2063174, 1.2063174)
+
+[node name="NewPiskel15_png" type="Sprite2D" parent="."]
+position = Vector2(2.7894287, 2.7894592)
+scale = Vector2(7, 7)
+texture = ExtResource("1_lmdi0")
+
+[node name="Label" type="Label" parent="NewPiskel15_png"]
+offset_left = -14.000001
+offset_top = -14.571428
+offset_right = 17.85714
+offset_bottom = 17.428568
+theme_override_colors/font_color = Color(0.86069375, 0.77395093, 0.65954185, 1)
+theme_override_colors/font_outline_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_fxpxb")
+theme_override_font_sizes/font_size = 16
+text = "CIA"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

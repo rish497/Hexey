@@ -14,7 +14,6 @@ func _physics_process(_delta):
 
 		if other_tile.z_index > my_tile.z_index:
 			covered = true
-			print(self.name, " -> Wall DISABLED because other tile is above: ", other_tile.name)
 			break
 
 	# Apply collision disabled state

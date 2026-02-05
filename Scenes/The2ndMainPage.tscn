@@ -1,38 +1,28 @@
-[gd_scene load_steps=48 format=3 uid="uid://coro8nr3puw2d"]
+[gd_scene load_steps=32 format=3 uid="uid://bsflg3ylnkue4"]
 
-[ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="1_61ets"]
-[ext_resource type="Script" uid="uid://clxtgsxllcwuy" path="res://Scripts/main_page.gd" id="1_t81xn"]
-[ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="2_1ebr7"]
-[ext_resource type="PackedScene" uid="uid://o1i81v3n7g8h" path="res://Scenes/CIAEVIL.tscn" id="3_df5tf"]
-[ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="3_ool47"]
-[ext_resource type="Texture2D" uid="uid://dyyve8s5i5hmu" path="res://Assets/New Piskel-7.png (1).png" id="4_meu2o"]
-[ext_resource type="Texture2D" uid="uid://du22ufxcgqgrb" path="res://Assets/New Piskel-6.png (1).png" id="5_meu2o"]
-[ext_resource type="Texture2D" uid="uid://dqoc8g3ojkhx8" path="res://Assets/New Piskel-10.png.png" id="6_puyhw"]
-[ext_resource type="Texture2D" uid="uid://bex2dbjty5ut1" path="res://Assets/New Piskel-9.png (1).png" id="7_hgaxc"]
-[ext_resource type="Texture2D" uid="uid://baxkech33fp1f" path="res://Assets/New Piskel-8.png (1).png" id="8_ibofp"]
-[ext_resource type="PackedScene" uid="uid://bwhkr533vv3my" path="res://Scenes/CorruptEffect.tscn" id="9_hgaxc"]
-[ext_resource type="PackedScene" uid="uid://da5o5yvamxgqm" path="res://Scenes/Window.tscn" id="10_ibofp"]
-[ext_resource type="Texture2D" uid="uid://1bse4c8bmwsh" path="res://Assets/New Piskel-1.png (2) (1).png" id="11_5s26l"]
-[ext_resource type="Texture2D" uid="uid://dheyijpmivdxs" path="res://Assets/New Piskel-1.png (2).png" id="11_r14pv"]
-[ext_resource type="Texture2D" uid="uid://bihgnwdcwgmvo" path="res://Assets/New Piskel-8.png (2).png" id="12_4olbc"]
-[ext_resource type="Texture2D" uid="uid://d1oqc5bx175gd" path="res://Assets/New Piskel-7.png (2).png" id="12_05l33"]
-[ext_resource type="FontFile" uid="uid://cs6slgshuy18v" path="res://Assets/Minecraft.ttf" id="12_atmdp"]
-[ext_resource type="Texture2D" uid="uid://iql0xx6xsx6s" path="res://Assets/New Piskel-14.png.png" id="13_atmdp"]
-[ext_resource type="PackedScene" uid="uid://c7xen8hnmlsrg" path="res://Wizard.tscn" id="14_65u77"]
-[ext_resource type="Texture2D" uid="uid://dfwn61sier5fn" path="res://Assets/New Piskel-7.png (3).png" id="14_bcfcw"]
-[ext_resource type="Texture2D" uid="uid://c25s6h6oqqcek" path="res://Assets/New Piskel-13.png (1).png" id="15_tjqdk"]
-[ext_resource type="Script" uid="uid://cx53l725h5qb6" path="res://Scripts/label_4.gd" id="17_qja66"]
-[ext_resource type="Shader" uid="uid://de2jfhm5a5vpl" path="res://BlurImage.gdshader" id="18_1pfxb"]
-[ext_resource type="Texture2D" uid="uid://dv7y0xby03v87" path="res://Assets/New Piskel-12.png (1).png" id="18_51x6w"]
-[ext_resource type="Texture2D" uid="uid://coyp3olj5miwb" path="res://Assets/New Piskel-12.png.png" id="18_mwa70"]
-[ext_resource type="Texture2D" uid="uid://c6b0tx5t5iu07" path="res://Assets/New Piskel-11.png.png" id="18_up0at"]
-[ext_resource type="Texture2D" uid="uid://cfha46awtv257" path="res://Assets/Gimbal_The_First_Official_UAP_Footage_from_the_USG_for_Public_Release.webm.jpg" id="19_3ndw1"]
-[ext_resource type="Texture2D" uid="uid://cn0ei5q7apc01" path="res://Assets/New Piskel-16.png (2).png" id="20_3ndw1"]
-[ext_resource type="Texture2D" uid="uid://dki2pnauoyxxi" path="res://Assets/New Piskel-12.png (2).png" id="20_a727u"]
-[ext_resource type="Texture2D" uid="uid://cis4fgjrsjv17" path="res://Assets/Screenshot 2026-02-05 142225.png" id="21_hskft"]
+[ext_resource type="Script" uid="uid://cv8s51222qwvo" path="res://Scripts/the_2_nd_main_page.gd" id="1_fjbdi"]
+[ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="2_numrs"]
+[ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="3_o3nkn"]
+[ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="4_mq5f7"]
+[ext_resource type="Texture2D" uid="uid://dyyve8s5i5hmu" path="res://Assets/New Piskel-7.png (1).png" id="5_tk8ac"]
+[ext_resource type="Texture2D" uid="uid://du22ufxcgqgrb" path="res://Assets/New Piskel-6.png (1).png" id="6_d4qx8"]
+[ext_resource type="Texture2D" uid="uid://dqoc8g3ojkhx8" path="res://Assets/New Piskel-10.png.png" id="7_pqwqn"]
+[ext_resource type="Texture2D" uid="uid://bex2dbjty5ut1" path="res://Assets/New Piskel-9.png (1).png" id="8_f3wmn"]
+[ext_resource type="Texture2D" uid="uid://baxkech33fp1f" path="res://Assets/New Piskel-8.png (1).png" id="9_e3g67"]
+[ext_resource type="PackedScene" uid="uid://da5o5yvamxgqm" path="res://Scenes/Window.tscn" id="10_ydvs2"]
+[ext_resource type="Texture2D" uid="uid://d1oqc5bx175gd" path="res://Assets/New Piskel-7.png (2).png" id="11_ayv1b"]
+[ext_resource type="Texture2D" uid="uid://bihgnwdcwgmvo" path="res://Assets/New Piskel-8.png (2).png" id="12_n7fju"]
+[ext_resource type="Texture2D" uid="uid://dfwn61sier5fn" path="res://Assets/New Piskel-7.png (3).png" id="13_xqdss"]
+[ext_resource type="Texture2D" uid="uid://dheyijpmivdxs" path="res://Assets/New Piskel-1.png (2).png" id="14_r28w2"]
+[ext_resource type="Texture2D" uid="uid://c25s6h6oqqcek" path="res://Assets/New Piskel-13.png (1).png" id="15_2n4fm"]
+[ext_resource type="FontFile" uid="uid://cs6slgshuy18v" path="res://Assets/Minecraft.ttf" id="16_8rlcb"]
+[ext_resource type="PackedScene" uid="uid://c7xen8hnmlsrg" path="res://Wizard.tscn" id="17_tkns8"]
+[ext_resource type="Texture2D" uid="uid://dv7y0xby03v87" path="res://Assets/New Piskel-12.png (1).png" id="18_r62hl"]
+[ext_resource type="Texture2D" uid="uid://coyp3olj5miwb" path="res://Assets/New Piskel-12.png.png" id="19_p4gve"]
+[ext_resource type="Texture2D" uid="uid://dki2pnauoyxxi" path="res://Assets/New Piskel-12.png (2).png" id="20_8u7b2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ool47"]
-shader = ExtResource("2_1ebr7")
+shader = ExtResource("3_o3nkn")
 
 [sub_resource type="QuadMesh" id="QuadMesh_q0spf"]
 size = Vector2(854, 480)
@@ -47,10 +37,10 @@ border_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 expand_margin_top = 6.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fup4q"]
-texture = ExtResource("4_meu2o")
+texture = ExtResource("5_tk8ac")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_puyhw"]
-texture = ExtResource("4_meu2o")
+texture = ExtResource("5_tk8ac")
 modulate_color = Color(0.5609549, 0.5609549, 0.5609549, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s26l"]
@@ -69,31 +59,15 @@ corner_detail = 1
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_05l33"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bcfcw"]
-texture = ExtResource("12_05l33")
+texture = ExtResource("11_ayv1b")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05l33"]
-texture = ExtResource("12_4olbc")
+texture = ExtResource("12_n7fju")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up0at"]
-texture = ExtResource("15_tjqdk")
+texture = ExtResource("15_2n4fm")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51x6w"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_atmdp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_df5tf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t81xn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fr2bk"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1pfxb"]
-shader = ExtResource("18_1pfxb")
-shader_parameter/blur_amount = 50.0
-shader_parameter/blur_steps = 20
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hskft"]
-texture = ExtResource("20_3ndw1")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -102,7 +76,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t81xn")
+script = ExtResource("1_fjbdi")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -111,7 +85,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_61ets")
+texture = ExtResource("2_numrs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 10
@@ -131,7 +105,7 @@ offset_top = 0.19998169
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.3456486, 0.34565854, 0.36797544, 1)
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_q0spf")
 text = "0 . 1 . 8320"
@@ -154,7 +128,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
-icon = ExtResource("5_meu2o")
+icon = ExtResource("6_d4qx8")
 icon_alignment = 1
 
 [node name="Button5" type="Button" parent="TaskBar"]
@@ -174,7 +148,7 @@ scale = Vector2(0.88, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
-icon = ExtResource("6_puyhw")
+icon = ExtResource("7_pqwqn")
 icon_alignment = 1
 
 [node name="Button3" type="Button" parent="TaskBar"]
@@ -194,7 +168,7 @@ scale = Vector2(0.88, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
-icon = ExtResource("7_hgaxc")
+icon = ExtResource("8_f3wmn")
 icon_alignment = 1
 
 [node name="Button4" type="Button" parent="TaskBar"]
@@ -214,7 +188,7 @@ scale = Vector2(0.88, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fup4q")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_puyhw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fup4q")
-icon = ExtResource("8_ibofp")
+icon = ExtResource("9_e3g67")
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="TaskBar"]
@@ -231,7 +205,7 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.5058824, 0.41568628, 0.29411766, 1)
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxFlat_5s26l")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5s26l")
@@ -239,7 +213,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_5s26l")
 text = "MENU"
 icon_alignment = 1
 
-[node name="Window" parent="." instance=ExtResource("10_ibofp")]
+[node name="Window" parent="." instance=ExtResource("10_ydvs2")]
 position = Vector2(242, 260)
 
 [node name="F1" type="Button" parent="Window"]
@@ -261,7 +235,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -277,7 +251,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_05l33")
 text = "
@@ -303,7 +277,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -319,7 +293,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_05l33")
 text = "
@@ -332,7 +306,7 @@ offset_left = -37.0
 offset_top = -65.0
 offset_right = 32.0
 offset_bottom = 1.0
-texture = ExtResource("14_bcfcw")
+texture = ExtResource("13_xqdss")
 
 [node name="Label" type="Label" parent="Window/TextureRect"]
 layout_mode = 0
@@ -341,13 +315,13 @@ offset_top = 25.0
 offset_right = 65.0
 offset_bottom = 48.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 16
 text = "500"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LevelsF1" parent="." instance=ExtResource("10_ibofp")]
+[node name="LevelsF1" parent="." instance=ExtResource("10_ydvs2")]
 visible = false
 position = Vector2(612, 130)
 
@@ -370,7 +344,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -396,7 +370,7 @@ offset_right = 65.290344
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -422,7 +396,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -448,7 +422,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -473,7 +447,7 @@ offset_right = 65.290344
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -498,7 +472,7 @@ offset_right = 69.0
 offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
+theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
@@ -506,14 +480,14 @@ F6"
 horizontal_alignment = 1
 
 [node name="Wizard" type="Node2D" parent="."]
-position = Vector2(170, 94)
+position = Vector2(782, 385)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Wizard"]
 offset_left = -66.0
 offset_top = -80.0
 offset_right = 65.0
 offset_bottom = -59.0
-texture = ExtResource("11_r14pv")
+texture = ExtResource("14_r28w2")
 region_rect = Rect2(0, 0, 100, 11.740247)
 patch_margin_left = 6
 patch_margin_top = 7
@@ -545,7 +519,7 @@ offset_top = 2.0
 offset_right = 84.0
 offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
+theme_override_fonts/font = ExtResource("16_8rlcb")
 theme_override_font_sizes/font_size = 11
 text = "WIZARD"
 vertical_alignment = 2
@@ -556,7 +530,7 @@ offset_left = -66.0
 offset_top = -59.0
 offset_right = 65.0
 offset_bottom = 43.0
-texture = ExtResource("11_r14pv")
+texture = ExtResource("14_r28w2")
 region_rect = Rect2(0, 11.951731, 100, 48.20166)
 patch_margin_left = 6
 patch_margin_top = 7
@@ -564,7 +538,7 @@ patch_margin_right = 6
 patch_margin_bottom = 8
 metadata/_edit_use_anchors_ = true
 
-[node name="Wizard" parent="Wizard" instance=ExtResource("14_65u77")]
+[node name="Wizard" parent="Wizard" instance=ExtResource("17_tkns8")]
 position = Vector2(-24, -9)
 scale = Vector2(1.6, 1.6)
 animation = &"Shoot"
@@ -581,284 +555,20 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_51x6w")
 [node name="Bubble Filler" type="Sprite2D" parent="Wizard/Label"]
 position = Vector2(16, 46.999996)
 scale = Vector2(1.9599949, 1.9599949)
-texture = ExtResource("18_51x6w")
+texture = ExtResource("18_r62hl")
 
 [node name="Bubble" type="Sprite2D" parent="Wizard"]
 clip_children = 2
 position = Vector2(30, -6)
 scale = Vector2(1.6, 1.6)
-texture = ExtResource("18_mwa70")
+texture = ExtResource("19_p4gve")
 
 [node name="Bubble2" type="Sprite2D" parent="Wizard"]
 visible = false
 clip_children = 2
 position = Vector2(30, -6)
 scale = Vector2(1.6, 1.6)
-texture = ExtResource("20_a727u")
-
-[node name="Shield" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(132.00002, 228)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("18_up0at")
-
-[node name="EmailNotification" type="Node2D" parent="."]
-position = Vector2(758, 391)
-
-[node name="NinePatchRect" type="NinePatchRect" parent="EmailNotification"]
-offset_left = -163.0
-offset_top = -102.0
-offset_right = 82.0
-offset_bottom = -81.0
-texture = ExtResource("11_r14pv")
-region_rect = Rect2(0, 0, 100, 11.740247)
-patch_margin_left = 6
-patch_margin_top = 7
-patch_margin_right = 6
-patch_margin_bottom = 8
-
-[node name="Label" type="Label" parent="EmailNotification/NinePatchRect"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 193.0
-offset_bottom = 17.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
-theme_override_font_sizes/font_size = 11
-text = "NEW MESSAGE"
-vertical_alignment = 2
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="EmailNotification"]
-offset_left = -163.0
-offset_top = -81.0
-offset_right = 82.0
-offset_bottom = -30.0
-texture = ExtResource("11_r14pv")
-region_rect = Rect2(0, 11.951731, 100, 48.20166)
-patch_margin_left = 6
-patch_margin_top = 7
-patch_margin_right = 6
-patch_margin_bottom = 8
-
-[node name="NewPiskel14_png" type="Sprite2D" parent="EmailNotification/NinePatchRect2"]
-position = Vector2(24.999985, 23.00001)
-scale = Vector2(1, 1.091)
-texture = ExtResource("13_atmdp")
-
-[node name="Label2" type="Label" parent="EmailNotification/NinePatchRect2"]
-layout_mode = 0
-offset_left = 54.0
-offset_top = 16.0
-offset_right = 242.0
-offset_bottom = 31.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
-theme_override_font_sizes/font_size = 11
-text = "AREA 51 LEAKED IMAGES"
-vertical_alignment = 2
-
-[node name="Label3" type="Label" parent="EmailNotification/NinePatchRect2"]
-layout_mode = 0
-offset_left = 155.0
-offset_top = 33.0
-offset_right = 343.0
-offset_bottom = 48.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
-theme_override_font_sizes/font_size = 11
-text = "Click To Open"
-vertical_alignment = 2
-
-[node name="EmailNotification" type="Button" parent="EmailNotification"]
-offset_left = -163.0
-offset_top = -101.0
-offset_right = 81.0
-offset_bottom = -31.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_atmdp")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_df5tf")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_t81xn")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_fr2bk")
-
-[node name="Email" type="Node2D" parent="."]
-visible = false
-position = Vector2(824, 272)
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Email"]
-offset_left = -268.0
-offset_top = -248.0
-offset_right = 15.0
-offset_bottom = 18.0
-texture = ExtResource("11_5s26l")
-patch_margin_left = 5
-patch_margin_top = 11
-patch_margin_right = 5
-patch_margin_bottom = 11
-
-[node name="Label4" type="Label" parent="Email"]
-offset_left = -98.0
-offset_top = -221.0
-offset_right = 8.0
-offset_bottom = -206.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
-theme_override_font_sizes/font_size = 11
-text = "To; This is Test"
-horizontal_alignment = 2
-vertical_alignment = 2
-script = ExtResource("17_qja66")
-
-[node name="Label5" type="Label" parent="Email"]
-offset_left = -261.0
-offset_top = -234.0
-offset_right = -69.0
-offset_bottom = -219.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
-theme_override_font_sizes/font_size = 11
-text = "From: Anonymous User"
-vertical_alignment = 2
-
-[node name="Label6" type="Label" parent="Email"]
-offset_left = -260.0
-offset_top = -203.0
-offset_right = -38.0
-offset_bottom = -185.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
-theme_override_font_sizes/font_size = 11
-text = "Subject: You weren’t supposed to see this"
-
-[node name="Label7" type="Label" parent="Email"]
-offset_left = -259.0
-offset_top = -182.0
-offset_right = 6.0
-offset_bottom = -44.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("12_atmdp")
-theme_override_font_sizes/font_size = 11
-text = "This isn’t a mistake.
-
-Area 51 is more than aircraft and test flights. I’ve attached two images—one recent, one older. Neither should exist. Look at the sky in the first. Look at the shadow in the second.
-
-Save them. Don’t ask questions."
-autowrap_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="Email"]
-material = SubResource("ShaderMaterial_1pfxb")
-offset_left = -250.0
-offset_top = -53.0
-offset_right = -178.0
-offset_bottom = 1.0
-pivot_offset = Vector2(36, 27)
-texture = ExtResource("19_3ndw1")
-expand_mode = 3
-
-[node name="Label" type="Label" parent="Email/TextureRect"]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 31.0
-offset_right = 77.0
-offset_bottom = 57.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_hskft")
-
-[node name="ErrorEffect" parent="Email/TextureRect" instance=ExtResource("9_hgaxc")]
-visible = false
-position = Vector2(39, 23)
-scale = Vector2(0.9599853, 0.9599853)
-
-[node name="TextureRect2" type="TextureRect" parent="Email"]
-material = SubResource("ShaderMaterial_1pfxb")
-offset_left = -173.0
-offset_top = -53.0
-offset_right = -101.0
-offset_bottom = 1.0
-pivot_offset = Vector2(36, 27)
-texture = ExtResource("21_hskft")
-expand_mode = 3
-
-[node name="Label" type="Label" parent="Email/TextureRect2"]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 31.0
-offset_right = 77.0
-offset_bottom = 57.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_hskft")
-
-[node name="ErrorEffect2" parent="Email/TextureRect2" instance=ExtResource("9_hgaxc")]
-visible = false
-position = Vector2(35, 25)
-scale = Vector2(0.8800049, 0.8800049)
-
-[node name="CIA(SelfMadeLogo)" parent="." instance=ExtResource("3_df5tf")]
-position = Vector2(493.99994, 591)
-
-[node name="ErrorEffect3" parent="." instance=ExtResource("9_hgaxc")]
-position = Vector2(218, 542)
-scale = Vector2(0.7599951, 0.7599951)
-
-[node name="ErrorEffect4" parent="." instance=ExtResource("9_hgaxc")]
-visible = false
-position = Vector2(629.00006, 531.99994)
-scale = Vector2(0.7599951, 0.7599951)
-
-[node name="ErrorEffect5" parent="." instance=ExtResource("9_hgaxc")]
-visible = false
-position = Vector2(910.99994, 401)
-scale = Vector2(0.7599951, 0.7599951)
-
-[node name="ErrorEffect6" parent="." instance=ExtResource("9_hgaxc")]
-visible = false
-position = Vector2(-96, 361)
-scale = Vector2(0.7599951, 0.7599951)
-
-[node name="ErrorEffect7" parent="." instance=ExtResource("9_hgaxc")]
-visible = false
-position = Vector2(-69, 26.999998)
-scale = Vector2(0.7599951, 0.7599951)
-
-[node name="errors" type="Node2D" parent="."]
-position = Vector2(0, 437)
-
-[node name="Node2D" parent="errors" instance=ExtResource("9_hgaxc")]
-position = Vector2(55, 4)
-scale = Vector2(1.3200006, 1.3200006)
-
-[node name="Node2D2" parent="errors" instance=ExtResource("9_hgaxc")]
-position = Vector2(739.00006, 26)
-scale = Vector2(1.3200006, 1.3200006)
-
-[node name="Node2D3" parent="errors" instance=ExtResource("9_hgaxc")]
-position = Vector2(829, -0.9999695)
-scale = Vector2(1.3200006, 1.3200006)
-
-[node name="ColorRect" type="ColorRect" parent="errors"]
-offset_left = 9.0
-offset_right = 158.0
-offset_bottom = 40.0
-color = Color(1, 1, 1, 0)
-
-[node name="ColorRect2" type="ColorRect" parent="errors"]
-offset_left = 683.0
-offset_top = -4.0
-offset_right = 856.0
-offset_bottom = 43.0
-color = Color(1, 1, 1, 0)
-
-[node name="ColorRect3" type="ColorRect" parent="errors"]
-offset_left = 81.0
-offset_top = -279.0
-offset_right = 417.0
-offset_bottom = -83.0
-color = Color(1, 1, 1, 0)
-
-[node name="ColorRect4" type="ColorRect" parent="errors"]
-offset_left = 79.0
-offset_top = -436.0
-offset_right = 415.0
-offset_bottom = -240.0
-color = Color(1, 1, 1, 0)
+texture = ExtResource("20_8u7b2")
 
 [connection signal="pressed" from="Window/F1" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Window/F2" to="." method="_on_f_2_pressed"]
-[connection signal="pressed" from="EmailNotification/EmailNotification" to="." method="_on_email_notification_pressed"]
