@@ -1,14 +1,15 @@
-[gd_scene load_steps=32 format=3 uid="uid://bsflg3ylnkue4"]
+[gd_scene load_steps=35 format=3 uid="uid://bsflg3ylnkue4"]
 
-[ext_resource type="Script" uid="uid://cv8s51222qwvo" path="res://Scripts/the_2_nd_main_page.gd" id="1_fjbdi"]
 [ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="2_numrs"]
 [ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="3_o3nkn"]
+[ext_resource type="Script" uid="uid://5ie88jsmtfih" path="res://Scripts/task_bar.gd" id="4_fjbdi"]
 [ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="4_mq5f7"]
 [ext_resource type="Texture2D" uid="uid://dyyve8s5i5hmu" path="res://Assets/New Piskel-7.png (1).png" id="5_tk8ac"]
 [ext_resource type="Texture2D" uid="uid://du22ufxcgqgrb" path="res://Assets/New Piskel-6.png (1).png" id="6_d4qx8"]
 [ext_resource type="Texture2D" uid="uid://dqoc8g3ojkhx8" path="res://Assets/New Piskel-10.png.png" id="7_pqwqn"]
 [ext_resource type="Texture2D" uid="uid://bex2dbjty5ut1" path="res://Assets/New Piskel-9.png (1).png" id="8_f3wmn"]
 [ext_resource type="Texture2D" uid="uid://baxkech33fp1f" path="res://Assets/New Piskel-8.png (1).png" id="9_e3g67"]
+[ext_resource type="Script" uid="uid://dj0py266dww87" path="res://Scripts/Draggable.gd" id="10_kx0g3"]
 [ext_resource type="PackedScene" uid="uid://da5o5yvamxgqm" path="res://Scenes/Window.tscn" id="10_ydvs2"]
 [ext_resource type="Texture2D" uid="uid://d1oqc5bx175gd" path="res://Assets/New Piskel-7.png (2).png" id="11_ayv1b"]
 [ext_resource type="Texture2D" uid="uid://bihgnwdcwgmvo" path="res://Assets/New Piskel-8.png (2).png" id="12_n7fju"]
@@ -16,10 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://dheyijpmivdxs" path="res://Assets/New Piskel-1.png (2).png" id="14_r28w2"]
 [ext_resource type="Texture2D" uid="uid://c25s6h6oqqcek" path="res://Assets/New Piskel-13.png (1).png" id="15_2n4fm"]
 [ext_resource type="FontFile" uid="uid://cs6slgshuy18v" path="res://Assets/Minecraft.ttf" id="16_8rlcb"]
-[ext_resource type="PackedScene" uid="uid://c7xen8hnmlsrg" path="res://Wizard.tscn" id="17_tkns8"]
+[ext_resource type="PackedScene" uid="uid://c7xen8hnmlsrg" path="res://Scenes/Wizard.tscn" id="17_tkns8"]
 [ext_resource type="Texture2D" uid="uid://dv7y0xby03v87" path="res://Assets/New Piskel-12.png (1).png" id="18_r62hl"]
 [ext_resource type="Texture2D" uid="uid://coyp3olj5miwb" path="res://Assets/New Piskel-12.png.png" id="19_p4gve"]
 [ext_resource type="Texture2D" uid="uid://dki2pnauoyxxi" path="res://Assets/New Piskel-12.png (2).png" id="20_8u7b2"]
+[ext_resource type="Script" uid="uid://b6rpy5eee620n" path="res://Scripts/LevelsF1.gd" id="22_k45vx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ool47"]
 shader = ExtResource("3_o3nkn")
@@ -56,6 +58,13 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up0at"]
+texture = ExtResource("15_2n4fm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51x6w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kx0g3"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_05l33"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bcfcw"]
@@ -64,11 +73,6 @@ texture = ExtResource("11_ayv1b")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05l33"]
 texture = ExtResource("12_n7fju")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up0at"]
-texture = ExtResource("15_2n4fm")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51x6w"]
-
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -76,7 +80,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fjbdi")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -111,6 +114,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_q0spf")
 text = "0 . 1 . 8320"
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("4_fjbdi")
 
 [node name="Button" type="Button" parent="TaskBar"]
 layout_mode = 1
@@ -213,276 +217,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_5s26l")
 text = "MENU"
 icon_alignment = 1
 
-[node name="Window" parent="." instance=ExtResource("10_ydvs2")]
-position = Vector2(242, 260)
+[node name="Wizard" type="Node2D" parent="TaskBar"]
+position = Vector2(782, -52)
+script = ExtResource("10_kx0g3")
 
-[node name="F1" type="Button" parent="Window"]
-offset_left = -145.0
-offset_top = -70.0
-offset_right = -90.0
-offset_bottom = -15.0
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="Window/F1"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F1"
-horizontal_alignment = 1
-
-[node name="OpenFolder" type="Label" parent="Window/F1"]
-visible = false
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_05l33")
-text = "
-   F1"
-horizontal_alignment = 1
-
-[node name="F2" type="Button" parent="Window"]
-offset_left = -37.999992
-offset_top = -67.0
-offset_right = 17.000008
-offset_bottom = -12.0
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="Window/F2"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F2"
-horizontal_alignment = 1
-
-[node name="OpenFolder" type="Label" parent="Window/F2"]
-visible = false
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_05l33")
-text = "
-   F2"
-horizontal_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="Window"]
-visible = false
-offset_left = -37.0
-offset_top = -65.0
-offset_right = 32.0
-offset_bottom = 1.0
-texture = ExtResource("13_xqdss")
-
-[node name="Label" type="Label" parent="Window/TextureRect"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 25.0
-offset_right = 65.0
-offset_bottom = 48.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 16
-text = "500"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LevelsF1" parent="." instance=ExtResource("10_ydvs2")]
-visible = false
-position = Vector2(612, 130)
-
-[node name="F1" type="Button" parent="LevelsF1"]
-offset_left = -145.0
-offset_top = -70.0
-offset_right = -90.0
-offset_bottom = -15.0
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="LevelsF1/F1"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F1"
-horizontal_alignment = 1
-
-[node name="F2" type="Button" parent="LevelsF1"]
-offset_left = -28.999992
-offset_top = -67.0
-offset_right = 26.000008
-offset_bottom = -12.0
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="LevelsF1/F2"]
-layout_mode = 0
-offset_left = -13.709658
-offset_top = 1.0
-offset_right = 65.290344
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F2"
-horizontal_alignment = 1
-
-[node name="F3" type="Button" parent="LevelsF1"]
-offset_left = 80.0
-offset_top = -67.0
-offset_right = 135.0
-offset_bottom = -12.0
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="LevelsF1/F3"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F3"
-horizontal_alignment = 1
-
-[node name="F4" type="Button" parent="LevelsF1"]
-offset_left = -145.0
-offset_top = -3.0000076
-offset_right = -90.0
-offset_bottom = 51.999992
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="LevelsF1/F4"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F4"
-horizontal_alignment = 1
-
-[node name="F5" type="Button" parent="LevelsF1"]
-offset_left = -28.999992
-offset_right = 26.000008
-offset_bottom = 54.999992
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="LevelsF1/F5"]
-layout_mode = 0
-offset_left = -13.709658
-offset_top = 1.0
-offset_right = 65.290344
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F5"
-horizontal_alignment = 1
-
-[node name="F6" type="Button" parent="LevelsF1"]
-offset_left = 80.0
-offset_right = 135.0
-offset_bottom = 54.999992
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="LevelsF1/F6"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F6"
-horizontal_alignment = 1
-
-[node name="Wizard" type="Node2D" parent="."]
-position = Vector2(782, 385)
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Wizard"]
+[node name="NinePatchRect" type="NinePatchRect" parent="TaskBar/Wizard"]
 offset_left = -66.0
 offset_top = -80.0
 offset_right = 65.0
@@ -495,7 +234,7 @@ patch_margin_right = 6
 patch_margin_bottom = 8
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="Wizard/NinePatchRect"]
+[node name="Button" type="Button" parent="TaskBar/Wizard/NinePatchRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -2.1682243
@@ -509,7 +248,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_up0at")
 theme_override_styles/hover = SubResource("StyleBoxTexture_up0at")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Wizard/NinePatchRect"]
+[node name="Label" type="Label" parent="TaskBar/Wizard/NinePatchRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.041297935
@@ -525,7 +264,7 @@ text = "WIZARD"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="Wizard"]
+[node name="NinePatchRect2" type="NinePatchRect" parent="TaskBar/Wizard"]
 offset_left = -66.0
 offset_top = -59.0
 offset_right = 65.0
@@ -538,13 +277,12 @@ patch_margin_right = 6
 patch_margin_bottom = 8
 metadata/_edit_use_anchors_ = true
 
-[node name="Wizard" parent="Wizard" instance=ExtResource("17_tkns8")]
+[node name="Wizard" parent="TaskBar/Wizard" instance=ExtResource("17_tkns8")]
 position = Vector2(-24, -9)
 scale = Vector2(1.6, 1.6)
-animation = &"Shoot"
 frame_progress = 0.0
 
-[node name="Label" type="Label" parent="Wizard"]
+[node name="Label" type="Label" parent="TaskBar/Wizard"]
 clip_children = 1
 offset_left = 14.0
 offset_top = -21.0
@@ -552,23 +290,335 @@ offset_right = 46.0
 offset_bottom = 10.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_51x6w")
 
-[node name="Bubble Filler" type="Sprite2D" parent="Wizard/Label"]
+[node name="Bubble Filler" type="Sprite2D" parent="TaskBar/Wizard/Label"]
 position = Vector2(16, 46.999996)
 scale = Vector2(1.9599949, 1.9599949)
 texture = ExtResource("18_r62hl")
 
-[node name="Bubble" type="Sprite2D" parent="Wizard"]
+[node name="Bubble" type="Sprite2D" parent="TaskBar/Wizard"]
 clip_children = 2
 position = Vector2(30, -6)
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("19_p4gve")
 
-[node name="Bubble2" type="Sprite2D" parent="Wizard"]
+[node name="Bubble2" type="Sprite2D" parent="TaskBar/Wizard"]
 visible = false
 clip_children = 2
 position = Vector2(30, -6)
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("20_8u7b2")
 
-[connection signal="pressed" from="Window/F1" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Window/F2" to="." method="_on_f_2_pressed"]
+[node name="Button" type="Button" parent="TaskBar/Wizard"]
+offset_left = -66.0
+offset_top = -80.0
+offset_right = 64.0
+offset_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kx0g3")
+
+[node name="Window" parent="TaskBar" instance=ExtResource("10_ydvs2")]
+position = Vector2(242, -177)
+
+[node name="F1" type="Button" parent="TaskBar/Window"]
+offset_left = -145.0
+offset_top = -70.0
+offset_right = -90.0
+offset_bottom = -15.0
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/Window/F1"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F1"
+horizontal_alignment = 1
+
+[node name="OpenFolder" type="Label" parent="TaskBar/Window/F1"]
+visible = false
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_05l33")
+text = "
+   F1"
+horizontal_alignment = 1
+
+[node name="F2" type="Button" parent="TaskBar/Window"]
+offset_left = -37.999992
+offset_top = -67.0
+offset_right = 17.000008
+offset_bottom = -12.0
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/Window/F2"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F2"
+horizontal_alignment = 1
+
+[node name="OpenFolder" type="Label" parent="TaskBar/Window/F2"]
+visible = false
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_05l33")
+text = "
+   F2"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TaskBar/Window"]
+offset_left = -37.0
+offset_top = -65.0
+offset_right = 32.0
+offset_bottom = 1.0
+texture = ExtResource("13_xqdss")
+
+[node name="Label" type="Label" parent="TaskBar/Window/TextureRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 25.0
+offset_right = 65.0
+offset_bottom = 48.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 16
+text = "500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="TaskBar/Window"]
+offset_left = -160.0
+offset_top = -100.0
+offset_right = 176.0
+offset_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kx0g3")
+
+[node name="LevelsF1" parent="TaskBar" instance=ExtResource("10_ydvs2")]
+position = Vector2(612, -307)
+script = ExtResource("22_k45vx")
+
+[node name="F1" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = -145.0
+offset_top = -70.0
+offset_right = -90.0
+offset_bottom = -15.0
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F1"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F1"
+horizontal_alignment = 1
+
+[node name="F2" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = -28.999992
+offset_top = -67.0
+offset_right = 26.000008
+offset_bottom = -12.0
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F2"]
+layout_mode = 0
+offset_left = -13.709658
+offset_top = 1.0
+offset_right = 65.290344
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F2"
+horizontal_alignment = 1
+
+[node name="F3" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = 80.0
+offset_top = -67.0
+offset_right = 135.0
+offset_bottom = -12.0
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F3"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F3"
+horizontal_alignment = 1
+
+[node name="F4" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = -145.0
+offset_top = -3.0000076
+offset_right = -90.0
+offset_bottom = 51.999992
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F4"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F4"
+horizontal_alignment = 1
+
+[node name="F5" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = -28.999992
+offset_right = 26.000008
+offset_bottom = 54.999992
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F5"]
+layout_mode = 0
+offset_left = -13.709658
+offset_top = 1.0
+offset_right = 65.290344
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F5"
+horizontal_alignment = 1
+
+[node name="F6" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = 80.0
+offset_right = 135.0
+offset_bottom = 54.999992
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F6"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F6"
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = -161.0
+offset_top = -100.0
+offset_right = 175.0
+offset_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kx0g3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kx0g3")
+
+[connection signal="pressed" from="TaskBar/Button" to="TaskBar" method="_on_button_pressed"]
+[connection signal="button_down" from="TaskBar/Wizard/Button" to="TaskBar/Wizard" method="_on_button_button_down"]
+[connection signal="button_up" from="TaskBar/Wizard/Button" to="TaskBar/Wizard" method="_on_button_button_up"]
+[connection signal="pressed" from="TaskBar/Wizard/Button" to="TaskBar/Wizard" method="_on_button_pressed"]
+[connection signal="pressed" from="TaskBar/Window/F1" to="TaskBar" method="_on_f_1_pressed"]
+[connection signal="pressed" from="TaskBar/Window/F2" to="TaskBar" method="_on_f_2_pressed"]
+[connection signal="button_down" from="TaskBar/Window/Button2" to="TaskBar/Window" method="_on_button_2_button_down"]
+[connection signal="button_up" from="TaskBar/Window/Button2" to="TaskBar/Window" method="_on_button_2_button_up"]
+[connection signal="button_down" from="TaskBar/LevelsF1/Button3" to="TaskBar/LevelsF1" method="_on_button_3_button_down"]
+[connection signal="button_up" from="TaskBar/LevelsF1/Button3" to="TaskBar/LevelsF1" method="_on_button_3_button_up"]

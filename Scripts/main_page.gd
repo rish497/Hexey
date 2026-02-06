@@ -175,9 +175,9 @@ func bubble_fill(end_y: float, dur: float) -> void:
 	var t := create_tween()
 	t.tween_property(bubble_filler,"position:y",end_y,dur).set_trans(Tween.TRANS_LINEAR)
 		
-func popup(panel, dur := .3):
+func popup(panel, dur := .4):
 	panel.visible = true
-	panel.scale = Vector2(0.8, 0.8)
+	panel.scale = Vector2(-.2,-.2)
 	panel.modulate.a = 0.0
 
 	var t := create_tween()

@@ -1,0 +1,153 @@
+[gd_scene load_steps=7 format=3 uid="uid://0bd01nysqlx5"]
+
+[ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_qwx73"]
+[ext_resource type="Texture2D" uid="uid://3o2w57in6aem" path="res://Grass-3.png (1).png" id="2_yd0cg"]
+[ext_resource type="Texture2D" uid="uid://lbydophrthe0" path="res://Assets/Hex Tiles/Grass-4.png (1).png" id="3_y1636"]
+[ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="4_oaj0v"]
+[ext_resource type="Texture2D" uid="uid://bwyknbopuq4wa" path="res://Assets/Hex Tiles/Grass-5.png (1).png" id="5_0wqp8"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="6_nfhna"]
+
+[node name="Grass2" type="Node2D"]
+script = ExtResource("1_qwx73")
+
+[node name="Grass5" type="Sprite2D" parent="."]
+position = Vector2(-22, -38)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass21" type="Sprite2D" parent="."]
+position = Vector2(29, -38)
+texture = ExtResource("3_y1636")
+
+[node name="Grass22" type="Sprite2D" parent="."]
+position = Vector2(4, -26)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass20" type="Sprite2D" parent="."]
+position = Vector2(-22, -14)
+texture = ExtResource("4_oaj0v")
+
+[node name="Grass2" type="Sprite2D" parent="."]
+position = Vector2(-74, -14)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass6" type="Sprite2D" parent="."]
+position = Vector2(30, -14)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass8" type="Sprite2D" parent="."]
+position = Vector2(82, -14)
+texture = ExtResource("4_oaj0v")
+
+[node name="Grass3" type="Sprite2D" parent="."]
+position = Vector2(-48, -2)
+texture = ExtResource("4_oaj0v")
+
+[node name="Grass4" type="Sprite2D" parent="."]
+position = Vector2(4, -2)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass7" type="Sprite2D" parent="."]
+position = Vector2(56, -2)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass9" type="Sprite2D" parent="."]
+position = Vector2(82, 10)
+texture = ExtResource("3_y1636")
+
+[node name="Grass10" type="Sprite2D" parent="."]
+position = Vector2(30, 10)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass11" type="Sprite2D" parent="."]
+position = Vector2(-22, 10)
+texture = ExtResource("4_oaj0v")
+
+[node name="Grass12" type="Sprite2D" parent="."]
+position = Vector2(-74, 10)
+texture = ExtResource("3_y1636")
+
+[node name="Grass13" type="Sprite2D" parent="."]
+position = Vector2(-48, 22)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass14" type="Sprite2D" parent="."]
+position = Vector2(4, 22)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass15" type="Sprite2D" parent="."]
+position = Vector2(56, 22)
+texture = ExtResource("5_0wqp8")
+
+[node name="Grass16" type="Sprite2D" parent="."]
+position = Vector2(82, 34)
+texture = ExtResource("5_0wqp8")
+
+[node name="Grass17" type="Sprite2D" parent="."]
+position = Vector2(30, 34)
+texture = ExtResource("3_y1636")
+
+[node name="Grass18" type="Sprite2D" parent="."]
+position = Vector2(-22, 34)
+texture = ExtResource("2_yd0cg")
+
+[node name="Grass19" type="Sprite2D" parent="."]
+position = Vector2(-74, 34)
+texture = ExtResource("2_yd0cg")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-48, 7)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-36, -61, -17, -61, -8, -72, 9, -72, 15, -84, 35, -85, 43, -74, 60, -73, 68, -84, 88, -84, 95, -73, 113, -70, 118, -61, 138, -60, 147, -48, 145, 57, 138, 67, 120, 66, 113, 54, 94, 53, 88, 64, 68, 65, 61, 54, 42, 53, 37, 62, 16, 65, 8, 53, -9, 54, -15, 65, -34, 65, -42, 55, -42, -46)
+
+[node name="Dirt6" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-22, -70)
+
+[node name="Dirt8" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(30, -70)
+
+[node name="Dirt7" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(4, -58)
+
+[node name="Dirt9" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(55, -56)
+
+[node name="Dirt12" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(82, -46)
+
+[node name="Dirt5" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-48, -58)
+
+[node name="Dirt3" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-74, -46)
+
+[node name="Dirt4" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-48, -34)
+
+[node name="Dirt11" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-48, 37)
+
+[node name="Dirt13" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(4, 37)
+
+[node name="Dirt14" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(56, 37)
+
+[node name="Dirt18" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(82, 49)
+
+[node name="Dirt15" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-74, 49)
+
+[node name="Dirt16" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-22, 49)
+
+[node name="Dirt17" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(30, 49)
+
+[node name="Dirt10" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(56, -34)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

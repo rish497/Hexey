@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://d1oqc5bx175gd" path="res://Assets/New Piskel-7.png (2).png" id="12_05l33"]
 [ext_resource type="FontFile" uid="uid://cs6slgshuy18v" path="res://Assets/Minecraft.ttf" id="12_atmdp"]
 [ext_resource type="Texture2D" uid="uid://iql0xx6xsx6s" path="res://Assets/New Piskel-14.png.png" id="13_atmdp"]
-[ext_resource type="PackedScene" uid="uid://c7xen8hnmlsrg" path="res://Wizard.tscn" id="14_65u77"]
+[ext_resource type="PackedScene" uid="uid://c7xen8hnmlsrg" path="res://Scenes/Wizard.tscn" id="14_65u77"]
 [ext_resource type="Texture2D" uid="uid://dfwn61sier5fn" path="res://Assets/New Piskel-7.png (3).png" id="14_bcfcw"]
 [ext_resource type="Texture2D" uid="uid://c25s6h6oqqcek" path="res://Assets/New Piskel-13.png (1).png" id="15_tjqdk"]
 [ext_resource type="Script" uid="uid://cx53l725h5qb6" path="res://Scripts/label_4.gd" id="17_qja66"]

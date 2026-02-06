@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://brfmopvqbg58w"]
+[gd_scene load_steps=12 format=3 uid="uid://brfmopvqbg58w"]
 
 [ext_resource type="PackedScene" uid="uid://tn7k1ga6mp3y" path="res://Scenes/grass1.tscn" id="1_vk57k"]
 [ext_resource type="Script" uid="uid://m0prc8cbsfw0" path="res://Scripts/level_1.gd" id="1_xrdnt"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bypcrpogu5jea" path="res://Scenes/Portal.tscn" id="6_evi0p"]
 [ext_resource type="PackedScene" uid="uid://drunkmmubpeq6" path="res://Scenes/folder.tscn" id="7_lsmp6"]
 [ext_resource type="Script" uid="uid://cs3gydv2v7t3f" path="res://Scripts/portal.gd" id="8_wrinw"]
+[ext_resource type="PackedScene" uid="uid://chjgdkrnn1y3e" path="res://Scenes/grass4.tscn" id="9_af3po"]
+[ext_resource type="PackedScene" uid="uid://0bd01nysqlx5" path="res://Scenes/grass3.tscn" id="10_uy8f0"]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2(-45, -57)
@@ -26,20 +28,33 @@ offset_bottom = 2.0
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="grass1" parent="CanvasLayer2" instance=ExtResource("1_vk57k")]
-position = Vector2(191, 256)
-
-[node name="flag" parent="CanvasLayer2/grass1" instance=ExtResource("2_7p6j4")]
-position = Vector2(-6, 9)
-
-[node name="Portal" parent="CanvasLayer2/grass1" instance=ExtResource("6_evi0p")]
-position = Vector2(-7, 6)
-script = ExtResource("8_wrinw")
+position = Vector2(157, 334)
 
 [node name="Grass2" parent="CanvasLayer2" instance=ExtResource("2_8ffim")]
-position = Vector2(388, 259)
+position = Vector2(683, 355)
 
 [node name="Folder" parent="CanvasLayer2/Grass2" instance=ExtResource("7_lsmp6")]
 position = Vector2(1, 1)
+
+[node name="Grass2(2)" parent="CanvasLayer2" instance=ExtResource("2_8ffim")]
+position = Vector2(306, 91)
+
+[node name="Folder" parent="CanvasLayer2/Grass2(2)" instance=ExtResource("7_lsmp6")]
+position = Vector2(1, 1)
+
+[node name="Grass3" parent="CanvasLayer2" instance=ExtResource("10_uy8f0")]
+position = Vector2(443, 262)
+
+[node name="Portal" parent="CanvasLayer2/Grass3" instance=ExtResource("6_evi0p")]
+visible = false
+position = Vector2(6, -4)
+script = ExtResource("8_wrinw")
+
+[node name="flag" parent="CanvasLayer2/Grass3" instance=ExtResource("2_7p6j4")]
+position = Vector2(6, -1)
+
+[node name="Grass4" parent="CanvasLayer2" instance=ExtResource("9_af3po")]
+position = Vector2(699, 135)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5

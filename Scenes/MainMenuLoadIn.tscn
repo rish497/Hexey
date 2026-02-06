@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="2_gsoko"]
 [ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="3_x71ed"]
 [ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="4_iyej0"]
-[ext_resource type="Texture2D" uid="uid://3o2w57in6aem" path="res://Assets/Hex Tiles/Grass-3.png (1).png" id="5_gan18"]
+[ext_resource type="Texture2D" uid="uid://3o2w57in6aem" path="res://Grass-3.png (1).png" id="5_gan18"]
 [ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="5_x71ed"]
 [ext_resource type="Texture2D" uid="uid://bwyknbopuq4wa" path="res://Assets/Hex Tiles/Grass-5.png (1).png" id="6_i7o3v"]
 [ext_resource type="Texture2D" uid="uid://lbydophrthe0" path="res://Assets/Hex Tiles/Grass-4.png (1).png" id="7_r5csa"]

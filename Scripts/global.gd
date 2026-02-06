@@ -9,12 +9,12 @@ var max_z
 var player_top_z := 100000
 var profile_name: String
 var email_animation_played := false
-# Called when the node enters the scene tree for the first time.
+var bit = 0
 func _ready() -> void:
-	pass # Replace with function body.
+	pass 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	if level_pass == true:
 		print("You did it")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckcb5wgxbsfdr"]
 
 [ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_mnecg"]
-[ext_resource type="Texture2D" uid="uid://3o2w57in6aem" path="res://Assets/Hex Tiles/Grass-3.png (1).png" id="2_sm5yn"]
+[ext_resource type="Texture2D" uid="uid://3o2w57in6aem" path="res://Grass-3.png (1).png" id="2_sm5yn"]
 [ext_resource type="Texture2D" uid="uid://lbydophrthe0" path="res://Assets/Hex Tiles/Grass-4.png (1).png" id="3_6y4l7"]
 [ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="4_kwbil"]
 [ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="4_ri43a"]
@@ -43,7 +43,6 @@ position = Vector2(26, 27)
 texture = ExtResource("4_kwbil")
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 0
 
