@@ -22,6 +22,7 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 
 Global="*res://Scenes/global.tscn"
 Transition="*res://Scenes/HexagonAnimationScreen.tscn"
+AudioManager="*res://Scenes/AudioManager.tscn"
 
 [display]
 

@@ -113,7 +113,7 @@ func _on_email_notification_pressed() -> void:
 	await get_tree().create_timer(.6).timeout
 	spin_and_shrink(texture_rect_2, TAU, 0, 1)
 	await get_tree().create_timer(1.4).timeout
-	fade_out(email)
+	hide_popup(email)
 	move_node_in_arc(CIA, CIA.position, Vector2(700,130), 130, .7)
 	await get_tree().create_timer(1).timeout
 	popup(window)
@@ -259,4 +259,16 @@ func _on_f_2_pressed() -> void:
 	elif folder_close_F2.visible == true:
 		folder_close_F2.visible = false
 		open_folder_F2.visible = true
-		
+	
+func hide_popup(panel):
+	var t := create_tween()
+	t.set_parallel(false)
+
+	t.tween_property(panel, "scale", Vector2(0.8, 0.8), 0.2)
+	t.tween_property(panel, "modulate:a", 0.0, 0.15)
+
+	t.tween_callback(func():
+		panel.visible = false
+		panel.scale = Vector2.ONE
+		panel.modulate.a = 1.0
+	)	

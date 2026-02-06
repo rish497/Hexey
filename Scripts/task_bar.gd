@@ -7,6 +7,8 @@ extends Label
 @onready var open_folder: Label = $Window/F1/OpenFolder
 @onready var folder_close_F2: Label = $Window/F2/FolderClose
 @onready var open_folder_F2: Label = $Window/F2/OpenFolder
+@onready var volume: Node2D = $Volume
+
 
 func _ready() -> void:
 	WizardAnimation.play("Idle")
@@ -34,7 +36,7 @@ func _on_f_1_pressed() -> void:
 		open_folder.visible = true
 		popup(levels_f_1,.6)
 
-func popup(panel, dur := .3):
+func popup(panel, dur := .5):
 	panel.visible = true
 	panel.scale = Vector2(-.5,-.5)
 	panel.modulate.a = 0.0
@@ -59,6 +61,30 @@ func fade_out(panel, duration := 0.5):
 		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
+func hide_popup(panel):
+	var t := create_tween()
+	t.set_parallel(false)
+
+	t.tween_property(panel, "scale", Vector2(0.8, 0.8), 0.2)
+	t.tween_property(panel, "modulate:a", 0.0, 0.15)
+
+	t.tween_callback(func():
+		panel.visible = false
+		panel.scale = Vector2.ONE
+		panel.modulate.a = 1.0
+	)
 
 func _on_button_pressed() -> void:
 	popup(LVLSelect)
+
+
+func _on_button_4_pressed() -> void:
+	popup(wizard)
+
+
+func _on_button_3_pressed() -> void:
+	pass
+
+
+func _on_button_5_pressed() -> void:
+	popup(volume)

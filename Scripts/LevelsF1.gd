@@ -1,15 +1,19 @@
 extends Node2D
+@onready var levels_f_1: Node2D = $"."
 
-var dragging = false
-var of = Vector2(0,0)
+func _on_button_pressed() -> void:
+	print("close")
+	hide_popup(levels_f_1)
 
-func _process(delta: float) -> void:
-	if dragging:
-		position = get_global_mouse_position() - of
+func hide_popup(panel):
+	var t := create_tween()
+	t.set_parallel(false)
 
-func _on_button_3_button_down() -> void:
-	dragging = true
-	of = get_global_mouse_position()-global_position
+	t.tween_property(panel, "scale", Vector2(0.8, 0.8), 0.2)
+	t.tween_property(panel, "modulate:a", 0.0, 0.15)
 
-func _on_button_3_button_up() -> void:
-	dragging = false
+	t.tween_callback(func():
+		panel.visible = false
+		panel.scale = Vector2.ONE
+		panel.modulate.a = 1.0
+	)

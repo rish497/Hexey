@@ -9,7 +9,8 @@ var max_z
 var player_top_z := 100000
 var profile_name: String
 var email_animation_played := false
-var bit = 0
+var bit := 0
+var goal := 500
 func _ready() -> void:
 	pass 
 
