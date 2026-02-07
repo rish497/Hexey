@@ -1,6 +1,7 @@
 extends Node2D
-
+var cursor = preload("res://Assets/New Piskel-5.png (1).png")
 func _ready() -> void:
+	Global.set_cursor(cursor)
 	Global.level_amount=1
 
 func _process(delta: float) -> void:

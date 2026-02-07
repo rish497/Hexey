@@ -1,6 +1,4 @@
 extends Control
-@onready var wizard: Node2D = $Wizard
-@onready var WizardAnimation: AnimatedSprite2D = $Wizard/Wizard
-
+var cursor = preload("res://Assets/New Piskel-5.png (1).png")
 func _ready() -> void:
-	WizardAnimation.play("Idle")
+	Global.set_cursor(cursor)

@@ -8,6 +8,7 @@ extends Label
 @onready var folder_close_F2: Label = $Window/F2/FolderClose
 @onready var open_folder_F2: Label = $Window/F2/OpenFolder
 @onready var volume: Node2D = $Volume
+@onready var tutorial: Node2D = $Tutorial
 
 
 func _ready() -> void:
@@ -15,7 +16,14 @@ func _ready() -> void:
 	LVLSelect.visible = false
 	levels_f_1.visible = false
 	wizard.visible = false
-
+	volume.visible = false
+	tutorial.visible = false
+	
+func _process(delta: float) -> void:
+	if levels_f_1.visible == false:
+		open_folder.visible = false
+		folder_close.visible = true
+	
 func _on_f_2_pressed() -> void:
 	if open_folder_F2.visible == true:
 		open_folder_F2.visible = false
@@ -83,7 +91,7 @@ func _on_button_4_pressed() -> void:
 
 
 func _on_button_3_pressed() -> void:
-	pass
+	popup(tutorial)
 
 
 func _on_button_5_pressed() -> void:

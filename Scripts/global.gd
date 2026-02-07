@@ -11,10 +11,15 @@ var profile_name: String
 var email_animation_played := false
 var bit := 0
 var goal := 500
+var custom_cursor = preload("res://Assets/New Piskel-5.png (1).png")
+var hand_cursor = preload("res://Assets/New Piskel-5.png (1).png")
+
 func _ready() -> void:
-	pass 
+	set_cursor(custom_cursor)
 
-
+func set_cursor(cursor):
+	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW) 
+	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_POINTING_HAND)
 
 func _process(delta: float) -> void:
 	if level_pass == true:

@@ -28,8 +28,9 @@ var email_final_pos: Vector2
 @onready var f_1: Button = $Window/F1
 @onready var levels_f_1: Node2D = $LevelsF1
 @onready var bubble_2: Sprite2D = $Wizard/Bubble2
-
+var cursor = preload("res://Assets/New Piskel-5.png (1).png")
 func _ready():
+	Global.set_cursor(cursor)
 	bubble_2.visible = false
 	folder_close.visible = true
 	open_folder.visible = false
