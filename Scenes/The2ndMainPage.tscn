@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://bsflg3ylnkue4"]
+[gd_scene load_steps=104 format=3 uid="uid://bsflg3ylnkue4"]
 
 [ext_resource type="Script" uid="uid://cv8s51222qwvo" path="res://Scripts/the_2_nd_main_page.gd" id="1_8rlcb"]
 [ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="2_numrs"]
@@ -45,6 +45,9 @@
 [ext_resource type="Texture2D" uid="uid://b0j8alo3lele3" path="res://Assets/TopDownCharacter/Character/Character_DownRight.png" id="41_8u7b2"]
 [ext_resource type="Texture2D" uid="uid://hq3rwg5rrh38" path="res://Assets/TopDownCharacter/Character/Character_DownLeft.png" id="42_e1pq6"]
 [ext_resource type="Texture2D" uid="uid://ckeh4uskxak72" path="res://Assets/TopDownCharacter/Character/Character_Left.png" id="43_57mll"]
+[ext_resource type="Script" uid="uid://djgiya7sjyq70" path="res://Scripts/menu.gd" id="46_8u7b2"]
+[ext_resource type="Texture2D" uid="uid://xhbdmgqnrvxy" path="res://Assets/New Piskel-10.png (10).png" id="46_p4gve"]
+[ext_resource type="Texture2D" uid="uid://b7485d6bvkse4" path="res://Assets/New Piskel-11.png (3).png" id="48_e1pq6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ool47"]
 shader = ExtResource("3_o3nkn")
@@ -98,6 +101,8 @@ texture = ExtResource("11_ayv1b")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05l33"]
 texture = ExtResource("12_n7fju")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8rlcb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6ta7"]
 texture = ExtResource("15_2n4fm")
@@ -412,6 +417,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u7b2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1pq6"]
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -452,7 +461,6 @@ theme_override_colors/font_color = Color(0.3456486, 0.34565854, 0.36797544, 1)
 theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_q0spf")
-text = "0 . 1 . 8320"
 horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("4_fjbdi")
@@ -559,6 +567,7 @@ text = "MENU"
 icon_alignment = 1
 
 [node name="Wizard" type="Node2D" parent="TaskBar"]
+visible = false
 position = Vector2(782, -52)
 script = ExtResource("10_k45vx")
 
@@ -644,6 +653,7 @@ scale = Vector2(1.6, 1.6)
 texture = ExtResource("19_p4gve")
 
 [node name="Volume" type="Node2D" parent="TaskBar"]
+visible = false
 position = Vector2(754, -63)
 script = ExtResource("17_i6ta7")
 
@@ -979,7 +989,7 @@ vertical_alignment = 1
 position = Vector2(538, -312)
 script = ExtResource("22_k45vx")
 
-[node name="F2" type="Button" parent="TaskBar/LevelsF1"]
+[node name="F1" type="Button" parent="TaskBar/LevelsF1"]
 offset_left = -145.0
 offset_top = -70.0
 offset_right = -90.0
@@ -990,7 +1000,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
 
-[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F2"]
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F1"]
 layout_mode = 0
 offset_left = -10.0
 offset_top = 1.0
@@ -1005,7 +1015,40 @@ text = "
 F1"
 horizontal_alignment = 1
 
-[node name="F3" type="Button" parent="TaskBar/LevelsF1"]
+[node name="button_F1" type="Button" parent="TaskBar/LevelsF1/F1"]
+layout_mode = 0
+offset_left = 2.4193487
+offset_top = 8.87097
+offset_right = 53.225777
+offset_bottom = 47.580643
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8rlcb")
+
+[node name="TextureRect" type="TextureRect" parent="TaskBar/LevelsF1/F1"]
+visible = false
+layout_mode = 0
+offset_top = 0.8064518
+offset_right = 58.03959
+offset_bottom = 56.32258
+texture = ExtResource("13_xqdss")
+
+[node name="Label" type="Label" parent="TaskBar/LevelsF1/F1/TextureRect"]
+layout_mode = 0
+offset_left = 6.4516196
+offset_top = 26.612904
+offset_right = 67.45162
+offset_bottom = 49.6129
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 8
+text = "done"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F2" type="Button" parent="TaskBar/LevelsF1"]
 offset_left = -28.999992
 offset_top = -67.0
 offset_right = 26.000008
@@ -1016,7 +1059,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
 
-[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F3"]
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F2"]
 layout_mode = 0
 offset_left = -13.709658
 offset_top = 1.0
@@ -1031,11 +1074,104 @@ text = "
 F2"
 horizontal_alignment = 1
 
-[node name="F4" type="Button" parent="TaskBar/LevelsF1"]
+[node name="button_F2" type="Button" parent="TaskBar/LevelsF1/F2"]
+layout_mode = 0
+offset_left = -1.6129074
+offset_top = 8.870969
+offset_right = 49.19352
+offset_bottom = 47.58064
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8rlcb")
+
+[node name="TextureRect2" type="TextureRect" parent="TaskBar/LevelsF1/F2"]
+visible = false
+layout_mode = 0
+offset_left = -4.03228
+offset_top = 0.8064511
+offset_right = 54.007305
+offset_bottom = 56.32258
+texture = ExtResource("13_xqdss")
+
+[node name="Label" type="Label" parent="TaskBar/LevelsF1/F2/TextureRect2"]
+layout_mode = 0
+offset_left = 6.4516196
+offset_top = 26.612904
+offset_right = 67.45162
+offset_bottom = 49.6129
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 8
+text = "done"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F3" type="Button" parent="TaskBar/LevelsF1"]
 offset_left = 80.0
 offset_top = -67.0
 offset_right = 135.0
 offset_bottom = -12.0
+scale = Vector2(1.24, 1.24)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
+
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F3"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
+text = "
+F3"
+horizontal_alignment = 1
+
+[node name="button_F3" type="Button" parent="TaskBar/LevelsF1/F3"]
+layout_mode = 0
+offset_left = 2.4193726
+offset_top = 8.064518
+offset_right = 53.2258
+offset_bottom = 46.77419
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8rlcb")
+
+[node name="TextureRect3" type="TextureRect" parent="TaskBar/LevelsF1/F3"]
+visible = false
+layout_mode = 0
+offset_top = 0.8064506
+offset_right = 58.039577
+offset_bottom = 56.32258
+texture = ExtResource("13_xqdss")
+
+[node name="Label" type="Label" parent="TaskBar/LevelsF1/F3/TextureRect3"]
+layout_mode = 0
+offset_left = 6.4516196
+offset_top = 26.612904
+offset_right = 67.45162
+offset_bottom = 49.6129
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 8
+text = "done"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F4" type="Button" parent="TaskBar/LevelsF1"]
+offset_left = -145.0
+offset_top = -3.0000076
+offset_right = -90.0
+offset_bottom = 51.999992
 scale = Vector2(1.24, 1.24)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
@@ -1054,36 +1190,43 @@ theme_override_fonts/font = ExtResource("4_mq5f7")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
-F3"
-horizontal_alignment = 1
-
-[node name="F5" type="Button" parent="TaskBar/LevelsF1"]
-offset_left = -145.0
-offset_top = -3.0000076
-offset_right = -90.0
-offset_bottom = 51.999992
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F5"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
 F4"
 horizontal_alignment = 1
 
-[node name="F6" type="Button" parent="TaskBar/LevelsF1"]
+[node name="button_F4" type="Button" parent="TaskBar/LevelsF1/F4"]
+layout_mode = 0
+offset_left = 2.4193726
+offset_top = 8.870972
+offset_right = 53.2258
+offset_bottom = 47.580647
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8rlcb")
+
+[node name="TextureRect4" type="TextureRect" parent="TaskBar/LevelsF1/F4"]
+visible = false
+layout_mode = 0
+offset_top = 0.8064554
+offset_right = 58.03958
+offset_bottom = 56.322582
+texture = ExtResource("13_xqdss")
+
+[node name="Label" type="Label" parent="TaskBar/LevelsF1/F4/TextureRect4"]
+layout_mode = 0
+offset_left = 6.4516196
+offset_top = 26.612904
+offset_right = 67.45162
+offset_bottom = 49.6129
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 8
+text = "done"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F5" type="Button" parent="TaskBar/LevelsF1"]
 offset_left = -28.999992
 offset_right = 26.000008
 offset_bottom = 54.999992
@@ -1093,7 +1236,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
 
-[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F6"]
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F5"]
 layout_mode = 0
 offset_left = -13.709658
 offset_top = 1.0
@@ -1108,7 +1251,41 @@ text = "
 F5"
 horizontal_alignment = 1
 
-[node name="F7" type="Button" parent="TaskBar/LevelsF1"]
+[node name="button_F5" type="Button" parent="TaskBar/LevelsF1/F5"]
+layout_mode = 0
+offset_left = -2.4193726
+offset_top = 8.064522
+offset_right = 48.387062
+offset_bottom = 46.774197
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8rlcb")
+
+[node name="TextureRect5" type="TextureRect" parent="TaskBar/LevelsF1/F5"]
+visible = false
+layout_mode = 0
+offset_left = -4.032231
+offset_top = 0.8064537
+offset_right = 54.00735
+offset_bottom = 56.322582
+texture = ExtResource("13_xqdss")
+
+[node name="Label" type="Label" parent="TaskBar/LevelsF1/F5/TextureRect5"]
+layout_mode = 0
+offset_left = 6.4516196
+offset_top = 26.612904
+offset_right = 67.45162
+offset_bottom = 49.6129
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 8
+text = "done"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F6" type="Button" parent="TaskBar/LevelsF1"]
 offset_left = 80.0
 offset_right = 135.0
 offset_bottom = 54.999992
@@ -1118,7 +1295,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
 
-[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F7"]
+[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F6"]
 layout_mode = 0
 offset_left = -10.0
 offset_top = 1.0
@@ -1133,6 +1310,39 @@ text = "
 F6"
 horizontal_alignment = 1
 
+[node name="button_F6" type="Button" parent="TaskBar/LevelsF1/F6"]
+layout_mode = 0
+offset_left = 1.612915
+offset_top = 9.677422
+offset_right = 52.419357
+offset_bottom = 48.387096
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8rlcb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8rlcb")
+
+[node name="TextureRect6" type="TextureRect" parent="TaskBar/LevelsF1/F6"]
+visible = false
+layout_mode = 0
+offset_top = 0.80645186
+offset_right = 58.03958
+offset_bottom = 56.322582
+texture = ExtResource("13_xqdss")
+
+[node name="Label" type="Label" parent="TaskBar/LevelsF1/F6/TextureRect6"]
+layout_mode = 0
+offset_left = 6.4516196
+offset_top = 26.612904
+offset_right = 67.45162
+offset_bottom = 49.6129
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 8
+text = "done"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Button" type="Button" parent="TaskBar/LevelsF1"]
 offset_left = 160.0
 offset_top = -98.0
@@ -1144,6 +1354,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_i6ta7")
 metadata/_edit_use_anchors_ = true
 
 [node name="Tutorial" type="Node2D" parent="TaskBar"]
+visible = false
 position = Vector2(498, -246)
 script = ExtResource("30_mq5f7")
 
@@ -1391,13 +1602,80 @@ animation = &"IDLE"
 position = Vector2(4, 65)
 texture = ExtResource("34_tk8ac")
 
+[node name="Label" type="Label" parent="TaskBar"]
+clip_children = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -114.0
+offset_right = 122.0
+offset_bottom = -6.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8u7b2")
+
+[node name="Menu" type="Node2D" parent="TaskBar/Label"]
+position = Vector2(2, -271)
+script = ExtResource("46_8u7b2")
+
+[node name="Shutoff" type="NinePatchRect" parent="TaskBar/Label/Menu"]
+offset_left = 4.0
+offset_top = 405.0
+offset_right = 115.0
+offset_bottom = 433.0
+texture = ExtResource("46_p4gve")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NewPiskel11_png(2)" type="Sprite2D" parent="TaskBar/Label/Menu/Shutoff"]
+position = Vector2(15, 14)
+texture = ExtResource("48_e1pq6")
+
+[node name="Label2" type="Label" parent="TaskBar/Label/Menu/Shutoff"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 7.0
+offset_right = 117.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("4_mq5f7")
+theme_override_font_sizes/font_size = 10
+text = "LOG OFF"
+
+[node name="ShutOff_button" type="Button" parent="TaskBar/Label/Menu"]
+offset_left = 7.0
+offset_top = 407.0
+offset_right = 15.0
+offset_bottom = 432.0
+scale = Vector2(13.16, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e1pq6")
+
+[node name="CloseLVL_button" type="Button" parent="TaskBar/Label/Menu"]
+offset_left = 7.0
+offset_top = 382.0
+offset_right = 15.0
+offset_bottom = 407.0
+scale = Vector2(13.16, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_e1pq6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e1pq6")
+
 [connection signal="pressed" from="TaskBar/Button" to="TaskBar" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Button5" to="TaskBar" method="_on_button_5_pressed"]
 [connection signal="pressed" from="TaskBar/Button3" to="TaskBar" method="_on_button_3_pressed"]
 [connection signal="pressed" from="TaskBar/Button4" to="TaskBar" method="_on_button_4_pressed"]
+[connection signal="pressed" from="TaskBar/Button2" to="TaskBar" method="_on_button_2_pressed"]
 [connection signal="pressed" from="TaskBar/Wizard/NinePatchRect/Button" to="TaskBar/Wizard" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Volume/NinePatchRect/Button" to="TaskBar/Volume" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Window/F1" to="TaskBar" method="_on_f_1_pressed"]
 [connection signal="pressed" from="TaskBar/Window/F2" to="TaskBar" method="_on_f_2_pressed"]
+[connection signal="pressed" from="TaskBar/LevelsF1/F1/button_F1" to="TaskBar/LevelsF1" method="_on_button_f_1_pressed"]
 [connection signal="pressed" from="TaskBar/LevelsF1/Button" to="TaskBar/LevelsF1" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Tutorial/NinePatchRect/Button" to="TaskBar/Tutorial" method="_on_button_pressed"]
+[connection signal="pressed" from="TaskBar/Label/Menu/ShutOff_button" to="TaskBar/Label/Menu" method="_on_shut_off_button_pressed"]
+[connection signal="pressed" from="TaskBar/Label/Menu/CloseLVL_button" to="TaskBar/Label/Menu" method="_on_close_lvl_button_pressed"]

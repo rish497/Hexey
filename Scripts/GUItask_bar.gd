@@ -1,12 +1,6 @@
 extends Label
 @onready var wizard: Node2D = $Wizard
 @onready var WizardAnimation: AnimatedSprite2D = $Wizard/Wizard
-@onready var LVLSelect: Node2D = $Window
-@onready var levels_f_1: Node2D = $LevelsF1
-@onready var folder_close: Label = $Window/F1/FolderClose
-@onready var open_folder: Label = $Window/F1/OpenFolder
-@onready var folder_close_F2: Label = $Window/F2/FolderClose
-@onready var open_folder_F2: Label = $Window/F2/OpenFolder
 @onready var volume: Node2D = $Volume
 @onready var tutorial: Node2D = $Tutorial
 @onready var task_bar: Label = $"."
@@ -16,38 +10,11 @@ extends Label
 func _ready() -> void:
 	task_bar.text = Global.profile_name
 	WizardAnimation.play("Idle")
-	LVLSelect.visible = false
-	levels_f_1.visible = false
 	wizard.visible = false
 	volume.visible = false
 	tutorial.visible = false
 	menu.visible = false
 	
-func _process(delta: float) -> void:
-	if levels_f_1.visible == false:
-		open_folder.visible = false
-		folder_close.visible = true
-		
-func _on_f_2_pressed() -> void:
-	if open_folder_F2.visible == true:
-		open_folder_F2.visible = false
-		folder_close_F2.visible = true
-	elif folder_close_F2.visible == true:
-		folder_close_F2.visible = false
-		open_folder_F2.visible = true
-
-
-func _on_f_1_pressed() -> void:
-	if open_folder.visible == true:
-		open_folder.visible = false
-		folder_close.visible = true
-		
-		fade_out(levels_f_1)
-	elif folder_close.visible == true:
-		folder_close.visible = false
-		open_folder.visible = true
-		popup(levels_f_1,.6)
-
 func popup(panel, dur := .5):
 	panel.visible = true
 	panel.scale = Vector2(-.5,-.5)
@@ -85,13 +52,9 @@ func hide_popup(panel):
 		panel.scale = Vector2.ONE
 		panel.modulate.a = 1.0
 	)
-
-func _on_button_pressed() -> void:
-	popup(LVLSelect)
-
-
 func _on_button_4_pressed() -> void:
 	popup(wizard)
+
 
 
 func _on_button_3_pressed() -> void:

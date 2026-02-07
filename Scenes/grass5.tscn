@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://rfwvdts2t07s"]
+
+[ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_qpuqk"]
+[ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="2_jtdg5"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="5_5hak4"]
+
+[node name="Grass1" type="Node2D" groups=["tile"]]
+position = Vector2(39, -7)
+script = ExtResource("1_qpuqk")
+
+[node name="Grass4" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(154, -60)
+texture = ExtResource("2_jtdg5")
+
+[node name="Grass7" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(206, -60)
+texture = ExtResource("2_jtdg5")
+
+[node name="Grass6" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(180, -48)
+texture = ExtResource("2_jtdg5")
+
+[node name="Grass2" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(24, -40)
+texture = ExtResource("2_jtdg5")
+
+[node name="Grass5" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(76, -40)
+texture = ExtResource("2_jtdg5")
+
+[node name="Grass3" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(50, -28)
+texture = ExtResource("2_jtdg5")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+disable_mode = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-64, -68, -69, -57, -70, 67, -65, 82, -19, 80, -11, 69, 9, 68, 14, 79, 60, 84, 66, 73, 66, -56, 61, -67, 40, -68, 34, -80, 14, -80, 9, -68, -12, -69, -18, -80, -38, -80, -44, -69)
+
+[node name="Dirt" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(-2, -60)
+
+[node name="Dirt2" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(102, -60)
+
+[node name="Dirt3" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(102, -36)
+
+[node name="Dirt4" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(102, -12)
+
+[node name="Dirt5" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(102, -60)
+
+[node name="Dirt8" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(128, -48)
+
+[node name="Dirt6" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(102, -36)
+
+[node name="Dirt9" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(128, -24)
+
+[node name="Dirt7" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(102, -12)
+
+[node name="Dirt10" parent="." instance=ExtResource("5_5hak4")]
+position = Vector2(128, 0)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]

@@ -1,33 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://drunkmmubpeq6"]
+[gd_scene load_steps=7 format=3 uid="uid://drunkmmubpeq6"]
 
+[ext_resource type="Texture2D" uid="uid://cy4usbyay7wk0" path="res://Assets/New Piskel-10.png (6).png" id="1_kskap"]
 [ext_resource type="Script" uid="uid://ch2ept68063mc" path="res://Scripts/folder.gd" id="1_m8wxv"]
-[ext_resource type="Texture2D" uid="uid://cmas0ww86onl6" path="res://Assets/New Piskel (7).png" id="2_a5ds2"]
+[ext_resource type="Texture2D" uid="uid://b2p4asbix41vo" path="res://Assets/New Piskel-11.png (1).png" id="2_kf6qf"]
+[ext_resource type="Texture2D" uid="uid://cgccw0ugxd26a" path="res://Assets/New Piskel-12.png (3).png" id="3_n6x5c"]
+[ext_resource type="Texture2D" uid="uid://2w0d01mpo46k" path="res://Assets/New Piskel-9.png (2).png" id="4_cbu3t"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kskap"]
-size = Vector2(27.5, 22.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4s5w3"]
+size = Vector2(13.546872, 8.999998)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 2
+[node name="Area2D" type="Area2D"]
+position = Vector2(49.000004, 28.000004)
+scale = Vector2(1.249999, 1.249999)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_m8wxv")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -12.0
-offset_top = -7.0
-offset_right = 11.0
-offset_bottom = 7.0
-color = Color(0.66162944, 0.6616294, 0.6616294, 1)
-
-[node name="NewPiskel(7)" type="Sprite2D" parent="."]
+[node name="NewPiskel8_png(4)" type="Sprite2D" parent="."]
 position = Vector2(-1, -1)
-scale = Vector2(0.8000006, 0.8000006)
-texture = ExtResource("2_a5ds2")
+scale = Vector2(1.2039992, 1.2039992)
+texture = ExtResource("1_kskap")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="NewPiskel8_png(4)2" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(1.2039992, 1.2039992)
+texture = ExtResource("2_kf6qf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.25, -1.25)
-scale = Vector2(0.8000006, 0.8000006)
-shape = SubResource("RectangleShape2D_kskap")
+[node name="NewPiskel8_png(4)3" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(1.2039992, 1.2039992)
+texture = ExtResource("3_n6x5c")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="NewPiskel8_png(4)4" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(1.2039992, 1.2039992)
+texture = ExtResource("4_cbu3t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.81875044, -1.4000006)
+scale = Vector2(1.3760004, 1.3760004)
+shape = SubResource("RectangleShape2D_4s5w3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

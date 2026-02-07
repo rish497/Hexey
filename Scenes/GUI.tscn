@@ -1,6 +1,400 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvfmdxl737b2n"]
+[gd_scene load_steps=92 format=3 uid="uid://cvfmdxl737b2n"]
 
 [ext_resource type="Script" uid="uid://b8vog677xxcfc" path="res://Scripts/gui.gd" id="1_ptolr"]
+[ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="2_fkak6"]
+[ext_resource type="Script" uid="uid://csb0sir76flyy" path="res://Scripts/GUItask_bar.gd" id="3_b55bf"]
+[ext_resource type="Texture2D" uid="uid://dyyve8s5i5hmu" path="res://Assets/New Piskel-7.png (1).png" id="4_ps245"]
+[ext_resource type="Texture2D" uid="uid://ctnqxg01ohwce" path="res://Assets/New Piskel-13.png (4).png" id="6_ndvf3"]
+[ext_resource type="Texture2D" uid="uid://dqoc8g3ojkhx8" path="res://Assets/New Piskel-10.png.png" id="6_o8mbo"]
+[ext_resource type="Texture2D" uid="uid://bex2dbjty5ut1" path="res://Assets/New Piskel-9.png (1).png" id="7_5k8k3"]
+[ext_resource type="Texture2D" uid="uid://v3q5kodoqo0l" path="res://Assets/New Piskel-14.png (2).png" id="7_qp24i"]
+[ext_resource type="Texture2D" uid="uid://baxkech33fp1f" path="res://Assets/New Piskel-8.png (1).png" id="8_wpq8d"]
+[ext_resource type="Script" uid="uid://bij5mrwvto5sq" path="res://Scripts/wizard.gd" id="9_tcrbt"]
+[ext_resource type="Texture2D" uid="uid://dheyijpmivdxs" path="res://Assets/New Piskel-1.png (2).png" id="10_di467"]
+[ext_resource type="Texture2D" uid="uid://c25s6h6oqqcek" path="res://Assets/New Piskel-13.png (1).png" id="11_h4jqm"]
+[ext_resource type="FontFile" uid="uid://cs6slgshuy18v" path="res://Assets/Minecraft.ttf" id="12_oodrk"]
+[ext_resource type="Texture2D" uid="uid://dv7y0xby03v87" path="res://Assets/New Piskel-12.png (1).png" id="13_ws65b"]
+[ext_resource type="PackedScene" uid="uid://c7xen8hnmlsrg" path="res://Scenes/Wizard.tscn" id="14_uscn0"]
+[ext_resource type="Texture2D" uid="uid://coyp3olj5miwb" path="res://Assets/New Piskel-12.png.png" id="15_cy1mo"]
+[ext_resource type="Script" uid="uid://cab3vu4yxepbq" path="res://Scripts/volume.gd" id="16_y6ehg"]
+[ext_resource type="Texture2D" uid="uid://dchie6wn13f4r" path="res://Assets/New Piskel-13.png (3).png" id="17_ki0bw"]
+[ext_resource type="Texture2D" uid="uid://drmoipfomhg2p" path="res://Assets/New Piskel-14.png (1).png" id="18_6b75c"]
+[ext_resource type="Script" uid="uid://d2qqtrt6qfvu6" path="res://Scripts/master.gd" id="19_0nx6a"]
+[ext_resource type="Texture2D" uid="uid://dt7kgidn2rvy6" path="res://Assets/New Piskel-18.png.png" id="20_cdppd"]
+[ext_resource type="Script" uid="uid://culmms8pdd1y7" path="res://Scripts/sfx.gd" id="21_co3tv"]
+[ext_resource type="Script" uid="uid://dafy77aiprkby" path="res://Scripts/music.gd" id="22_q4ema"]
+[ext_resource type="Script" uid="uid://c3xc6lkcsmf4c" path="res://Scripts/ui.gd" id="23_gi612"]
+[ext_resource type="Script" uid="uid://cjcujqag0sqyu" path="res://Scripts/tutorial.gd" id="29_3jxna"]
+[ext_resource type="Texture2D" uid="uid://gsxjv11wclib" path="res://Assets/New Piskel (14).png" id="30_ehku8"]
+[ext_resource type="Texture2D" uid="uid://cw0q63alocck5" path="res://Assets/New Piskel-3.png (1).png" id="31_mfi0b"]
+[ext_resource type="Texture2D" uid="uid://drncebvaqq00j" path="res://Assets/New Piskel-4.png (2).png" id="32_qyl2a"]
+[ext_resource type="Texture2D" uid="uid://bwyknbopuq4wa" path="res://Assets/Hex Tiles/Grass-5.png (1).png" id="33_cpktf"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="34_mnots"]
+[ext_resource type="Texture2D" uid="uid://duphbdyma3x2v" path="res://Assets/TopDownCharacter/Character/Character_Right.png" id="35_e7d3q"]
+[ext_resource type="Texture2D" uid="uid://duenv0c1tfnmq" path="res://Assets/TopDownCharacter/Character/Character_Down.png" id="36_eivcm"]
+[ext_resource type="Texture2D" uid="uid://dmwdhxmwvin58" path="res://Assets/TopDownCharacter/Character/Character_Up.png" id="37_yjxkx"]
+[ext_resource type="Texture2D" uid="uid://b3rr7awebilcy" path="res://Assets/TopDownCharacter/Character/Character_UpRight.png" id="38_elbq7"]
+[ext_resource type="Texture2D" uid="uid://cqf3p03tccoxj" path="res://Assets/TopDownCharacter/Character/Character_UpLeft.png" id="39_six2f"]
+[ext_resource type="Script" uid="uid://6jviu0w3gbfo" path="res://Scripts/GUI_Menu.gd" id="40_ndvf3"]
+[ext_resource type="Texture2D" uid="uid://b0j8alo3lele3" path="res://Assets/TopDownCharacter/Character/Character_DownRight.png" id="40_ydjy0"]
+[ext_resource type="Texture2D" uid="uid://hq3rwg5rrh38" path="res://Assets/TopDownCharacter/Character/Character_DownLeft.png" id="41_ra8ye"]
+[ext_resource type="Texture2D" uid="uid://ckeh4uskxak72" path="res://Assets/TopDownCharacter/Character/Character_Left.png" id="42_60d80"]
+[ext_resource type="Texture2D" uid="uid://ciwean2b2c3t4" path="res://Assets/New Piskel-6.png (2).png" id="43_4pw1v"]
+[ext_resource type="Texture2D" uid="uid://xhbdmgqnrvxy" path="res://Assets/New Piskel-10.png (10).png" id="45_q8xwb"]
+[ext_resource type="Texture2D" uid="uid://0rdpcnf610x6" path="res://Assets/New Piskel-12.png (4).png" id="46_7dq38"]
+[ext_resource type="Texture2D" uid="uid://b7485d6bvkse4" path="res://Assets/New Piskel-11.png (3).png" id="47_cmlee"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xip18"]
+content_margin_right = 148.0
+content_margin_bottom = 6.0
+bg_color = Color(0.2634792, 0.26587328, 0.28240174, 1)
+border_width_top = 6
+border_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+expand_margin_top = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ud52"]
+texture = ExtResource("4_ps245")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86irq"]
+texture = ExtResource("4_ps245")
+modulate_color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs4lo"]
+bg_color = Color(0.88355416, 0.77015686, 0.59955317, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5058824, 0.41568628, 0.29411766, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lasw"]
+texture = ExtResource("11_h4jqm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bsfl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58ra5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i7nmo"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_numrs"]
+atlas = ExtResource("30_ehku8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3nkn"]
+atlas = ExtResource("30_ehku8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jkbdm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_numrs")
+}],
+"loop": false,
+"name": &"Clicked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3nkn")
+}],
+"loop": false,
+"name": &"NotClicked",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8m2e5"]
+texture = ExtResource("32_qyl2a")
+modulate_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l447x"]
+atlas = ExtResource("35_e7d3q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u736u"]
+atlas = ExtResource("35_e7d3q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glyrq"]
+atlas = ExtResource("35_e7d3q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8f6q8"]
+atlas = ExtResource("35_e7d3q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_601d1"]
+atlas = ExtResource("36_eivcm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sln1"]
+atlas = ExtResource("37_yjxkx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hay6s"]
+atlas = ExtResource("37_yjxkx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g5yi"]
+atlas = ExtResource("37_yjxkx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctlvl"]
+atlas = ExtResource("37_yjxkx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m45q"]
+atlas = ExtResource("38_elbq7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv0ic"]
+atlas = ExtResource("38_elbq7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjpeh"]
+atlas = ExtResource("38_elbq7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a02g7"]
+atlas = ExtResource("38_elbq7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fqyi"]
+atlas = ExtResource("39_six2f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00ohp"]
+atlas = ExtResource("39_six2f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqdlp"]
+atlas = ExtResource("39_six2f")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak6rq"]
+atlas = ExtResource("39_six2f")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvhjq"]
+atlas = ExtResource("36_eivcm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dppk"]
+atlas = ExtResource("36_eivcm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7iat"]
+atlas = ExtResource("36_eivcm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owr4h"]
+atlas = ExtResource("36_eivcm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nncp5"]
+atlas = ExtResource("40_ydjy0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqo64"]
+atlas = ExtResource("40_ydjy0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt8lm"]
+atlas = ExtResource("40_ydjy0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkmu1"]
+atlas = ExtResource("40_ydjy0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_derdh"]
+atlas = ExtResource("41_ra8ye")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75j4t"]
+atlas = ExtResource("41_ra8ye")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsl6j"]
+atlas = ExtResource("41_ra8ye")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcswh"]
+atlas = ExtResource("41_ra8ye")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmemd"]
+atlas = ExtResource("42_60d80")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgeop"]
+atlas = ExtResource("42_60d80")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r2x3"]
+atlas = ExtResource("42_60d80")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpn2x"]
+atlas = ExtResource("42_60d80")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nfxsk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l447x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u736u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glyrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8f6q8")
+}],
+"loop": true,
+"name": &"E",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_601d1")
+}],
+"loop": true,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sln1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hay6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g5yi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctlvl")
+}],
+"loop": true,
+"name": &"N",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m45q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv0ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjpeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a02g7")
+}],
+"loop": true,
+"name": &"NE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fqyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00ohp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqdlp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak6rq")
+}],
+"loop": true,
+"name": &"NW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvhjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dppk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7iat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owr4h")
+}],
+"loop": true,
+"name": &"S",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nncp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqo64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pt8lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkmu1")
+}],
+"loop": true,
+"name": &"SE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_derdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75j4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsl6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcswh")
+}],
+"loop": true,
+"name": &"SW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmemd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgeop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r2x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpn2x")
+}],
+"loop": true,
+"name": &"W",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkak6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhmxe"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,17 +410,977 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_ptolr")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 96.0
-offset_bottom = 89.0
+[node name="TaskBar" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.053000003
+anchor_top = 0.97700006
+anchor_right = 0.947
+anchor_bottom = 1.067
+offset_left = 0.26200104
+offset_top = 0.039978027
+offset_right = 0.2619629
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.3456486, 0.34565854, 0.36797544, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_xip18")
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("3_b55bf")
 
-[node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 117.0
-offset_top = 44.0
-offset_right = 197.0
-offset_bottom = 87.0
+[node name="Button5" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 288.0
+offset_top = -17.5
+offset_right = 330.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ud52")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_86irq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ud52")
+icon = ExtResource("6_o8mbo")
+icon_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[node name="Button6" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -17.5
+offset_right = -264.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ud52")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_86irq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ud52")
+icon = ExtResource("6_ndvf3")
+icon_alignment = 1
+
+[node name="Button7" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -17.5
+offset_right = -220.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ud52")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_86irq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ud52")
+icon = ExtResource("7_qp24i")
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 335.0
+offset_top = -17.5
+offset_right = 377.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ud52")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_86irq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ud52")
+icon = ExtResource("7_5k8k3")
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 381.0
+offset_top = -17.5
+offset_right = 423.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ud52")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_86irq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ud52")
+icon = ExtResource("8_wpq8d")
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="TaskBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -416.0
+offset_top = -17.5
+offset_right = -313.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5058824, 0.41568628, 0.29411766, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_xs4lo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xs4lo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xs4lo")
+text = "MENU"
+icon_alignment = 1
+
+[node name="Wizard" type="Node2D" parent="TaskBar"]
+visible = false
+position = Vector2(782, -52)
+script = ExtResource("9_tcrbt")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TaskBar/Wizard"]
+offset_left = -66.0
+offset_top = -80.0
+offset_right = 65.0
+offset_bottom = -59.0
+texture = ExtResource("10_di467")
+region_rect = Rect2(0, 0, 100, 11.740247)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="TaskBar/Wizard/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.1682243
+anchor_right = -2.1682243
+offset_left = 399.03738
+offset_top = 4.0
+offset_right = 411.03738
+offset_bottom = 16.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8lasw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8lasw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8lasw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TaskBar/Wizard/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041297935
+anchor_right = 0.041297935
+offset_left = -0.6578169
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 11
+text = "WIZARD"
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="TaskBar/Wizard"]
+offset_left = -66.0
+offset_top = -59.0
+offset_right = 65.0
+offset_bottom = 43.0
+texture = ExtResource("10_di467")
+region_rect = Rect2(0, 11.951731, 100, 48.20166)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TaskBar/Wizard"]
+clip_children = 1
+offset_left = 14.0
+offset_top = -21.0
+offset_right = 46.0
+offset_bottom = 10.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1bsfl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Bubble Filler" type="Sprite2D" parent="TaskBar/Wizard/Label"]
+position = Vector2(16, 45.999996)
+scale = Vector2(1.9599949, 1.9599949)
+texture = ExtResource("13_ws65b")
+
+[node name="Wizard" parent="TaskBar/Wizard" instance=ExtResource("14_uscn0")]
+position = Vector2(-24, -9)
+scale = Vector2(1.6, 1.6)
+frame_progress = 0.0
+
+[node name="Bubble" type="Sprite2D" parent="TaskBar/Wizard"]
+clip_children = 2
+position = Vector2(30, -6)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("15_cy1mo")
+
+[node name="Volume" type="Node2D" parent="TaskBar"]
+visible = false
+position = Vector2(754, -63)
+script = ExtResource("16_y6ehg")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TaskBar/Volume"]
+offset_left = -133.0
+offset_top = -80.0
+offset_right = 65.0
+offset_bottom = -59.0
+mouse_filter = 1
+texture = ExtResource("10_di467")
+region_rect = Rect2(0, 0, 100, 11.740247)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="Button" type="Button" parent="TaskBar/Volume/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.1682243
+anchor_right = -2.1682243
+offset_left = 611.3084
+offset_top = 4.0
+offset_right = 623.3084
+offset_bottom = 16.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8lasw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8lasw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8lasw")
+
+[node name="Label" type="Label" parent="TaskBar/Volume/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041297935
+anchor_right = 0.041297935
+offset_left = -0.6578169
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 11
+text = "SOUND"
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="TaskBar/Volume"]
+offset_left = -133.0
+offset_top = -59.0
+offset_right = 65.0
+offset_bottom = 52.0
+mouse_filter = 1
+texture = ExtResource("10_di467")
+region_rect = Rect2(0, 11.951731, 100, 48.20166)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="DJ_Wizard" type="Sprite2D" parent="TaskBar/Volume"]
+position = Vector2(-75, -1)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("17_ki0bw")
+
+[node name="SoundLabel" type="Label" parent="TaskBar/Volume"]
+clip_children = 1
+offset_left = -104.00006
+offset_top = 18.0
+offset_right = -48.0
+offset_bottom = 35.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_58ra5")
+
+[node name="SoundVolumeDisplay" type="Sprite2D" parent="TaskBar/Volume/SoundLabel"]
+position = Vector2(29.000061, -19)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("18_6b75c")
+
+[node name="ColorRect" type="ColorRect" parent="TaskBar/Volume"]
+offset_left = -56.0
+offset_top = -41.0
+offset_right = 57.0
+offset_bottom = -35.0
+mouse_filter = 2
+color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+
+[node name="Label2" type="Label" parent="TaskBar/Volume/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1.0
+offset_top = -18.0
+offset_right = 118.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 11
+text = "Master Volume"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MasterControl" type="Area2D" parent="TaskBar/Volume/ColorRect"]
+audio_bus_override = true
+script = ExtResource("19_0nx6a")
+
+[node name="Sprite2D" type="Sprite2D" parent="TaskBar/Volume/ColorRect/MasterControl"]
+position = Vector2(108, 3)
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("20_cdppd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TaskBar/Volume/ColorRect/MasterControl"]
+position = Vector2(108, 3)
+shape = SubResource("CircleShape2D_i7nmo")
+
+[node name="ColorRect2" type="ColorRect" parent="TaskBar/Volume"]
+offset_left = -21.0
+offset_top = -18.0
+offset_right = 57.0
+offset_bottom = -12.0
+mouse_filter = 1
+color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+
+[node name="Label3" type="Label" parent="TaskBar/Volume/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 6.0
+offset_top = -17.0
+offset_right = 82.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 11
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SFXControl" type="Area2D" parent="TaskBar/Volume/ColorRect2"]
+position = Vector2(-35, 0)
+audio_bus_override = true
+audio_bus_name = &"SFX"
+script = ExtResource("21_co3tv")
+
+[node name="Sprite2D" type="Sprite2D" parent="TaskBar/Volume/ColorRect2/SFXControl"]
+position = Vector2(108, 3)
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("20_cdppd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TaskBar/Volume/ColorRect2/SFXControl"]
+position = Vector2(108, 3)
+shape = SubResource("CircleShape2D_i7nmo")
+
+[node name="ColorRect3" type="ColorRect" parent="TaskBar/Volume"]
+offset_left = -21.0
+offset_top = 9.0
+offset_right = 57.0
+offset_bottom = 15.0
+mouse_filter = 1
+color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+
+[node name="Label3" type="Label" parent="TaskBar/Volume/ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 6.0
+offset_top = -17.0
+offset_right = 82.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 11
+text = "MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MusicControl" type="Area2D" parent="TaskBar/Volume/ColorRect3"]
+position = Vector2(-35, 0)
+audio_bus_override = true
+audio_bus_name = &"Music"
+script = ExtResource("22_q4ema")
+
+[node name="Sprite2D" type="Sprite2D" parent="TaskBar/Volume/ColorRect3/MusicControl"]
+position = Vector2(108, 3)
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("20_cdppd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TaskBar/Volume/ColorRect3/MusicControl"]
+position = Vector2(108, 3)
+shape = SubResource("CircleShape2D_i7nmo")
+
+[node name="ColorRect4" type="ColorRect" parent="TaskBar/Volume"]
+offset_left = -21.0
+offset_top = 37.0
+offset_right = 57.0
+offset_bottom = 43.0
+mouse_filter = 1
+color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+
+[node name="Label3" type="Label" parent="TaskBar/Volume/ColorRect4"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 6.0
+offset_top = -17.0
+offset_right = 82.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 11
+text = "UI"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="UIControl" type="Area2D" parent="TaskBar/Volume/ColorRect4"]
+position = Vector2(-35, -78)
+audio_bus_override = true
+audio_bus_name = &"UI"
+script = ExtResource("23_gi612")
+
+[node name="Sprite2D" type="Sprite2D" parent="TaskBar/Volume/ColorRect4/UIControl"]
+position = Vector2(108, 81)
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("20_cdppd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TaskBar/Volume/ColorRect4/UIControl"]
+position = Vector2(108, 81)
+shape = SubResource("CircleShape2D_i7nmo")
+
+[node name="Tutorial" type="Node2D" parent="TaskBar"]
+visible = false
+position = Vector2(498, -246)
+script = ExtResource("29_3jxna")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TaskBar/Tutorial"]
+offset_left = -237.0
+offset_top = -80.0
+offset_right = 65.0
+offset_bottom = -59.0
+texture = ExtResource("10_di467")
+region_rect = Rect2(0, 0, 100, 11.740247)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="Button" type="Button" parent="TaskBar/Tutorial/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.37429598
+anchor_right = -0.37429598
+offset_left = 399.03738
+offset_top = 4.0
+offset_right = 411.03738
+offset_bottom = 16.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8lasw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8lasw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8lasw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TaskBar/Tutorial/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.018734481
+anchor_top = 0.04761905
+anchor_right = 0.01873451
+anchor_bottom = 0.04761905
+offset_left = -0.6578169
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 11
+text = "HOW TO PLAY"
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="TaskBar/Tutorial"]
+offset_left = -237.0
+offset_top = -59.0
+offset_right = 65.0
+offset_bottom = 148.0
+texture = ExtResource("10_di467")
+region_rect = Rect2(0, 11.951731, 100, 48.20166)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 6
+patch_margin_bottom = 8
+
+[node name="Label2" type="Label" parent="TaskBar/Tutorial/NinePatchRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09820468
+anchor_top = 1.2737628
+anchor_right = 0.09820471
+anchor_bottom = 1.2737628
+offset_left = -0.657814
+offset_top = -256.5238
+offset_right = 84.0
+offset_bottom = -241.5238
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 17
+text = "Left Mouse"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="TaskBar/Tutorial/NinePatchRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08495965
+anchor_top = 1.589825
+anchor_right = 0.08495967
+anchor_bottom = 1.589825
+offset_left = -0.657814
+offset_top = -256.5238
+offset_right = 84.0
+offset_bottom = -241.5238
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 17
+text = "Drag WIndows"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="TaskBar/Tutorial/NinePatchRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6213835
+anchor_top = 1.2634
+anchor_right = 0.62138355
+anchor_bottom = 1.2634
+offset_left = -0.657814
+offset_top = -256.5238
+offset_right = 84.0
+offset_bottom = -241.5238
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 17
+text = "W/A/S/D"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="TaskBar/Tutorial/NinePatchRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6081383
+anchor_top = 1.6053691
+anchor_right = 0.60813856
+anchor_bottom = 1.6053691
+offset_left = -0.657814
+offset_top = -256.5238
+offset_right = 84.0
+offset_bottom = -241.5238
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("12_oodrk")
+theme_override_font_sizes/font_size = 17
+text = "Move"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Mouse" type="AnimatedSprite2D" parent="TaskBar/Tutorial"]
+position = Vector2(-170, -9)
+scale = Vector2(1.53125, 1.53125)
+sprite_frames = SubResource("SpriteFrames_jkbdm")
+animation = &"Clicked"
+
+[node name="D" type="Sprite2D" parent="TaskBar/Tutorial"]
+position = Vector2(18, -0.9999933)
+scale = Vector2(1.7187505, 1.7187505)
+texture = ExtResource("31_mfi0b")
+
+[node name="S" type="Sprite2D" parent="TaskBar/Tutorial"]
+position = Vector2(-10.5, -1.4999933)
+scale = Vector2(1.7187505, 1.7187505)
+texture = ExtResource("31_mfi0b")
+
+[node name="A" type="Sprite2D" parent="TaskBar/Tutorial"]
+position = Vector2(-38.5, -1.4999933)
+scale = Vector2(1.7187505, 1.7187505)
+texture = ExtResource("31_mfi0b")
+
+[node name="W" type="Sprite2D" parent="TaskBar/Tutorial"]
+position = Vector2(-10.5, -28.499992)
+scale = Vector2(1.7187505, 1.7187505)
+texture = ExtResource("31_mfi0b")
+
+[node name="PressedD" type="Label" parent="TaskBar/Tutorial"]
+offset_left = -10.0
+offset_top = -24.0
+offset_right = 46.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8m2e5")
+
+[node name="PressedS" type="Label" parent="TaskBar/Tutorial"]
+offset_left = -38.0
+offset_top = -24.0
+offset_right = 18.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8m2e5")
+
+[node name="PressedA" type="Label" parent="TaskBar/Tutorial"]
+offset_left = -66.0
+offset_top = -24.0
+offset_right = -10.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8m2e5")
+
+[node name="PressedW" type="Label" parent="TaskBar/Tutorial"]
+offset_left = -38.0
+offset_top = -51.0
+offset_right = 18.0
+offset_bottom = 5.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8m2e5")
+
+[node name="LevelBlock" type="Node2D" parent="TaskBar/Tutorial"]
+position = Vector2(-2, 27)
+
+[node name="Grass5_png(1)" type="Sprite2D" parent="TaskBar/Tutorial/LevelBlock"]
+position = Vector2(-150, 49)
+texture = ExtResource("33_cpktf")
+
+[node name="Grass5_png(1)2" type="Sprite2D" parent="TaskBar/Tutorial/LevelBlock"]
+position = Vector2(-124, 61)
+texture = ExtResource("33_cpktf")
+
+[node name="Grass5_png(1)3" type="Sprite2D" parent="TaskBar/Tutorial/LevelBlock"]
+position = Vector2(-176, 61)
+texture = ExtResource("33_cpktf")
+
+[node name="Grass5_png(1)4" type="Sprite2D" parent="TaskBar/Tutorial/LevelBlock"]
+position = Vector2(-150, 73)
+texture = ExtResource("33_cpktf")
+
+[node name="Wall" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-150, 17)
+
+[node name="Wall2" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-176, 29)
+
+[node name="Wall3" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-124, 29)
+
+[node name="Wall4" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-202, 41)
+
+[node name="Wall5" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-98, 41)
+
+[node name="Wall6" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-202, 65)
+
+[node name="Wall7" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-98, 65)
+
+[node name="Wall8" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-176, 77)
+
+[node name="Wall9" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-124, 77)
+
+[node name="Wall10" parent="TaskBar/Tutorial/LevelBlock" instance=ExtResource("34_mnots")]
+position = Vector2(-150, 89)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TaskBar/Tutorial/LevelBlock" groups=["Jack"]]
+position = Vector2(-150, 56)
+sprite_frames = SubResource("SpriteFrames_nfxsk")
+animation = &"IDLE"
+
+[node name="Cursor" type="Sprite2D" parent="TaskBar/Tutorial"]
+position = Vector2(4, 65)
+texture = ExtResource("43_4pw1v")
+
+[node name="Label" type="Label" parent="TaskBar"]
+clip_children = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -114.0
+offset_right = 122.0
+offset_bottom = -6.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fkak6")
+
+[node name="Menu" type="Node2D" parent="TaskBar/Label"]
+position = Vector2(2, -271)
+script = ExtResource("40_ndvf3")
+
+[node name="CloseLVL_button2" type="NinePatchRect" parent="TaskBar/Label/Menu"]
+offset_left = 4.0
+offset_top = 381.0
+offset_right = 115.0
+offset_bottom = 409.0
+texture = ExtResource("45_q8xwb")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NewPiskel12_png(4)" type="Sprite2D" parent="TaskBar/Label/Menu/CloseLVL_button2"]
+position = Vector2(17.000002, 14)
+scale = Vector2(0.78125006, 0.78125006)
+texture = ExtResource("46_7dq38")
+
+[node name="Label" type="Label" parent="TaskBar/Label/Menu/CloseLVL_button2"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 7.0
+offset_right = 117.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 10
+text = "CLOSE LVL"
+
+[node name="Shutoff" type="NinePatchRect" parent="TaskBar/Label/Menu"]
+offset_left = 4.0
+offset_top = 405.0
+offset_right = 115.0
+offset_bottom = 433.0
+texture = ExtResource("45_q8xwb")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="NewPiskel11_png(2)" type="Sprite2D" parent="TaskBar/Label/Menu/Shutoff"]
+position = Vector2(15, 14)
+texture = ExtResource("47_cmlee")
+
+[node name="Label2" type="Label" parent="TaskBar/Label/Menu/Shutoff"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 7.0
+offset_right = 117.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 10
+text = "LOG OFF"
+
+[node name="ShutOff_button" type="Button" parent="TaskBar/Label/Menu"]
+offset_left = 7.0
+offset_top = 407.0
+offset_right = 15.0
+offset_bottom = 432.0
+scale = Vector2(13.16, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bhmxe")
+
+[node name="CloseLVL_button" type="Button" parent="TaskBar/Label/Menu"]
+offset_left = 7.0
+offset_top = 382.0
+offset_right = 15.0
+offset_bottom = 407.0
+scale = Vector2(13.16, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bhmxe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bhmxe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.6875
+offset_top = 21.0
+offset_right = -8.195862
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -29.5
+offset_right = 95.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78431374, 0.6784314, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 31
+text = "LEVEL 1-1
+Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -29.5
+offset_right = 95.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78431374, 0.6784314, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 31
+text = "LEVEL 1-2
+Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -29.5
+offset_right = 95.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78431374, 0.6784314, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 31
+text = "LEVEL 1-3
+Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -29.5
+offset_right = 95.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78431374, 0.6784314, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 31
+text = "LEVEL 1-4
+Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -29.5
+offset_right = 95.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78431374, 0.6784314, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 31
+text = "LEVEL 1-5
+Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -29.5
+offset_right = 95.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78431374, 0.6784314, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 31
+text = "LEVEL 1-6
+Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="+100 Bits" type="Label" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = 54.0
+offset_right = 95.00003
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.78431374, 0.6784314, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("2_fkak6")
+theme_override_font_sizes/font_size = 27
+text = "+ 100 Bits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="TaskBar/Button5" to="TaskBar" method="_on_button_5_pressed"]
+[connection signal="pressed" from="TaskBar/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="TaskBar/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="TaskBar/Button3" to="TaskBar" method="_on_button_3_pressed"]
+[connection signal="pressed" from="TaskBar/Button4" to="TaskBar" method="_on_button_4_pressed"]
+[connection signal="pressed" from="TaskBar/Button2" to="TaskBar" method="_on_button_2_pressed"]
+[connection signal="pressed" from="TaskBar/Wizard/NinePatchRect/Button" to="TaskBar/Wizard" method="_on_button_pressed"]
+[connection signal="pressed" from="TaskBar/Volume/NinePatchRect/Button" to="TaskBar/Volume" method="_on_button_pressed"]
+[connection signal="pressed" from="TaskBar/Tutorial/NinePatchRect/Button" to="TaskBar/Tutorial" method="_on_button_pressed"]
+[connection signal="pressed" from="TaskBar/Label/Menu/ShutOff_button" to="TaskBar/Label/Menu" method="_on_shut_off_button_pressed"]
+[connection signal="pressed" from="TaskBar/Label/Menu/CloseLVL_button" to="TaskBar/Label/Menu" method="_on_close_lvl_button_pressed"]

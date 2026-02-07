@@ -35,6 +35,8 @@ var typing_speed := 0.04
 var generator := AudioStreamGenerator.new()
 var playback: AudioStreamGeneratorPlayback
 var phase := 0.0
+var cursor = preload("res://Assets/New Piskel-5.png (1).png")
+
 func animate_button_in() -> void:
 	button.visible = true
 	button_target_y = button.position.y
@@ -49,41 +51,46 @@ func animate_button_in() -> void:
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
 func _ready() -> void:
-	for btn in pfp_buttons:
-		btn.pressed.connect(_on_pfp_pressed.bind(btn))
-	button.visible = false
-	color_rect.modulate.a = 1.0
-	generator.mix_rate = 44100
-	generator.buffer_length = 0.1
-	typing_sound.stream = generator
-	typing_sound.play()
-	playback = typing_sound.get_stream_playback()
-	
-	for n in [h, e, x, e_2, y]:
-		n.scale = Vector2.ZERO
-		n.modulate.a = 0.0
+	Global.set_cursor(cursor)
+	if Global.email_animation_played == false:
+		for btn in pfp_buttons:
+			btn.pressed.connect(_on_pfp_pressed.bind(btn))
+		button.visible = false
+		color_rect.modulate.a = 1.0
+		generator.mix_rate = 44100
+		generator.buffer_length = 0.1
+		typing_sound.stream = generator
+		typing_sound.play()
+		playback = typing_sound.get_stream_playback()
+		
+		for n in [h, e, x, e_2, y]:
+			n.scale = Vector2.ZERO
+			n.modulate.a = 0.0
 
-	label_1.visible = true
-	label_2.visible = false
-	label_3.visible = false
+		label_1.visible = true
+		label_2.visible = false
+		label_3.visible = false
 
-	typewriter(label_1)
-	await get_tree().create_timer(2).timeout
-	label_2.visible = true
-	typewriter(label_2)
-	await get_tree().create_timer(2).timeout
-	label_3.visible = true
-	typewriter(label_3)
-	await get_tree().create_timer(2.8).timeout
+		typewriter(label_1)
+		await get_tree().create_timer(2).timeout
+		label_2.visible = true
+		typewriter(label_2)
+		await get_tree().create_timer(2).timeout
+		label_3.visible = true
+		typewriter(label_3)
+		await get_tree().create_timer(2.8).timeout
 
-	fade_out_color_rect(1.2)
-	label_1.visible = false
-	label_2.visible = false
-	label_3.visible = false
-	
-	await animate_letters()
-	await get_tree().create_timer(.3).timeout
-	animate_button_in()
+		fade_out_color_rect(1.2)
+		label_1.visible = false
+		label_2.visible = false
+		label_3.visible = false
+		await animate_letters()
+		await get_tree().create_timer(.3).timeout
+		animate_button_in()
+	else:
+		await animate_letters()
+		await get_tree().create_timer(.3).timeout
+		animate_button_in()
 
 func animate_letters() -> void:
 	for n in [e_2, e, y, h, x]:
@@ -124,57 +131,59 @@ func fade_out_color_rect(duration := 2.0) -> void:
 		duration
 	)
 func _on_button_pressed() -> void:
-	var letters := [h, e, x, e_2, y]
+	if Global.email_animation_played == false:
+		var letters := [h, e, x, e_2, y]
 
-	var letter_start_y := h.position.y
-	var button_start_y := button.position.y
+		var letter_start_y := h.position.y
+		var button_start_y := button.position.y
 
-	var meet_offset := 10
-	var separate_offset := 360
+		var meet_offset := 10
+		var separate_offset := 360
 
-	var t := create_tween()
-	t.set_parallel(true)
+		var t := create_tween()
+		t.set_parallel(true)
 
-	for n in letters:
+		for n in letters:
+			t.tween_property(
+				n,
+				"position:y",
+				letter_start_y + meet_offset,
+				.3
+			).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
 		t.tween_property(
-			n,
+			button,
 			"position:y",
-			letter_start_y + meet_offset,
+			button_start_y - meet_offset,
 			.3
 		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
-	t.tween_property(
-		button,
-		"position:y",
-		button_start_y - meet_offset,
-		.3
-	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		await t.finished
 
-	await t.finished
+		var t2 := create_tween()
+		t2.set_parallel(true)
 
-	var t2 := create_tween()
-	t2.set_parallel(true)
+		for n in letters:
+			t2.tween_property(
+				n,
+				"position:y",
+				letter_start_y - separate_offset,
+				1.10
+			).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
-	for n in letters:
 		t2.tween_property(
-			n,
+			button,
 			"position:y",
-			letter_start_y - separate_offset,
+			button_start_y + separate_offset,
 			1.10
 		).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-
-	t2.tween_property(
-		button,
-		"position:y",
-		button_start_y + separate_offset,
-		1.10
-	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	await get_tree().create_timer(.5).timeout
-	if profile_made == false:
-		_slide_from_side(profile_maker)
-	else:
-		Transition.change_scene(self, "MainPage")
-
+		await get_tree().create_timer(.5).timeout
+		if profile_made == false:
+			_slide_from_side(profile_maker)
+		else:
+			Transition.change_scene(self, "MainPage")
+	elif Global.email_animation_played == false:
+		Transition.change_scene(self, "The2ndMainPage")
 func _slide_from_side(object_to_animate):
 	var tween := create_tween()
 	var target_position = Vector2(51, object_to_animate.position.y) 

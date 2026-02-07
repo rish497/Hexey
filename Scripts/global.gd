@@ -1,6 +1,5 @@
 extends Node
 var position = false
-var level_pass=false
 var level_amount
 var folder_collected = 0
 var total_folder_collected = 0
@@ -9,22 +8,23 @@ var max_z
 var player_top_z := 100000
 var profile_name: String
 var email_animation_played := false
-var bit := 0
 var goal := 500
 var custom_cursor = preload("res://Assets/New Piskel-5.png (1).png")
 var hand_cursor = preload("res://Assets/New Piskel-5.png (1).png")
 
-func _ready() -> void:
-	set_cursor(custom_cursor)
 
+var F1_level1_pass=false
+var F1_level2_pass=false
+var F1_level3_pass=false
+var F1_level4_pass=false
+var F1_level5_pass=false
+var F1_level6_pass=false
+var level_pass = false
+var bit := 0
+		
 func set_cursor(cursor):
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW) 
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_POINTING_HAND)
-
-func _process(delta: float) -> void:
-	if level_pass == true:
-		print("You did it")
-		return
 
 func set_hex_covered(hex_sprite: Sprite2D, covered: bool, top_height: int, full_height: int) -> void:
 	if not hex_sprite or not hex_sprite.texture:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://coro8nr3puw2d"]
+[gd_scene load_steps=49 format=3 uid="uid://coro8nr3puw2d"]
 
 [ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="1_61ets"]
 [ext_resource type="Script" uid="uid://clxtgsxllcwuy" path="res://Scripts/main_page.gd" id="1_t81xn"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="3_ool47"]
 [ext_resource type="Texture2D" uid="uid://dyyve8s5i5hmu" path="res://Assets/New Piskel-7.png (1).png" id="4_meu2o"]
 [ext_resource type="Texture2D" uid="uid://du22ufxcgqgrb" path="res://Assets/New Piskel-6.png (1).png" id="5_meu2o"]
+[ext_resource type="Script" uid="uid://citcvscbylnkr" path="res://Scripts/TaskBar.gd" id="5_uoqww"]
 [ext_resource type="Texture2D" uid="uid://dqoc8g3ojkhx8" path="res://Assets/New Piskel-10.png.png" id="6_puyhw"]
 [ext_resource type="Texture2D" uid="uid://bex2dbjty5ut1" path="res://Assets/New Piskel-9.png (1).png" id="7_hgaxc"]
 [ext_resource type="Texture2D" uid="uid://baxkech33fp1f" path="res://Assets/New Piskel-8.png (1).png" id="8_ibofp"]
@@ -137,6 +138,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_q0spf")
 text = "0 . 1 . 8320"
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("5_uoqww")
 
 [node name="Button" type="Button" parent="TaskBar"]
 layout_mode = 1

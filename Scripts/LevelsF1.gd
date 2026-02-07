@@ -1,6 +1,27 @@
 extends Node2D
 @onready var levels_f_1: Node2D = $"."
+@onready var texture_rect: TextureRect = $F1/TextureRect
+@onready var texture_rect_2: TextureRect = $F2/TextureRect2
+@onready var texture_rect_3: TextureRect = $F3/TextureRect3
+@onready var texture_rect_4: TextureRect = $F4/TextureRect4
+@onready var texture_rect_5: TextureRect = $F5/TextureRect5
+@onready var texture_rect_6: TextureRect = $F6/TextureRect6
 
+
+func _process(delta: float) -> void:
+	if Global.F1_level1_pass == true:
+		texture_rect.visible = true
+	elif Global.F1_level2_pass == true:
+		texture_rect_2.visible = true
+	elif Global.F1_level3_pass == true:
+		texture_rect_3.visible = true
+	elif Global.F1_level4_pass == true:
+		texture_rect_4.visible = true
+	elif Global.F1_level5_pass == true:
+		texture_rect_5.visible = true
+	elif Global.F1_level6_pass == true:
+		texture_rect_6.visible = true
+	
 func _on_button_pressed() -> void:
 	print("close")
 	hide_popup(levels_f_1)
@@ -17,3 +38,7 @@ func hide_popup(panel):
 		panel.scale = Vector2.ONE
 		panel.modulate.a = 1.0
 	)
+
+
+func _on_button_f_1_pressed() -> void:
+	Transition.change_scene(self,"level_1")

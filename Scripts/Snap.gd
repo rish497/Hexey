@@ -1,34 +1,40 @@
 extends Node2D
 
+@export var locked: bool = false
 @onready var collision_polygon: CollisionPolygon2D = $Area2D/CollisionPolygon2D
+@onready var collision := $CollisionShape2D
 
 const TILE_SIZE := Vector2(1, 1)
 var dragging := false
-@onready var collision := $CollisionShape2D
 
 
 func _input(event):
+
+	if locked:
+		dragging = false
+		return
+
 	if Global.position:
 		dragging = false
 		return
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if Global.position == true:
-			print("stoped?")
-			dragging = false
-			return
+		if event.pressed:
+			var local_mouse_pos := collision_polygon.to_local(get_global_mouse_position())
+			if point_in_polygon(local_mouse_pos, collision_polygon.polygon):
+				dragging = true
+				z_index = _get_top_z()
 		else:
-			if event.pressed:
-				var local_mouse_pos := collision_polygon.to_local(get_global_mouse_position())
-				if point_in_polygon(local_mouse_pos, collision_polygon.polygon):
-					dragging = true
-					z_index = _get_top_z()
-			else:
-				dragging = false
+			dragging = false
+
 
 func _physics_process(_delta):
+	if locked:
+		return
+
 	if dragging:
 		global_position = get_global_mouse_position().snapped(TILE_SIZE) + TILE_SIZE / 2
+
 
 func _get_top_z() -> int:
 	var max_z := 0
@@ -47,4 +53,3 @@ func point_in_polygon(point: Vector2, polygon: PackedVector2Array) -> bool:
 			inside = not inside
 		j = i
 	return inside
-	

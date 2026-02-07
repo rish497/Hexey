@@ -28,9 +28,10 @@ var email_final_pos: Vector2
 @onready var f_1: Button = $Window/F1
 @onready var levels_f_1: Node2D = $LevelsF1
 @onready var bubble_2: Sprite2D = $Wizard/Bubble2
-var cursor = preload("res://Assets/New Piskel-5.png (1).png")
+var cursor = preload("res://Assets/New Piskel-6.png (3).png")
+var cursor1 = preload("res://Assets/New Piskel-5.png (1).png")
 func _ready():
-	Global.set_cursor(cursor)
+	Global.set_cursor(cursor1)
 	bubble_2.visible = false
 	folder_close.visible = true
 	open_folder.visible = false
@@ -97,7 +98,9 @@ func emailcomein():
 
 
 func _on_email_notification_pressed() -> void:
+	Global.set_cursor(cursor)
 	fade_out(email_notification, .5)
+	email_notification.position = Vector2(1075,391)
 	popup(email)
 	await get_tree().create_timer(1.7).timeout
 	move_to(CIA, Vector2(284,240), .5)

@@ -96,8 +96,7 @@ texture = ExtResource("2_yd0cg")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-48, 7)
-collision_layer = 0
-collision_mask = 0
+disable_mode = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-36, -61, -17, -61, -8, -72, 9, -72, 15, -84, 35, -85, 43, -74, 60, -73, 68, -84, 88, -84, 95, -73, 113, -70, 118, -61, 138, -60, 147, -48, 145, 57, 138, 67, 120, 66, 113, 54, 94, 53, 88, 64, 68, 65, 61, 54, 42, 53, 37, 62, 16, 65, 8, 53, -9, 54, -15, 65, -34, 65, -42, 55, -42, -46)
