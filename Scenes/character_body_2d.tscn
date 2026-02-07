@@ -298,6 +298,7 @@ top_level = true
 light_mask = 2
 visibility_layer = 543
 collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_601d1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Jack"]]

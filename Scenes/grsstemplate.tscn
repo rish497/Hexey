@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt73m8x3gyid6"]
+
+[ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_n87dh"]
+[ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="2_3bbdh"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="5_lbsuh"]
+
+[node name="Grass1" type="Node2D" groups=["tile"]]
+position = Vector2(39, -7)
+script = ExtResource("1_n87dh")
+
+[node name="Grass2" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(24, -40)
+texture = ExtResource("2_3bbdh")
+
+[node name="Area2D" type="Area2D" parent="."]
+disable_mode = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+
+[node name="Dirt" parent="." instance=ExtResource("5_lbsuh")]
+position = Vector2(24, -72)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]

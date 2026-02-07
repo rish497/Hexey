@@ -567,7 +567,6 @@ text = "MENU"
 icon_alignment = 1
 
 [node name="Wizard" type="Node2D" parent="TaskBar"]
-visible = false
 position = Vector2(782, -52)
 script = ExtResource("10_k45vx")
 
@@ -625,6 +624,25 @@ patch_margin_left = 6
 patch_margin_top = 7
 patch_margin_right = 6
 patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="TaskBar/Wizard/NinePatchRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516472
+anchor_top = 0.29411766
+anchor_right = 0.3282444
+anchor_bottom = 0.29411766
+offset_left = -0.65783215
+offset_top = -19.0
+offset_right = 83.999985
+offset_bottom = -4.0
+theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("16_8rlcb")
+theme_override_font_sizes/font_size = 11
+text = "0 / 500"
+horizontal_alignment = 1
+vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="TaskBar/Wizard"]
@@ -1675,6 +1693,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_e1pq6")
 [connection signal="pressed" from="TaskBar/Window/F1" to="TaskBar" method="_on_f_1_pressed"]
 [connection signal="pressed" from="TaskBar/Window/F2" to="TaskBar" method="_on_f_2_pressed"]
 [connection signal="pressed" from="TaskBar/LevelsF1/F1/button_F1" to="TaskBar/LevelsF1" method="_on_button_f_1_pressed"]
+[connection signal="pressed" from="TaskBar/LevelsF1/F2/button_F2" to="TaskBar/LevelsF1" method="_on_button_f_2_pressed"]
 [connection signal="pressed" from="TaskBar/LevelsF1/Button" to="TaskBar/LevelsF1" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Tutorial/NinePatchRect/Button" to="TaskBar/Tutorial" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Label/Menu/ShutOff_button" to="TaskBar/Label/Menu" method="_on_shut_off_button_pressed"]

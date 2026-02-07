@@ -7,15 +7,12 @@ extends Node2D
 const TILE_SIZE := Vector2(1, 1)
 var dragging := false
 
-
 func _input(event):
-
-	if locked:
+	if locked or Global.position:
 		dragging = false
 		return
 
-	if Global.position:
-		dragging = false
+	if collision_polygon == null:
 		return
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -26,7 +23,6 @@ func _input(event):
 				z_index = _get_top_z()
 		else:
 			dragging = false
-
 
 func _physics_process(_delta):
 	if locked:

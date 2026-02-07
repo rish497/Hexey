@@ -6,12 +6,14 @@ extends Node2D
 var starting_pos := Vector2(16, 46)
 var final_pos := Vector2(16, 12)
 var was_visible := false
+@onready var label_2: Label = $NinePatchRect2/Label2
 
 func _on_button_pressed() -> void:
 	print("close")
 	hide_popup(wizard)
 
 func _process(_delta: float) -> void:
+	label_2.text = str(Global.bit) + " / 500"
 	if wizard.visible and not was_visible:
 		was_visible = true
 		await get_tree().create_timer(.5).timeout

@@ -42,3 +42,7 @@ func hide_popup(panel):
 
 func _on_button_f_1_pressed() -> void:
 	Transition.change_scene(self,"level_1")
+
+
+func _on_button_f_2_pressed() -> void:
+	Transition.change_scene(self,"level_2")
