@@ -1,16 +1,22 @@
 extends Node2D
 
-@export var locked: bool = false
+@export var locked := false
+
+@onready var area: Area2D = $Area2D
 @onready var collision_polygon: CollisionPolygon2D = $Area2D/CollisionPolygon2D
-@onready var collision := $CollisionShape2D
 
 const TILE_SIZE := Vector2(1, 1)
+
 var dragging := false
+var last_valid_position: Vector2
+
 
 func _input(event):
 	if locked or Global.position:
 		dragging = false
 		return
+		
+	modulate = Color(1.0, 0.85, 0.85) if is_overlapping_no_place() else Color.WHITE
 
 	if collision_polygon == null:
 		return
@@ -20,16 +26,27 @@ func _input(event):
 			var local_mouse_pos := collision_polygon.to_local(get_global_mouse_position())
 			if point_in_polygon(local_mouse_pos, collision_polygon.polygon):
 				dragging = true
+				last_valid_position = global_position
 				z_index = _get_top_z()
 		else:
 			dragging = false
+			if is_overlapping_no_place():
+				global_position = last_valid_position
+
 
 func _physics_process(_delta):
-	if locked:
+	if locked or not dragging:
 		return
 
-	if dragging:
-		global_position = get_global_mouse_position().snapped(TILE_SIZE) + TILE_SIZE / 2
+	var target_pos := get_global_mouse_position().snapped(TILE_SIZE) + TILE_SIZE / 2
+	global_position = target_pos
+
+
+func is_overlapping_no_place() -> bool:
+	for a in area.get_overlapping_areas():
+		if a.is_in_group("no_place"):
+			return true
+	return false
 
 
 func _get_top_z() -> int:
@@ -49,3 +66,5 @@ func point_in_polygon(point: Vector2, polygon: PackedVector2Array) -> bool:
 			inside = not inside
 		j = i
 	return inside
+
+	

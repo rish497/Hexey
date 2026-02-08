@@ -350,7 +350,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LevelsF1" parent="." instance=ExtResource("10_ibofp")]
-visible = false
 position = Vector2(612, 130)
 
 [node name="F1" type="Button" parent="LevelsF1"]
@@ -480,31 +479,6 @@ theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
 text = "
 F5"
-horizontal_alignment = 1
-
-[node name="F6" type="Button" parent="LevelsF1"]
-offset_left = 80.0
-offset_right = 135.0
-offset_bottom = 54.999992
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="LevelsF1/F6"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("3_ool47")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F6"
 horizontal_alignment = 1
 
 [node name="Wizard" type="Node2D" parent="."]

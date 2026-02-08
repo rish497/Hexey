@@ -630,7 +630,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Label2" type="Label" parent="TaskBar/Wizard/NinePatchRect2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.516472
+anchor_left = 0.3282444
 anchor_top = 0.29411766
 anchor_right = 0.3282444
 anchor_bottom = 0.29411766
@@ -1304,64 +1304,6 @@ text = "done"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="F6" type="Button" parent="TaskBar/LevelsF1"]
-offset_left = 80.0
-offset_right = 135.0
-offset_bottom = 54.999992
-scale = Vector2(1.24, 1.24)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_05l33")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_05l33")
-
-[node name="FolderClose" type="Label" parent="TaskBar/LevelsF1/F6"]
-layout_mode = 0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = 69.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 13
-theme_override_styles/normal = SubResource("StyleBoxTexture_bcfcw")
-text = "
-F6"
-horizontal_alignment = 1
-
-[node name="button_F6" type="Button" parent="TaskBar/LevelsF1/F6"]
-layout_mode = 0
-offset_left = 1.612915
-offset_top = 9.677422
-offset_right = 52.419357
-offset_bottom = 48.387096
-theme_override_styles/normal = SubResource("StyleBoxEmpty_8rlcb")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_8rlcb")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_8rlcb")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_8rlcb")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_8rlcb")
-
-[node name="TextureRect6" type="TextureRect" parent="TaskBar/LevelsF1/F6"]
-visible = false
-layout_mode = 0
-offset_top = 0.80645186
-offset_right = 58.03958
-offset_bottom = 56.322582
-texture = ExtResource("13_xqdss")
-
-[node name="Label" type="Label" parent="TaskBar/LevelsF1/F6/TextureRect6"]
-layout_mode = 0
-offset_left = 6.4516196
-offset_top = 26.612904
-offset_right = 67.45162
-offset_bottom = 49.6129
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_mq5f7")
-theme_override_font_sizes/font_size = 8
-text = "done"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Button" type="Button" parent="TaskBar/LevelsF1"]
 offset_left = 160.0
 offset_top = -98.0
@@ -1686,7 +1628,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_e1pq6")
 [connection signal="pressed" from="TaskBar/LevelsF1/F3/button_F3" to="TaskBar/LevelsF1" method="_on_button_f_3_pressed"]
 [connection signal="pressed" from="TaskBar/LevelsF1/F4/button_F4" to="TaskBar/LevelsF1" method="_on_button_f_4_pressed"]
 [connection signal="pressed" from="TaskBar/LevelsF1/F5/button_F5" to="TaskBar/LevelsF1" method="_on_button_f_5_pressed"]
-[connection signal="pressed" from="TaskBar/LevelsF1/F6/button_F6" to="TaskBar/LevelsF1" method="_on_button_f_6_pressed"]
 [connection signal="pressed" from="TaskBar/LevelsF1/Button" to="TaskBar/LevelsF1" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Tutorial/NinePatchRect/Button" to="TaskBar/Tutorial" method="_on_button_pressed"]
 [connection signal="pressed" from="TaskBar/Label/Menu/ShutOff_button" to="TaskBar/Label/Menu" method="_on_shut_off_button_pressed"]

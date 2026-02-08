@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://0wenbt08a4fq" path="res://Scripts/wall.gd" id="1_8r34y"]
 [ext_resource type="Texture2D" uid="uid://tcvhhcuvf7l0" path="res://Assets/Grass-1.png.png" id="2_8r34y"]
 
-[node name="Wall" type="Node2D"]
+[node name="Wall" type="Node2D" groups=["wall"]]
 script = ExtResource("1_8r34y")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["wall"]]
 collision_layer = 3
 collision_mask = 3
 
@@ -17,8 +17,8 @@ polygon = PackedVector2Array(10, -8, 10, -8, 16, 3, 10, 16, -10, 16, -16, 3, -10
 [node name="EmptyHex" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("2_8r34y")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["wall"]]
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" groups=["wall"]]
 visible = false
 polygon = PackedVector2Array(10, -7, 15, 4, 10, 15, -9, 15, -15, 3, -9, -7)

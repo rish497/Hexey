@@ -55,9 +55,10 @@ func _on_portal_body_entered(body: Node2D) -> void:
 		fade_in(__100_bits,.5)
 		move_to(__100_bits,Vector2(362,281),.5)
 		await get_tree().create_timer(.9).timeout
-
 		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
+		Global.F1_level2_display= false
+		
 	elif Global.F1_level3_pass == true and Global.F1_level3_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
@@ -68,6 +69,7 @@ func _on_portal_body_entered(body: Node2D) -> void:
 		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
 		Global.F1_level3_display= false
+		
 	elif Global.F1_level4_pass == true and Global.F1_level4_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
@@ -78,6 +80,7 @@ func _on_portal_body_entered(body: Node2D) -> void:
 		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
 		Global.F1_level4_display= false
+		
 	elif Global.F1_level5_pass == true and Global.F1_level5_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
@@ -88,6 +91,7 @@ func _on_portal_body_entered(body: Node2D) -> void:
 		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
 		Global.F1_level5_display= false
+		
 	elif Global.F1_level6_pass == true and Global.F1_level6_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout

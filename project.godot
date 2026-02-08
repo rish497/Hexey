@@ -41,6 +41,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 flag_group=""
 tile=""
 Jack=""
+wall=""
+no_place=""
 
 [input]
 

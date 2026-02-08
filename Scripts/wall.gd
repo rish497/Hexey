@@ -11,13 +11,8 @@ func _ready() -> void:
 	area.area_entered.connect(_recheck_coverage)
 	area.area_exited.connect(_recheck_coverage)
 
-	# Initial check (important)
 	_recheck_coverage()
 
-
-# ─────────────────────────────────────────────
-# CORE LOGIC: brute-force check (100% reliable)
-# ─────────────────────────────────────────────
 func _recheck_coverage(_a: Area2D = null) -> void:
 	var my_tile := get_top_parent_tile(self)
 	var covered := false
@@ -32,13 +27,8 @@ func _recheck_coverage(_a: Area2D = null) -> void:
 			covered = true
 			break
 
-	# Deferred = physics safe
 	collision.set_deferred("disabled", covered)
 
-
-# ─────────────────────────────────────────────
-# Helper: get the tile root
-# ─────────────────────────────────────────────
 func get_top_parent_tile(node: Node) -> Node2D:
 	var current := node
 	while current.get_parent() and current.get_parent() is Node2D:

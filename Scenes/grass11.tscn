@@ -210,14 +210,29 @@ texture = ExtResource("2_4i334")
 position = Vector2(26, 86)
 texture = ExtResource("2_4i334")
 
+[node name="Grass50" type="Sprite2D" parent="."]
+position = Vector2(-104, 105)
+texture = ExtResource("4_rv16k")
+
+[node name="Grass51" type="Sprite2D" parent="."]
+position = Vector2(-130, 117)
+texture = ExtResource("4_hc387")
+
+[node name="Grass52" type="Sprite2D" parent="."]
+position = Vector2(-104, 105)
+texture = ExtResource("4_rv16k")
+
+[node name="Grass53" type="Sprite2D" parent="."]
+position = Vector2(-130, 117)
+texture = ExtResource("4_hc387")
+
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 position = Vector2(-104, -37)
 collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-42, -49, -36, -60, -16, -61, -11, -50, 9, -49, 16, -61, 35, -61, 44, -50, 62, -49, 67, -61, 88, -61, 94, -50, 113, -50, 120, -61, 141, -59, 147, -48, 165, -49, 171, -61, 192, -60, 197, -50, 198, -44, 218, -42, 226, -57, 245, -53, 250, -43, 251, 136, 244, 148, 225, 148, 216, 136, 200, 136, 193, 148, 175, 148, 165, 135, 146, 135, 140, 148, 118, 147, 112, 134, 95, 135, 89, 147, 67, 147, 61, 136, 44, 136, 36, 146, 16, 148, -7, 143, -15, 152, -35, 153, -42, 143)
+polygon = PackedVector2Array(-42, -49, -36, -60, -16, -61, -11, -50, 9, -49, 16, -61, 35, -61, 44, -50, 62, -49, 67, -61, 88, -61, 94, -50, 113, -50, 120, -61, 141, -59, 147, -48, 165, -49, 171, -61, 192, -60, 197, -65, 219, -66, 224, -77, 243, -77, 250, -65, 251, 136, 244, 148, 225, 148, 216, 136, 200, 136, 193, 148, 175, 148, 165, 135, 146, 135, 140, 148, 118, 147, 112, 134, 95, 135, 89, 147, 67, 147, 63, 158, 42, 158, 36, 170, 10, 167, -10, 167, -16, 177, -36, 179, -43, 168, -42, 143)
 
 [node name="Dirt3" parent="." instance=ExtResource("3_hc387")]
 position = Vector2(-130, -90)
@@ -342,27 +357,11 @@ position = Vector2(-52, 74)
 [node name="Dirt56" parent="." instance=ExtResource("3_hc387")]
 position = Vector2(-78, 86)
 
-[node name="Grass50" type="Sprite2D" parent="."]
-position = Vector2(-104, 105)
-texture = ExtResource("4_rv16k")
-
-[node name="Grass51" type="Sprite2D" parent="."]
-position = Vector2(-130, 117)
-texture = ExtResource("4_hc387")
-
 [node name="Dirt54" parent="." instance=ExtResource("3_hc387")]
 position = Vector2(-52, 97)
 
 [node name="Dirt57" parent="." instance=ExtResource("3_hc387")]
 position = Vector2(-78, 109)
-
-[node name="Grass52" type="Sprite2D" parent="."]
-position = Vector2(-104, 105)
-texture = ExtResource("4_rv16k")
-
-[node name="Grass53" type="Sprite2D" parent="."]
-position = Vector2(-130, 117)
-texture = ExtResource("4_hc387")
 
 [node name="Dirt55" parent="." instance=ExtResource("3_hc387")]
 position = Vector2(-52, 97)
