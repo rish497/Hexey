@@ -6,157 +6,155 @@
 [ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="4_aeq44"]
 [ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="6_3vh2s"]
 
-[node name="Grass2" type="Node2D"]
+[node name="Grass2" type="Node2D" groups=["tile"]]
 script = ExtResource("1_37m76")
 
-[node name="Grass2" type="Sprite2D" parent="."]
+[node name="Grass2" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-130, -58)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass5" type="Sprite2D" parent="."]
+[node name="Grass5" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-78, -58)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass6" type="Sprite2D" parent="."]
+[node name="Grass6" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-26, -58)
 texture = ExtResource("3_wasu0")
 
-[node name="Grass11" type="Sprite2D" parent="."]
+[node name="Grass11" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(26, -58)
 texture = ExtResource("3_wasu0")
 
-[node name="Grass3" type="Sprite2D" parent="."]
+[node name="Grass3" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-104, -46)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass4" type="Sprite2D" parent="."]
+[node name="Grass4" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-52, -46)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass7" type="Sprite2D" parent="."]
+[node name="Grass7" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(0, -46)
 texture = ExtResource("3_wasu0")
 
-[node name="Grass8" type="Sprite2D" parent="."]
+[node name="Grass8" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-26, -34)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass26" type="Sprite2D" parent="."]
+[node name="Grass26" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-78, -34)
 texture = ExtResource("4_aeq44")
 
-[node name="Grass27" type="Sprite2D" parent="."]
+[node name="Grass27" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-130, -34)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass28" type="Sprite2D" parent="."]
+[node name="Grass28" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-104, -22)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass29" type="Sprite2D" parent="."]
+[node name="Grass29" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-52, -22)
 texture = ExtResource("4_aeq44")
 
-[node name="Grass9" type="Sprite2D" parent="."]
+[node name="Grass9" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(26, -34)
 texture = ExtResource("3_wasu0")
 
-[node name="Grass10" type="Sprite2D" parent="."]
+[node name="Grass10" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(0, -22)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass12" type="Sprite2D" parent="."]
+[node name="Grass12" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(26, -10)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass13" type="Sprite2D" parent="."]
+[node name="Grass13" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-26, -10)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass14" type="Sprite2D" parent="."]
+[node name="Grass14" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(0, 2)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass15" type="Sprite2D" parent="."]
+[node name="Grass15" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-26, 14)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass16" type="Sprite2D" parent="."]
+[node name="Grass16" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(26, 14)
 texture = ExtResource("3_wasu0")
 
-[node name="Grass17" type="Sprite2D" parent="."]
+[node name="Grass17" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(0, 26)
 texture = ExtResource("3_wasu0")
 
-[node name="Grass18" type="Sprite2D" parent="."]
+[node name="Grass18" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-26, 38)
 texture = ExtResource("4_aeq44")
 
-[node name="Grass19" type="Sprite2D" parent="."]
+[node name="Grass19" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(26, 38)
 texture = ExtResource("3_wasu0")
 
-[node name="Grass30" type="Sprite2D" parent="."]
+[node name="Grass30" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(52, 50)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass33" type="Sprite2D" parent="."]
+[node name="Grass33" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(104, 50)
 texture = ExtResource("4_aeq44")
 
-[node name="Grass36" type="Sprite2D" parent="."]
+[node name="Grass36" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(130, 62)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass31" type="Sprite2D" parent="."]
+[node name="Grass31" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(78, 62)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass34" type="Sprite2D" parent="."]
+[node name="Grass34" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(104, 74)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass37" type="Sprite2D" parent="."]
+[node name="Grass37" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(130, 86)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass20" type="Sprite2D" parent="."]
+[node name="Grass20" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(0, 50)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass21" type="Sprite2D" parent="."]
+[node name="Grass21" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-26, 62)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass22" type="Sprite2D" parent="."]
+[node name="Grass22" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(26, 62)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass32" type="Sprite2D" parent="."]
+[node name="Grass32" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(52, 74)
 texture = ExtResource("4_aeq44")
 
-[node name="Grass35" type="Sprite2D" parent="."]
+[node name="Grass35" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(78, 86)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass23" type="Sprite2D" parent="."]
+[node name="Grass23" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(0, 74)
 texture = ExtResource("4_aeq44")
 
-[node name="Grass24" type="Sprite2D" parent="."]
+[node name="Grass24" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(-26, 86)
 texture = ExtResource("2_dhxxb")
 
-[node name="Grass25" type="Sprite2D" parent="."]
+[node name="Grass25" type="Sprite2D" parent="." groups=["tile"]]
 position = Vector2(26, 86)
 texture = ExtResource("2_dhxxb")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-104, -37)
-collision_layer = 0
-collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-42, -49, -36, -60, -16, -61, -11, -50, 9, -49, 16, -61, 35, -61, 44, -50, 62, -49, 67, -61, 88, -61, 94, -50, 113, -50, 120, -61, 141, -59, 147, -48, 165, -49, 171, -38, 172, 56, 191, 57, 197, 48, 219, 46, 273, 72, 277, 91, 276, 139, 272, 151, 250.81787, 150.99998, 236, 166, 218, 152, 198.86165, 151.63644, 182, 164, 165.35495, 150.99997, 145.72481, 150.99998, 130, 164, 114, 151, 93.29797, 150.99998, 79, 164, 61, 151, 43, 151, 36, 140, 36, 56, 36, 46, 17, 44, 11, 55, -11, 55, -15, 44, -42, 41, -43, 31, -60, 31, -68, 18, -63, -48)

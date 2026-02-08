@@ -11,9 +11,9 @@ extends Label
 @onready var tutorial: Node2D = $Tutorial
 @onready var task_bar: Label = $"."
 @onready var menu: Node2D = $Label/Menu
-
-
+var cursor = preload("uid://cj1fos7c57t58")
 func _ready() -> void:
+	Global.set_cursor(cursor)
 	task_bar.text = Global.profile_name
 	WizardAnimation.play("Idle")
 	LVLSelect.visible = false
@@ -22,12 +22,104 @@ func _ready() -> void:
 	volume.visible = false
 	tutorial.visible = false
 	menu.visible = false
+var wizard_500_done := false
 	
 func _process(delta: float) -> void:
 	if levels_f_1.visible == false:
 		open_folder.visible = false
 		folder_close.visible = true
-		
+	if Global.bit >= 500 and not wizard_500_done:
+		wizard_500_done = true
+		await get_tree().create_timer(.5).timeout
+		wizard_loop()
+@onready var email: Node2D = $Email
+@onready var error_effect: Node2D = $Email/TextureRect/ErrorEffect
+@onready var error_effect_2: Node2D = $Email/TextureRect2/ErrorEffect2
+@onready var bubble_2: Sprite2D = $Wizard/Bubble2
+@onready var color_rect: ColorRect = $ColorRect
+var cursor_2 = preload("uid://cfqdlamyugwt8")
+@onready var cia_self_made_logo_: Node2D = $"CIA(SelfMadeLogo)"
+@onready var color_rect_2: ColorRect = $ColorRect2
+
+func wizard_loop() -> void:
+	Global.set_cursor(cursor_2)
+	color_rect.visible = true
+	popup(wizard,2)
+	bit_500_complete()
+	while wizard_500_done:
+		await wizard_bit500()
+		await get_tree().create_timer(0.2).timeout
+@onready var buble_filler: Label = $Wizard/Label
+@onready var bubble: Sprite2D = $Wizard/Bubble
+@onready var email_notification: Node2D = $"../EmailNotification"
+var email_final_pos: Vector2
+
+
+func emailcomein():
+	email_notification.modulate.a = 0.0
+	email_final_pos = email_notification.position
+	var email_tween: Tween
+	if email_tween:
+		email_tween.kill()
+
+	email_notification.visible = true
+	email_notification.position = email_final_pos + Vector2(400, 0)
+	email_notification.modulate.a = 0.0
+
+	email_tween = create_tween()
+	email_tween.set_parallel(true)
+
+	email_tween.tween_property(
+		email_notification,
+		"position",
+		email_final_pos,
+		0.35
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+	email_tween.tween_property(
+		email_notification,
+		"modulate:a",
+		1.0,
+		0.2
+	)
+
+func bit_500_complete():
+	await get_tree().create_timer(2).timeout
+	popup(email,0.5)
+	await get_tree().create_timer(0.5).timeout
+	buble_filler.visible = false
+	bubble.visible = false
+	move_to(bubble_2,Vector2(-346,-73),1.5)
+	await get_tree().create_timer(2).timeout
+	fade_out(bubble_2)
+	fade_out(error_effect_2)
+	await get_tree().create_timer(3).timeout
+	move_to(cia_self_made_logo_,Vector2(472,-133),1)
+	await get_tree().create_timer(1.5).timeout
+	fade_in(color_rect_2,.5)
+	await get_tree().create_timer(0.8).timeout
+	Global.set_cursor(cursor)
+	emailcomein()
+	
+
+func wizard_bit500() -> void:
+	WizardAnimation.play("Shoot")
+	WizardAnimation.flip_h = false
+	await get_tree().create_timer(0.3).timeout
+	WizardAnimation.flip_h = true
+	await get_tree().create_timer(0.3).timeout
+	WizardAnimation.flip_h = false
+	await get_tree().create_timer(0.3).timeout
+	WizardAnimation.flip_h = true
+	await get_tree().create_timer(0.3).timeout
+	WizardAnimation.play("HalfArmLift")
+	await get_tree().create_timer(0.3).timeout
+	WizardAnimation.play("ArmLift")
+	await get_tree().create_timer(0.3).timeout
+	WizardAnimation.play("HalfArmLift")
+	await get_tree().create_timer(0.3).timeout
+	WizardAnimation.play("ArmLift")
+
 func _on_f_2_pressed() -> void:
 	if open_folder_F2.visible == true:
 		open_folder_F2.visible = false
@@ -119,3 +211,11 @@ func move_to(panel, target_pos: Vector2, duration := .7):
 		target_pos,
 		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	
+
+@onready var email_2: Node2D = $"../Email2"
+
+func _on_email_notification_pressed() -> void:
+	fade_out(email_notification)
+	popup(email_2)
+	email_notification.position = Vector2(1026,451)

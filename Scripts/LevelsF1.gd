@@ -11,15 +11,15 @@ extends Node2D
 func _process(delta: float) -> void:
 	if Global.F1_level1_pass == true:
 		texture_rect.visible = true
-	elif Global.F1_level2_pass == true:
+	if Global.F1_level2_pass == true:
 		texture_rect_2.visible = true
-	elif Global.F1_level3_pass == true:
+	if Global.F1_level3_pass == true:
 		texture_rect_3.visible = true
-	elif Global.F1_level4_pass == true:
+	if Global.F1_level4_pass == true:
 		texture_rect_4.visible = true
-	elif Global.F1_level5_pass == true:
+	if Global.F1_level5_pass == true:
 		texture_rect_5.visible = true
-	elif Global.F1_level6_pass == true:
+	if Global.F1_level6_pass == true:
 		texture_rect_6.visible = true
 	
 func _on_button_pressed() -> void:

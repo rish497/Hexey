@@ -94,5 +94,3 @@ visible = false
 material = SubResource("ShaderMaterial_6r07y")
 position = Vector2(0, 2)
 mesh = SubResource("QuadMesh_6ioyp")
-
-[connection signal="body_entered" from="CanvasLayer2/Grass4/Portal" to="CanvasLayer3/Control" method="_on_portal_body_entered"]

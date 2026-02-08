@@ -345,12 +345,14 @@ offset_bottom = 48.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ool47")
 theme_override_font_sizes/font_size = 16
-text = "500"
+text = "!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LevelsF1" parent="." instance=ExtResource("10_ibofp")]
+visible = false
 position = Vector2(612, 130)
+label_text = "F1"
 
 [node name="F1" type="Button" parent="LevelsF1"]
 offset_left = -145.0

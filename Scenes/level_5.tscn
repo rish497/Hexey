@@ -1,0 +1,93 @@
+[gd_scene load_steps=15 format=3 uid="uid://bn3q1r0qnt81y"]
+
+[ext_resource type="Script" uid="uid://iakrfh8jvius" path="res://Scripts/level_5.gd" id="1_68k2k"]
+[ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="2_acvgl"]
+[ext_resource type="PackedScene" uid="uid://cvfmdxl737b2n" path="res://Scenes/GUI.tscn" id="3_wyrn7"]
+[ext_resource type="PackedScene" uid="uid://okklodmm2vjt" path="res://Scenes/flag.tscn" id="5_76uda"]
+[ext_resource type="PackedScene" uid="uid://bypcrpogu5jea" path="res://Scenes/Portal.tscn" id="6_pied6"]
+[ext_resource type="PackedScene" uid="uid://drunkmmubpeq6" path="res://Scenes/folder.tscn" id="7_1csia"]
+[ext_resource type="PackedScene" uid="uid://rvi82f48s1s5" path="res://Scenes/grass19.tscn" id="7_68k2k"]
+[ext_resource type="PackedScene" uid="uid://shyfhakpqon6" path="res://Scenes/grass20.tscn" id="8_acvgl"]
+[ext_resource type="PackedScene" uid="uid://yvnub2rke2en" path="res://Scenes/grass21.tscn" id="9_wyrn7"]
+[ext_resource type="PackedScene" uid="uid://birx1d1khp0oj" path="res://Scenes/grass14.tscn" id="10_7iarf"]
+[ext_resource type="PackedScene" uid="uid://n2nxc6vc5cji" path="res://Scenes/character_body_2d.tscn" id="11_omaiq"]
+[ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="12_nd3ft"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6r07y"]
+shader = ExtResource("12_nd3ft")
+
+[sub_resource type="QuadMesh" id="QuadMesh_6ioyp"]
+size = Vector2(854, 480)
+center_offset = Vector3(427, 240, 0)
+
+[node name="Level 1" type="Node2D"]
+position = Vector2(-45, -57)
+script = ExtResource("1_68k2k")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 45.0
+offset_top = 57.0
+offset_right = 898.0
+offset_bottom = 540.0
+texture = ExtResource("2_acvgl")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="Control" parent="CanvasLayer3" instance=ExtResource("3_wyrn7")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Grass1" parent="CanvasLayer2" instance=ExtResource("7_68k2k")]
+position = Vector2(486, 215)
+
+[node name="Folder4" parent="CanvasLayer2/Grass1" instance=ExtResource("7_1csia")]
+position = Vector2(8.000001, -3.0000005)
+scale = Vector2(1.486, 1.486)
+
+[node name="Grass2" parent="CanvasLayer2" instance=ExtResource("8_acvgl")]
+position = Vector2(621, 158)
+
+[node name="Folder5" parent="CanvasLayer2/Grass2" instance=ExtResource("7_1csia")]
+position = Vector2(0, -4)
+scale = Vector2(1.1661284, 1.1661284)
+
+[node name="Grass3" parent="CanvasLayer2" instance=ExtResource("9_wyrn7")]
+position = Vector2(622, 339)
+
+[node name="Folder3" parent="CanvasLayer2/Grass3" instance=ExtResource("7_1csia")]
+position = Vector2(1.000015, 1.9999923)
+scale = Vector2(1.1661284, 1.1661284)
+
+[node name="Grass5" parent="CanvasLayer2" instance=ExtResource("10_7iarf")]
+position = Vector2(277, 223)
+
+[node name="flag" parent="CanvasLayer2/Grass5" instance=ExtResource("5_76uda")]
+position = Vector2(4, 11)
+scale = Vector2(1.1889035, 1.1889035)
+
+[node name="Portal" parent="CanvasLayer2/Grass5" instance=ExtResource("6_pied6")]
+visible = false
+position = Vector2(3, 7.9999847)
+scale = Vector2(1.1889035, 1.1889035)
+
+[node name="Folder2" parent="CanvasLayer2/Grass5" instance=ExtResource("7_1csia")]
+position = Vector2(71.00008, -7.0000305)
+scale = Vector2(1.4861284, 1.4861284)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Jack" parent="CanvasLayer" instance=ExtResource("11_omaiq")]
+position = Vector2(716, -62)
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer4"]
+material = SubResource("ShaderMaterial_6r07y")
+position = Vector2(0, 2)
+mesh = SubResource("QuadMesh_6ioyp")
+
+[connection signal="body_entered" from="CanvasLayer2/Grass5/Portal" to="CanvasLayer3/Control" method="_on_portal_body_entered"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://yvnub2rke2en"]
+
+[ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_hiqkb"]
+[ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="2_cjrkh"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="4_mls41"]
+
+[node name="Grass1" type="Node2D" groups=["tile"]]
+position = Vector2(39, -7)
+script = ExtResource("1_hiqkb")
+
+[node name="Grass37" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-1, 2)
+texture = ExtResource("2_cjrkh")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-183, 38)
+disable_mode = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(2.7518463, -49.448425)
+scale = Vector2(0.9889706, 0.23219623)
+polygon = PackedVector2Array(138.77881, -10.988892, 146, -65.03541, 166, -65.03541, 171.1357, -105.73633, 191.35875, -110.04303, 199, -62.816933, 217, -62.816933, 223.71562, -10.988892, 223.71562, 139.7457, 215, 181.21483, 197.42564, 182.67377, 191.35875, 230.18645, 171.1357, 225.87975, 166.07991, 177.85242, 144, 180.10559, 139.78996, 131.1323)
+
+[node name="Dirt26" parent="." instance=ExtResource("4_mls41")]
+position = Vector2(-1, -29)
+
+[node name="Dirt27" parent="." instance=ExtResource("4_mls41")]
+position = Vector2(-27, -18)
+
+[node name="Dirt4" parent="." instance=ExtResource("4_mls41")]
+position = Vector2(25, -17)
+
+[node name="Dirt5" parent="." instance=ExtResource("4_mls41")]
+position = Vector2(25, 7)
+
+[node name="Dirt13" parent="." instance=ExtResource("4_mls41")]
+position = Vector2(-27, 6)
+
+[node name="Dirt18" parent="." instance=ExtResource("4_mls41")]
+position = Vector2(-1, 18)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]

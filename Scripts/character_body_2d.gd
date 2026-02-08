@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-var speed := 150
+var speed := 125
 var teleported := false
 var last_position_state := false
 
