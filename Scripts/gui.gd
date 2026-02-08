@@ -10,7 +10,6 @@ var cursor = preload("res://Assets/New Piskel-5.png (1).png")
 
 func _ready() -> void:
 	Global.set_cursor(cursor)
-
 	generator.mix_rate = 44100
 	type_player.stream = generator
 	type_player.play()
@@ -28,12 +27,7 @@ func _on_button_7_pressed() -> void:
 	Global.folder_collected = 0
 	Global.position = false
 	print(Global.position)
-var F1_level1_display = false
-var F1_level2_display = false
-var F1_level3_display = false
-var F1_level4_display = false
-var F1_level5_display = false
-var F1_level6_display = false
+
 @onready var color_rect: ColorRect = $ColorRect
 @onready var label_2: Label = $ColorRect/Label2
 @onready var label_3: Label = $ColorRect/Label3
@@ -43,17 +37,18 @@ var F1_level6_display = false
 @onready var __100_bits: Label = $"ColorRect/+100 Bits"
 
 func _on_portal_body_entered(body: Node2D) -> void:
-	if Global.F1_level1_pass == true and F1_level1_display==false:
+	if Global.F1_level1_pass == true and Global.F1_level1_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
 		await typewriter(label)
 		fade_in(__100_bits,.5)
 		move_to(__100_bits,Vector2(362,281),.5)
 		await get_tree().create_timer(.9).timeout
-		
 		Transition.change_scene(self,"The2ndMainPage")
-		F1_level1_display= true
-	elif Global.F1_level2_pass == true and F1_level2_display==false:
+		Global.F1_level1_display= false
+		Global.position = false
+		
+	elif Global.F1_level2_pass == true and Global.F1_level2_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
 		await typewriter(label_2)
@@ -61,48 +56,48 @@ func _on_portal_body_entered(body: Node2D) -> void:
 		move_to(__100_bits,Vector2(362,281),.5)
 		await get_tree().create_timer(.9).timeout
 
+		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
-		F1_level2_display= true
-	elif Global.F1_level3_pass == true and F1_level3_display==false:
+	elif Global.F1_level3_pass == true and Global.F1_level3_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
 		await typewriter(label_3)
 		fade_in(__100_bits,.5)
 		move_to(__100_bits,Vector2(362,281),.5)
 		await get_tree().create_timer(.9).timeout
-
+		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
-		F1_level3_display= true
-	elif Global.F1_level4_pass == true and F1_level4_display==false:
+		Global.F1_level3_display= false
+	elif Global.F1_level4_pass == true and Global.F1_level4_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
 		await typewriter(label_4)
 		fade_in(__100_bits,.5)
 		move_to(__100_bits,Vector2(362,281),.5)
 		await get_tree().create_timer(.9).timeout
-		
+		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
-		F1_level4_display= true
-	elif Global.F1_level5_pass == true and F1_level5_display==false:
+		Global.F1_level4_display= false
+	elif Global.F1_level5_pass == true and Global.F1_level5_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
 		await typewriter(label_5)
 		fade_in(__100_bits,.5)
 		move_to(__100_bits,Vector2(362,281),.5)
 		await get_tree().create_timer(.9).timeout
-
+		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
-		F1_level5_display= true
-	elif Global.F1_level6_pass == true and F1_level6_display==false:
+		Global.F1_level5_display= false
+	elif Global.F1_level6_pass == true and Global.F1_level6_display==true:
 		fade_in(color_rect, 1)
 		await get_tree().create_timer(1).timeout
 		await typewriter(label_6)
 		fade_in(__100_bits,.5)
 		move_to(__100_bits,Vector2(362,281),.5)
 		await get_tree().create_timer(.9).timeout
-
+		Global.position = false
 		Transition.change_scene(self,"The2ndMainPage")
-		F1_level6_display= true
+		Global.F1_level6_display= false
 	
 
 		

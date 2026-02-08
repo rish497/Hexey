@@ -25,6 +25,7 @@ var profile_made = false
 @onready var selection_ring: Label = $ProfileMaker/SelectionRing
 var selected_pfp: Button = null
 @onready var profilename: LineEdit = $ProfileMaker/HBoxContainer2/LineEdit
+@onready var shut_off: Node2D = $ShutOff
 
 
 var button_target_y: float
@@ -51,6 +52,7 @@ func animate_button_in() -> void:
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
 func _ready() -> void:
+	shut_off.visible = false
 	Global.set_cursor(cursor)
 	if Global.email_animation_played == false:
 		for btn in pfp_buttons:
@@ -81,6 +83,7 @@ func _ready() -> void:
 		await get_tree().create_timer(2.8).timeout
 
 		fade_out_color_rect(1.2)
+		shut_off.visible = true
 		label_1.visible = false
 		label_2.visible = false
 		label_3.visible = false
@@ -88,6 +91,12 @@ func _ready() -> void:
 		await get_tree().create_timer(.3).timeout
 		animate_button_in()
 	else:
+		fade_out_color_rect(1.2)
+		shut_off.visible = true
+		label_1.visible = false
+		label_2.visible = false
+		label_3.visible = false
+		shut_off.visible = true
 		await animate_letters()
 		await get_tree().create_timer(.3).timeout
 		animate_button_in()
@@ -132,6 +141,7 @@ func fade_out_color_rect(duration := 2.0) -> void:
 	)
 func _on_button_pressed() -> void:
 	if Global.email_animation_played == false:
+		
 		var letters := [h, e, x, e_2, y]
 
 		var letter_start_y := h.position.y
@@ -181,8 +191,8 @@ func _on_button_pressed() -> void:
 		if profile_made == false:
 			_slide_from_side(profile_maker)
 		else:
-			Transition.change_scene(self, "MainPage")
-	elif Global.email_animation_played == false:
+			Transition.change_scene(self, "The2ndMainPage")
+	else:
 		Transition.change_scene(self, "The2ndMainPage")
 func _slide_from_side(object_to_animate):
 	var tween := create_tween()
@@ -206,3 +216,7 @@ func _on_pfp_pressed(btn: Button) -> void:
 	selection_ring.visible = true
 
 	selection_ring.global_position =btn.global_position + btn.size * 0.5 - selection_ring.size * 0.5
+
+
+func _on_shut_off_button_pressed() -> void:
+	get_tree().quit()

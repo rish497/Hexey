@@ -5,10 +5,12 @@ func _ready() -> void:
 	Global.set_cursor(cursor)
 	Global.level_amount=4
 	Global.folder_collected = 0
+	Global.level_pass = false
 
 func _process(delta: float) -> void:
 	if Global.folder_collected == Global.level_amount and bitgiven==false:
 		Global.level_pass = true
 		Global.F1_level2_pass = true
+		Global.last_completed_level = 2
 		Global.bit +=100
 		bitgiven = true

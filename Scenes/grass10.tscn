@@ -1,0 +1,435 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl48rmu8r5aqw"]
+
+[ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_xschn"]
+[ext_resource type="Texture2D" uid="uid://dwhtfrs2p2mcf" path="res://Assets/Hex Tiles/Grass-3.png (1).png" id="2_x2k52"]
+[ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="3_xba1i"]
+[ext_resource type="Texture2D" uid="uid://lbydophrthe0" path="res://Assets/Hex Tiles/Grass-4.png (1).png" id="4_wg6tk"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="5_7bqac"]
+
+[node name="Grass1" type="Node2D" groups=["tile"]]
+position = Vector2(39, -7)
+script = ExtResource("1_xschn")
+
+[node name="Grass2" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(31, -70)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass3" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(5, -58)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass12" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-47, -121)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass13" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-73, -109)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass14" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-21, -109)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass15" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-47, -97)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass16" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-73, -85)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass17" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-21, -85)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass18" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-47, -73)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass4" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(57, -58)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass5" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(31, -46)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass6" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(5, -34)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass7" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(57, -34)
+texture = ExtResource("3_xba1i")
+
+[node name="Grass8" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(31, -22)
+texture = ExtResource("4_wg6tk")
+
+[node name="Grass9" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(5, -10)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass19" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-73, 34)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass20" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-99, 46)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass21" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-47, 46)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass22" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-21, 58)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass23" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-73, 58)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass24" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-99, 70)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass25" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-47, 70)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass26" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(5, 70)
+texture = ExtResource("4_wg6tk")
+
+[node name="Grass28" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-21, 82)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass29" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-73, 82)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass30" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-99, 94)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass31" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-47, 94)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass32" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(5, 94)
+texture = ExtResource("4_wg6tk")
+
+[node name="Grass35" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-21, 106)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass33" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(31, 106)
+texture = ExtResource("4_wg6tk")
+
+[node name="Grass34" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(5, 118)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass36" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(-21, 130)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass37" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(31, 130)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass38" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(108, 94)
+texture = ExtResource("4_wg6tk")
+
+[node name="Grass39" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(82, 106)
+texture = ExtResource("4_wg6tk")
+
+[node name="Grass40" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(108, 118)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass41" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(82, 130)
+texture = ExtResource("2_x2k52")
+
+[node name="Grass10" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(57, -10)
+texture = ExtResource("4_wg6tk")
+
+[node name="Grass11" type="Sprite2D" parent="." groups=["tile"]]
+position = Vector2(31, 2)
+texture = ExtResource("4_wg6tk")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-123, -81)
+disable_mode = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(14, -79, 35, -79, 39, -68, 59, -69, 66, -80, 86, -79, 92, -67, 113, -69, 117, -80, 137, -83, 144, -69, 167, -69, 171, -79, 194, -79, 197, -71, 217, -71, 224, -80, 245, -80, 246, -68, 247, -61, 247, 211, 240, 223, 222, 224, 216, 235, 166, 235, 144, 235, 139, 223, 118, 224, 112, 234, 86, 237, 66, 237, 60, 226, 40, 226, 34, 237, 15, 237, 9, 227, 9, -69)
+
+[node name="Dirt" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, -153)
+
+[node name="Dirt3" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, -153)
+
+[node name="Dirt5" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(5, -153)
+
+[node name="Dirt7" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, -153)
+
+[node name="Dirt9" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, -153)
+
+[node name="Dirt2" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-73, -141)
+
+[node name="Dirt4" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-21, -141)
+
+[node name="Dirt6" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(31, -141)
+
+[node name="Dirt8" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, -141)
+
+[node name="Dirt10" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, -129)
+
+[node name="Dirt12" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(5, -129)
+
+[node name="Dirt13" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, -129)
+
+[node name="Dirt14" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, -129)
+
+[node name="Dirt17" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(31, -117)
+
+[node name="Dirt18" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, -117)
+
+[node name="Dirt19" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, -105)
+
+[node name="Dirt21" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(5, -105)
+
+[node name="Dirt23" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, -105)
+
+[node name="Dirt22" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, -105)
+
+[node name="Dirt30" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(31, -94)
+
+[node name="Dirt26" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(5, -82)
+
+[node name="Dirt27" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, -93)
+
+[node name="Dirt31" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, -82)
+
+[node name="Dirt28" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, -82)
+
+[node name="Dirt32" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, -82)
+
+[node name="Dirt33" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-73, -70)
+
+[node name="Dirt34" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-21, -70)
+
+[node name="Dirt36" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, -70)
+
+[node name="Dirt37" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, -58)
+
+[node name="Dirt38" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, -58)
+
+[node name="Dirt41" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, -58)
+
+[node name="Dirt42" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-73, -46)
+
+[node name="Dirt43" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-21, -46)
+
+[node name="Dirt45" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, -46)
+
+[node name="Dirt46" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, -34)
+
+[node name="Dirt47" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, -34)
+
+[node name="Dirt50" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, -34)
+
+[node name="Dirt51" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-73, -22)
+
+[node name="Dirt52" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-21, -22)
+
+[node name="Dirt54" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, -22)
+
+[node name="Dirt55" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, -10)
+
+[node name="Dirt56" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, -10)
+
+[node name="Dirt59" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, -10)
+
+[node name="Dirt60" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-73, 2)
+
+[node name="Dirt64" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, 14)
+
+[node name="Dirt61" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-21, 2)
+
+[node name="Dirt63" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, 2)
+
+[node name="Dirt65" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, 14)
+
+[node name="Dirt66" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(5, 14)
+
+[node name="Dirt67" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 14)
+
+[node name="Dirt68" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, 14)
+
+[node name="Dirt70" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-21, 26)
+
+[node name="Dirt71" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(31, 26)
+
+[node name="Dirt72" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, 26)
+
+[node name="Dirt76" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 14)
+
+[node name="Dirt77" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, 14)
+
+[node name="Dirt80" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(31, 26)
+
+[node name="Dirt81" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, 26)
+
+[node name="Dirt84" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(5, 38)
+
+[node name="Dirt85" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 38)
+
+[node name="Dirt86" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, 38)
+
+[node name="Dirt93" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(5, 38)
+
+[node name="Dirt94" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 38)
+
+[node name="Dirt95" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, 38)
+
+[node name="Dirt98" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(31, 50)
+
+[node name="Dirt99" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, 50)
+
+[node name="Dirt103" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 62)
+
+[node name="Dirt104" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, 62)
+
+[node name="Dirt112" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 62)
+
+[node name="Dirt113" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(109, 62)
+
+[node name="Dirt105" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(31, 74)
+
+[node name="Dirt106" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(83, 74)
+
+[node name="Dirt109" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 86)
+
+[node name="Dirt119" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 86)
+
+[node name="Dirt121" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-73, 97)
+
+[node name="Dirt125" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, 109)
+
+[node name="Dirt127" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 109)
+
+[node name="Dirt129" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, 109)
+
+[node name="Dirt130" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, 109)
+
+[node name="Dirt132" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 109)
+
+[node name="Dirt134" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-73, 121)
+
+[node name="Dirt138" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, 133)
+
+[node name="Dirt140" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 133)
+
+[node name="Dirt142" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-47, 133)
+
+[node name="Dirt143" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(-99, 133)
+
+[node name="Dirt145" parent="." instance=ExtResource("5_7bqac")]
+position = Vector2(57, 133)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]

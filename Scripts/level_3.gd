@@ -6,11 +6,11 @@ func _ready() -> void:
 	Global.level_amount=3
 	Global.folder_collected = 0
 	Global.level_pass = false
+	
 func _process(delta: float) -> void:
 	if Global.folder_collected == Global.level_amount and bitgiven==false:
 		Global.level_pass = true
-		Global.F1_level1_pass = true
-		Global.last_completed_level = 1
+		Global.F1_level3_pass = true
+		Global.last_completed_level = 3
 		Global.bit +=100
 		bitgiven = true
-		

@@ -554,6 +554,7 @@ text = "MENU"
 icon_alignment = 1
 
 [node name="Wizard" type="Node2D" parent="TaskBar"]
+visible = false
 position = Vector2(782, -52)
 script = ExtResource("9_tcrbt")
 
@@ -1222,6 +1223,8 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_bhmxe")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_bhmxe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bhmxe")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 layout_mode = 1
@@ -1388,8 +1391,6 @@ theme_override_font_sizes/font_size = 27
 text = "+ 100 Bits"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="TaskBar/Button5" to="TaskBar" method="_on_button_5_pressed"]
 [connection signal="pressed" from="TaskBar/Button6" to="." method="_on_button_6_pressed"]

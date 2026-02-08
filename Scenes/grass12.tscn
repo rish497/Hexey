@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwma0nxwdjrm7"]
+
+[ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_qoe7f"]
+[ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="2_8x3is"]
+[ext_resource type="Texture2D" uid="uid://bwyknbopuq4wa" path="res://Assets/Hex Tiles/Grass-5.png (1).png" id="3_0fbd8"]
+[ext_resource type="Texture2D" uid="uid://lbydophrthe0" path="res://Assets/Hex Tiles/Grass-4.png (1).png" id="5_slkqg"]
+[ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="6_vsr1v"]
+
+[node name="Grass1" type="Node2D" groups=["tile"]]
+script = ExtResource("1_qoe7f")
+
+[node name="Grass16" type="Sprite2D" parent="."]
+position = Vector2(-29, -34)
+texture = ExtResource("3_0fbd8")
+
+[node name="Grass12" type="Sprite2D" parent="."]
+position = Vector2(23, -34)
+texture = ExtResource("2_8x3is")
+
+[node name="Grass17" type="Sprite2D" parent="."]
+position = Vector2(-3, -22)
+texture = ExtResource("2_8x3is")
+
+[node name="Grass18" type="Sprite2D" parent="."]
+position = Vector2(-29, -10)
+texture = ExtResource("2_8x3is")
+
+[node name="Grass19" type="Sprite2D" parent="."]
+position = Vector2(23, -10)
+texture = ExtResource("5_slkqg")
+
+[node name="Grass20" type="Sprite2D" parent="."]
+position = Vector2(-3, 2)
+texture = ExtResource("2_8x3is")
+
+[node name="Grass21" type="Sprite2D" parent="."]
+position = Vector2(-29, 14)
+texture = ExtResource("2_8x3is")
+
+[node name="Grass22" type="Sprite2D" parent="."]
+position = Vector2(23, 14)
+texture = ExtResource("5_slkqg")
+
+[node name="Grass23" type="Sprite2D" parent="."]
+position = Vector2(-3, 26)
+texture = ExtResource("2_8x3is")
+
+[node name="Grass24" type="Sprite2D" parent="."]
+position = Vector2(-29, 38)
+texture = ExtResource("2_8x3is")
+
+[node name="Grass25" type="Sprite2D" parent="."]
+position = Vector2(23, 38)
+texture = ExtResource("5_slkqg")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(34, -65)
+disable_mode = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-99, 27, -79, 28, -74, 24, -54, 23, -47, 34, -28, 34, -21, 23, -2, 23, 3, 29, 6, 26, 24, 28, 31, 38, 31, 119, 24, 130, -22, 128, -29, 115, -46, 116, -51, 125, -73, 128, -100, 130, -105, 119, -105, 39)
+
+[node name="Dirt10" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(-55, -30)
+
+[node name="Dirt11" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(49, -30)
+
+[node name="Dirt14" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(-55, -6)
+
+[node name="Dirt15" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(-55, 18)
+
+[node name="Dirt17" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(49, -6)
+
+[node name="Dirt18" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(49, 18)
+
+[node name="Dirt16" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(-55, 42)
+
+[node name="Dirt19" parent="." instance=ExtResource("6_vsr1v")]
+position = Vector2(49, 42)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]

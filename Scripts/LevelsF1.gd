@@ -46,3 +46,19 @@ func _on_button_f_1_pressed() -> void:
 
 func _on_button_f_2_pressed() -> void:
 	Transition.change_scene(self,"level_2")
+
+
+func _on_button_f_3_pressed() -> void:
+	Transition.change_scene(self,"level_3")
+
+
+func _on_button_f_4_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_f_5_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_f_6_pressed() -> void:
+	pass # Replace with function body.
