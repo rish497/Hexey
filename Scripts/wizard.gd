@@ -9,6 +9,7 @@ var was_visible := false
 @onready var label_2: Label = $NinePatchRect2/Label2
 
 func _on_button_pressed() -> void:
+	Global.clicksound()
 	print("close")
 	hide_popup(wizard)
 

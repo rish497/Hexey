@@ -1,7 +1,8 @@
-[gd_scene load_steps=92 format=3 uid="uid://cvfmdxl737b2n"]
+[gd_scene load_steps=95 format=3 uid="uid://cvfmdxl737b2n"]
 
 [ext_resource type="Script" uid="uid://b8vog677xxcfc" path="res://Scripts/gui.gd" id="1_ptolr"]
 [ext_resource type="FontFile" uid="uid://bqv1upwhk8pen" path="res://Assets/RasterForgeRegular-JpBgm.ttf" id="2_fkak6"]
+[ext_resource type="Shader" uid="uid://cvkgo07fhlpql" path="res://screen_effect.gdshader" id="2_qp24i"]
 [ext_resource type="Script" uid="uid://csb0sir76flyy" path="res://Scripts/GUItask_bar.gd" id="3_b55bf"]
 [ext_resource type="Texture2D" uid="uid://dyyve8s5i5hmu" path="res://Assets/New Piskel-7.png (1).png" id="4_ps245"]
 [ext_resource type="Texture2D" uid="uid://ctnqxg01ohwce" path="res://Assets/New Piskel-13.png (4).png" id="6_ndvf3"]
@@ -43,6 +44,13 @@
 [ext_resource type="Texture2D" uid="uid://xhbdmgqnrvxy" path="res://Assets/New Piskel-10.png (10).png" id="45_q8xwb"]
 [ext_resource type="Texture2D" uid="uid://0rdpcnf610x6" path="res://Assets/New Piskel-12.png (4).png" id="46_7dq38"]
 [ext_resource type="Texture2D" uid="uid://b7485d6bvkse4" path="res://Assets/New Piskel-11.png (3).png" id="47_cmlee"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rapjo"]
+shader = ExtResource("2_qp24i")
+
+[sub_resource type="QuadMesh" id="QuadMesh_um6tc"]
+size = Vector2(854, 480)
+center_offset = Vector3(427, 240, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xip18"]
 content_margin_right = 148.0
@@ -409,6 +417,14 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_ptolr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_rapjo")
+position = Vector2(0, 2)
+mesh = SubResource("QuadMesh_um6tc")
 
 [node name="TaskBar" type="Label" parent="."]
 layout_mode = 1

@@ -15,7 +15,6 @@ func _input(event):
 	if locked or Global.position:
 		dragging = false
 		return
-		
 	modulate = Color(1.0, 0.85, 0.85) if is_overlapping_no_place() else Color.WHITE
 
 	if collision_polygon == null:
@@ -23,6 +22,7 @@ func _input(event):
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			Global.clicksound()
 			var local_mouse_pos := collision_polygon.to_local(get_global_mouse_position())
 			if point_in_polygon(local_mouse_pos, collision_polygon.polygon):
 				dragging = true

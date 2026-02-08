@@ -27,7 +27,6 @@ var selected_pfp: Button = null
 @onready var profilename: LineEdit = $ProfileMaker/HBoxContainer2/LineEdit
 @onready var shut_off: Node2D = $ShutOff
 
-
 var button_target_y: float
 
 
@@ -87,6 +86,7 @@ func _ready() -> void:
 		label_1.visible = false
 		label_2.visible = false
 		label_3.visible = false
+		Global.bgmusic = true
 		await animate_letters()
 		await get_tree().create_timer(.3).timeout
 		animate_button_in()
@@ -97,12 +97,14 @@ func _ready() -> void:
 		label_2.visible = false
 		label_3.visible = false
 		shut_off.visible = true
+		Global.bgmusic = true
 		await animate_letters()
 		await get_tree().create_timer(.3).timeout
 		animate_button_in()
 
 func animate_letters() -> void:
 	for n in [e_2, e, y, h, x]:
+		Global.letter_in()
 		var t := create_tween()
 		t.tween_property(n, "modulate:a", 1.0, 0.2)
 		t.tween_property(n, "scale", Vector2.ONE, 0.35)\
@@ -140,6 +142,7 @@ func fade_out_color_rect(duration := 2.0) -> void:
 		duration
 	)
 func _on_button_pressed() -> void:
+	Global.explosionsound()
 	if Global.email_animation_played == false:
 		
 		var letters := [h, e, x, e_2, y]
@@ -207,11 +210,13 @@ func _slide_from_side(object_to_animate):
 
 
 func _on_profile_submit_pressed() -> void:
+	Global.explosionsound()
 	Global.profile_name = profilename.text
 	await get_tree().create_timer(.4).timeout
 	Transition.change_scene(self, "MainPage")
 	
 func _on_pfp_pressed(btn: Button) -> void:
+	Global.clicksound()
 	selected_pfp = btn
 	selection_ring.visible = true
 
@@ -219,4 +224,5 @@ func _on_pfp_pressed(btn: Button) -> void:
 
 
 func _on_shut_off_button_pressed() -> void:
+	Global.clicksound()
 	get_tree().quit()

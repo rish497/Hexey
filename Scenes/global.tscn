@@ -1,6 +1,94 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcvtj063ntupv"]
+[gd_scene load_steps=16 format=3 uid="uid://bcvtj063ntupv"]
 
 [ext_resource type="Script" uid="uid://ble4c44gb7jpq" path="res://Scripts/global.gd" id="1_koean"]
+[ext_resource type="AudioStream" uid="uid://te04cqvcgltl" path="res://Sound/unbound-space.wav" id="2_o8ivi"]
+[ext_resource type="AudioStream" uid="uid://ddxjqb3s2bqs3" path="res://Sound/soul_serenity_sounds-typing-sound-02-229861.mp3" id="3_yl8w0"]
+[ext_resource type="AudioStream" uid="uid://nc48hgsvtkdj" path="res://Sound/freesound_community-space-explosion-with-reverb-101449.mp3" id="4_pklo1"]
+[ext_resource type="AudioStream" uid="uid://ce30y8g4v21n" path="res://Sound/freesound_community-quick-static-glitches-96857.mp3" id="5_c71dq"]
+[ext_resource type="AudioStream" uid="uid://cmsha4awploec" path="res://Sound/glitch-sound-effect-free-download-no-copyright-hassna-ahlam_ximFyFDY.mp3" id="6_c71dq"]
+[ext_resource type="AudioStream" uid="uid://bmf2xl38ulf7k" path="res://Sound/whatsapp-video-2026-02-09-at-13955-am-3-d-minor-bpm-47_0QCQqn23.mp3" id="7_y7gcx"]
+[ext_resource type="AudioStream" uid="uid://8fljsy8q1sq0" path="res://Sound/soundreality-whoosh-end-384629.mp3" id="8_tlnjv"]
+[ext_resource type="AudioStream" uid="uid://c4fh4qclj1syk" path="res://Sound/soundreality-whoosh-take-flight-384632.mp3" id="9_8eqhs"]
+[ext_resource type="AudioStream" uid="uid://b84ywlmjk8crl" path="res://Sound/freesound_community-recharge-sound-99815.mp3" id="10_wnmoe"]
+[ext_resource type="AudioStream" uid="uid://d0e8w4vdkh474" path="res://Sound/olivia_parker-build-up-and-impact-demo-309551.mp3" id="11_0kgvl"]
+[ext_resource type="AudioStream" uid="uid://chop5gjlqu8d0" path="res://Sound/pas2_sound1 (1).mp3" id="12_axoxo"]
+[ext_resource type="AudioStream" uid="uid://byjfsmwyfigmu" path="res://Sound/freesound_community-error-sound-39539.mp3" id="13_fx1g8"]
+[ext_resource type="AudioStream" uid="uid://msx1hut4sc2i" path="res://Sound/dragon-studio-sci-fi-portal-jump-04-416161.mp3" id="14_usw0v"]
+[ext_resource type="AudioStream" uid="uid://bdhp2plbgi1r2" path="res://Sound/universfield-video-game-bonus-323603.mp3" id="15_8vggj"]
 
 [node name="Global" type="Node"]
 script = ExtResource("1_koean")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_o8ivi")
+volume_db = -18.176
+bus = &"Music"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yl8w0")
+bus = &"UI"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yl8w0")
+bus = &"UI"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pklo1")
+bus = &"UI"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_c71dq")
+pitch_scale = 0.19
+bus = &"SFX"
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_c71dq")
+volume_db = -8.675
+bus = &"SFX"
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_y7gcx")
+volume_db = 10.165
+pitch_scale = 1.12
+bus = &"SFX"
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tlnjv")
+volume_db = 6.397
+bus = &"SFX"
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_8eqhs")
+volume_db = 0.368
+bus = &"SFX"
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_wnmoe")
+volume_db = 1.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_0kgvl")
+volume_db = 1.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_axoxo")
+volume_db = 1.0
+pitch_scale = 1.41
+bus = &"UI"
+
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_fx1g8")
+volume_db = 4.014
+bus = &"SFX"
+
+[node name="AudioStreamPlayer14" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_usw0v")
+volume_db = 1.0
+bus = &"SFX"
+
+[node name="AudioStreamPlayer15" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_8vggj")
+volume_db = -11.807
+bus = &"SFX"

@@ -62,10 +62,12 @@ func reset_state():
 
 
 func start_sequence() -> void:
+	Global.aliensound()
 	errors.visible = true
 	await get_tree().create_timer(1.0).timeout
 	emailcomein()
 	await get_tree().create_timer(.4).timeout
+
 	move_to(CIA, Vector2(369,472), 0.4)
 	await get_tree().create_timer(1.2).timeout
 	move_to(CIA, Vector2(444,594), 0.4)
@@ -98,47 +100,59 @@ func emailcomein():
 
 
 func _on_email_notification_pressed() -> void:
+	Global.clicksound()
 	Global.set_cursor(cursor)
 	fade_out(email_notification, .5)
 	email_notification.position = Vector2(1075,391)
 	popup(email)
-	await get_tree().create_timer(1.7).timeout
+	await get_tree().create_timer(2.3).timeout
 	move_to(CIA, Vector2(284,240), .5)
 	await get_tree().create_timer(.5).timeout
+	Global.throwsound()
 	move_node_in_arc(error_effect,Vector2(-289,30),error_effect.position,150,1)
 	await get_tree().create_timer(1).timeout
+	Global.throwsound()
 	move_node_in_arc(error_effect_2,Vector2(-289,30),error_effect_2.position,160, 1)
 	await get_tree().create_timer(2).timeout
 	move_to(texture_rect, Vector2(-716,154), 1)
 	await get_tree().create_timer(.6).timeout
 	move_to(texture_rect_2, Vector2(-716,154), 1)
 	await get_tree().create_timer(.4).timeout
+	Global.tpsound()
 	spin_and_shrink(texture_rect, TAU, 0.0, 1)
 	await get_tree().create_timer(.6).timeout
+	Global.tpsound()
 	spin_and_shrink(texture_rect_2, TAU, 0, 1)
 	await get_tree().create_timer(1.4).timeout
 	hide_popup(email)
 	move_node_in_arc(CIA, CIA.position, Vector2(700,130), 130, .7)
 	await get_tree().create_timer(1).timeout
 	popup(window)
+	Global.clicksound()
+	Global.throwsound()
 	move_node_in_arc(error_effect_3,Vector2(700,130),Vector2(233,229),160, 1)
 	await  get_tree().create_timer(2).timeout
 	popup(WizardWindow)
+	Global.clicksound()
 	wizard.play("Idle")
 	fade_out(error_effect_3)
 	F2_Blocker.visible = true
+	
 	await get_tree().create_timer(1.4).timeout
 	wizard.play("HalfArmLift")
 	await get_tree().create_timer(.2).timeout
 	wizard.play("ArmLift")
 	fade_in(shield, 2)
+	Global.shieldsound()
 	await get_tree().create_timer(2.5).timeout
 	wizard.play("Idle")
 	error_effect_4.visible = true
+	Global.throwsound()
 	move_node_in_arc(error_effect_4, Vector2(700,130), Vector2(131,227),160,1)
 	await  get_tree().create_timer(2).timeout
 	fade_out(error_effect_4)
-	await get_tree().create_timer(1.4).timeout
+	Global.buildup()
+	await get_tree().create_timer(1).timeout
 	spin_and_shrink(CIA, 2*TAU, 0.0, 1.2)
 	await get_tree().create_timer(1.4).timeout
 	error_effect_4.visible = true
@@ -165,11 +179,10 @@ func _on_email_notification_pressed() -> void:
 	await get_tree().create_timer(2.3).timeout
 	spin_and_shrink(bubble_2,TAU,0,0.7)
 	await get_tree().create_timer(1.2).timeout
+	Global.explosionsound()
 	Transition.change_scene(self,"level_1")
 	Global.email_animation_played = true
-	
-	
-	
+	Global.aliensoundstop()
 	
 func bubble_fill(end_y: float, dur: float) -> void:
 	bubble.visible = true

@@ -12,6 +12,7 @@ func _ready() -> void:
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			Global.clicksound()
 			dragging = true
 			var mouse_x: float = get_viewport().get_mouse_position().x
 			grab_offset = position.x - (mouse_x - get_parent().global_position.x)

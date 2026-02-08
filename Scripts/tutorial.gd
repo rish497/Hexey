@@ -99,6 +99,7 @@ func move_to(panel, target_pos: Vector2, duration := .6):
 
 
 func _on_button_pressed() -> void:
+	Global.clicksound()
 	hide_popup(self)
 	
 func hide_popup(panel):

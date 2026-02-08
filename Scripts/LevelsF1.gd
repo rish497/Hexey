@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 		texture_rect_6.visible = true
 	
 func _on_button_pressed() -> void:
+	Global.clicksound()
 	print("close")
 	hide_popup(levels_f_1)
 
@@ -41,20 +42,25 @@ func hide_popup(panel):
 
 
 func _on_button_f_1_pressed() -> void:
+	Global.clicksound()
 	Transition.change_scene(self,"level_1")
 
 
 func _on_button_f_2_pressed() -> void:
+	Global.clicksound()
 	Transition.change_scene(self,"level_2")
 
 
 func _on_button_f_3_pressed() -> void:
+	Global.clicksound()
 	Transition.change_scene(self,"level_3")
 
 
 func _on_button_f_4_pressed() -> void:
+	Global.clicksound()
 	Transition.change_scene(self, "level_4")
 
 
 func _on_button_f_5_pressed() -> void:
-	pass # Replace with function body.
+	Global.clicksound()
+	Transition.change_scene(self, "level_5")

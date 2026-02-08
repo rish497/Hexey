@@ -45,6 +45,7 @@ func wizard_loop() -> void:
 	Global.set_cursor(cursor_2)
 	color_rect.visible = true
 	popup(wizard,2)
+	Global.clicksound()
 	bit_500_complete()
 	while wizard_500_done:
 		await wizard_bit500()
@@ -121,6 +122,7 @@ func wizard_bit500() -> void:
 	WizardAnimation.play("ArmLift")
 
 func _on_f_2_pressed() -> void:
+	Global.clicksound()
 	if open_folder_F2.visible == true:
 		open_folder_F2.visible = false
 		folder_close_F2.visible = true
@@ -130,6 +132,7 @@ func _on_f_2_pressed() -> void:
 
 
 func _on_f_1_pressed() -> void:
+	Global.clicksound()
 	if open_folder.visible == true:
 		open_folder.visible = false
 		folder_close.visible = true
@@ -141,6 +144,7 @@ func _on_f_1_pressed() -> void:
 		popup(levels_f_1,.6)
 
 func popup(panel, dur := .5):
+	Global.clicksound()
 	panel.visible = true
 	panel.scale = Vector2(-.5,-.5)
 	panel.modulate.a = 0.0
@@ -179,22 +183,27 @@ func hide_popup(panel):
 	)
 
 func _on_button_pressed() -> void:
+	Global.clicksound()
 	popup(LVLSelect)
 
 
 func _on_button_4_pressed() -> void:
+	Global.clicksound()
 	popup(wizard)
 
 
 func _on_button_3_pressed() -> void:
+	Global.clicksound()
 	popup(tutorial)
 
 
 func _on_button_5_pressed() -> void:
+	Global.clicksound()
 	popup(volume)
 
 
 func _on_button_2_pressed() -> void:
+	Global.clicksound()
 	if menu.visible == false:
 		move_to(menu,Vector2(2.0,-323.0))
 	elif menu.visible == true:
@@ -216,6 +225,7 @@ func move_to(panel, target_pos: Vector2, duration := .7):
 @onready var email_2: Node2D = $"../Email2"
 
 func _on_email_notification_pressed() -> void:
+	Global.clicksound()
 	fade_out(email_notification)
 	popup(email_2)
 	email_notification.position = Vector2(1026,451)

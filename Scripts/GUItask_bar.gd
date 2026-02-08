@@ -16,6 +16,7 @@ func _ready() -> void:
 	menu.visible = false
 	
 func popup(panel, dur := .5):
+	Global.clicksound()
 	panel.visible = true
 	panel.scale = Vector2(-.5,-.5)
 	panel.modulate.a = 0.0
@@ -66,6 +67,7 @@ func _on_button_5_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
+	Global.clicksound()
 	if menu.visible == false:
 		move_to(menu,Vector2(2.0,-323.0))
 	elif menu.visible == true:

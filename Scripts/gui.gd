@@ -34,6 +34,7 @@ func _on_button_6_pressed() -> void:
 	print(Global.position)
 
 func _on_button_7_pressed() -> void:
+	Global.clicksound()
 	print("working")
 	get_tree().reload_current_scene()
 
@@ -50,20 +51,31 @@ func _process(_delta: float) -> void:
 
 	if not Global.Display_level:
 		return
-	if Global.Display_level == true:
-			
-		if Global.F1_level1_pass:
+
+	match Global.last_completed_level:
+		1:
 			start_sequence(label)
-		elif Global.F1_level2_pass:
+			Global.Display_level = false
+		2:
 			start_sequence(label_2)
-		elif Global.F1_level3_pass:
+			Global.Display_level = false
+		3:
 			start_sequence(label_3)
-		elif Global.F1_level4_pass:
+			Global.Display_level = false
+		4:
 			start_sequence(label_4)
-		elif Global.F1_level5_pass:
+			Global.Display_level = false
+		5:
 			start_sequence(label_5)
-		elif Global.F1_level6_pass:
+			Global.Display_level = false
+		6:
 			start_sequence(label_6)
+			Global.Display_level = false
+		_:
+			return
+
+	Global.Display_level = false
+	Global.last_completed_level = 0
 
 func start_sequence(target_label: Label) -> void:
 	sequence_running = true
@@ -76,6 +88,7 @@ func run_sequence(target_label: Label) -> void:
 	await typewriter(target_label)
 
 	fade_in(__100_bits, 0.5)
+	Global.money()
 	move_to(__100_bits, Vector2(362, 281), 0.5)
 	await get_tree().create_timer(0.9).timeout
 

@@ -1881,9 +1881,9 @@ vertical_alignment = 2
 
 [node name="Label6" type="Label" parent="Email2"]
 offset_left = -260.0
-offset_top = -203.0
+offset_top = -211.0
 offset_right = -38.0
-offset_bottom = -185.0
+offset_bottom = -193.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
 theme_override_fonts/font = ExtResource("16_8rlcb")
 theme_override_font_sizes/font_size = 11
@@ -1891,17 +1891,20 @@ text = "Subject:Thank You Note"
 
 [node name="Label7" type="Label" parent="Email2"]
 offset_left = -260.0
-offset_top = -184.0
-offset_right = 5.0
-offset_bottom = 23.0
+offset_top = -192.0
+offset_right = 9.0
+offset_bottom = 7.0
 theme_override_colors/font_color = Color(0.09019608, 0.047058824, 0.003921569, 1)
-theme_override_constants/line_spacing = 2
+theme_override_constants/line_spacing = 1
+theme_override_constants/paragraph_spacing = -2
 theme_override_fonts/font = ExtResource("16_8rlcb")
 theme_override_font_sizes/font_size = 11
 text = "Thank you for playing this game! I really hope that you liked the game. Please write your feedback on the Itch comments of this game! If you are wondering if the alien image was real then I don't know myself lol, I found them in a UFO. For right now this was just part one of the game. The second part of the game is still in progress! 
 
 Credits:
+Sound effects from Pixabay
 8-direction Top Down Character by Gamekrazzy via Itch.io
+Contains music ©2025 Retro Indie Josh (https://retroindiejosh.itch.io) 
 All other assets made by me
 "
 autowrap_mode = 3
