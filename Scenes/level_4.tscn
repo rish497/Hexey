@@ -38,6 +38,10 @@ layer = 9
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
+[node name="Grass3" parent="CanvasLayer2" instance=ExtResource("9_54c2w")]
+position = Vector2(159, 205)
+scale = Vector2(0.9, 0.9)
+
 [node name="Grass1" parent="CanvasLayer2" instance=ExtResource("7_di0d6")]
 position = Vector2(454, 79)
 scale = Vector2(0.9, 0.9)
@@ -57,10 +61,6 @@ scale = Vector2(1.6512538, 1.6512538)
 
 [node name="Grass2" parent="CanvasLayer2" instance=ExtResource("11_qh6br")]
 position = Vector2(722, 200)
-scale = Vector2(0.9, 0.9)
-
-[node name="Grass3" parent="CanvasLayer2" instance=ExtResource("9_54c2w")]
-position = Vector2(159, 205)
 scale = Vector2(0.9, 0.9)
 
 [node name="Grass4" parent="CanvasLayer2" instance=ExtResource("10_54c2w")]

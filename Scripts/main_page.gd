@@ -144,7 +144,9 @@ func _on_email_notification_pressed() -> void:
 	wizard.play("ArmLift")
 	fade_in(shield, 2)
 	Global.shieldsound()
-	await get_tree().create_timer(2.5).timeout
+	await get_tree().create_timer(2).timeout
+	Global.shieldsoundstop()
+	await get_tree().create_timer(0.5).timeout
 	wizard.play("Idle")
 	error_effect_4.visible = true
 	Global.throwsound()

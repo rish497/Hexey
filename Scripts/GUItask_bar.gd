@@ -67,7 +67,6 @@ func _on_button_5_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	Global.clicksound()
 	if menu.visible == false:
 		move_to(menu,Vector2(2.0,-323.0))
 	elif menu.visible == true:
@@ -84,3 +83,7 @@ func move_to(panel, target_pos: Vector2, duration := .7):
 		target_pos,
 		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+
+func _on_button_8_pressed() -> void:
+	pass # Replace with function body.

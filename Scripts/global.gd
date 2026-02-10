@@ -33,7 +33,8 @@ func tpsound():
 @onready var audio_stream_player_10: AudioStreamPlayer = $AudioStreamPlayer10
 func shieldsound():
 	audio_stream_player_10.play()
-	
+func shieldsoundstop():
+	audio_stream_player_10.stop()
 @onready var audio_stream_player_8: AudioStreamPlayer = $AudioStreamPlayer8
 func throwsound():
 	audio_stream_player_8.play()
@@ -81,7 +82,7 @@ func play_collect_sound() -> void:
 	await $AudioStreamPlayer12.finished
 	collected = false
 	collect_playing = false
-
+var dragging_tile: Node = null
 
 func set_cursor(cursor):
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW) 

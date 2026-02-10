@@ -34,7 +34,6 @@ func _on_button_6_pressed() -> void:
 	print(Global.position)
 
 func _on_button_7_pressed() -> void:
-	Global.clicksound()
 	print("working")
 	get_tree().reload_current_scene()
 
@@ -51,28 +50,29 @@ func _process(_delta: float) -> void:
 
 	if not Global.Display_level:
 		return
-
-	match Global.last_completed_level:
-		1:
-			start_sequence(label)
-			Global.Display_level = false
-		2:
-			start_sequence(label_2)
-			Global.Display_level = false
-		3:
-			start_sequence(label_3)
-			Global.Display_level = false
-		4:
-			start_sequence(label_4)
-			Global.Display_level = false
-		5:
-			start_sequence(label_5)
-			Global.Display_level = false
-		6:
-			start_sequence(label_6)
-			Global.Display_level = false
-		_:
-			return
+	if Global.Display_level == true:
+			
+		match Global.last_completed_level:
+			1:
+				start_sequence(label)
+				Global.Display_level = false
+			2:
+				start_sequence(label_2)
+				Global.Display_level = false
+			3:
+				start_sequence(label_3)
+				Global.Display_level = false
+			4:
+				start_sequence(label_4)
+				Global.Display_level = false
+			5:
+				start_sequence(label_5)
+				Global.Display_level = false
+			6:
+				start_sequence(label_6)
+				Global.Display_level = false
+			_:
+				return
 
 	Global.Display_level = false
 	Global.last_completed_level = 0
