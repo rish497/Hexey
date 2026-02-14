@@ -12,6 +12,5 @@ func _process(delta: float) -> void:
 		Global.level_pass = true
 		Global.F1_level1_pass = true
 		Global.last_completed_level = 1
-		Global.bit +=100
 		bitgiven = true
 		

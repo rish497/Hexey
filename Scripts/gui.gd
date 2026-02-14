@@ -55,21 +55,27 @@ func _process(_delta: float) -> void:
 		match Global.last_completed_level:
 			1:
 				start_sequence(label)
+				Global.bit +=100
 				Global.Display_level = false
 			2:
 				start_sequence(label_2)
+				Global.bit +=100
 				Global.Display_level = false
 			3:
 				start_sequence(label_3)
+				Global.bit +=100
 				Global.Display_level = false
 			4:
 				start_sequence(label_4)
+				Global.bit +=100
 				Global.Display_level = false
 			5:
 				start_sequence(label_5)
+				Global.bit +=100
 				Global.Display_level = false
 			6:
 				start_sequence(label_6)
+				Global.bit +=100
 				Global.Display_level = false
 			_:
 				return
