@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://brfmopvqbg58w"]
+
+[ext_resource type="PackedScene" uid="uid://tn7k1ga6mp3y" path="res://Scenes/grass1.tscn" id="1_vk57k"]
+[ext_resource type="Script" uid="uid://m0prc8cbsfw0" path="res://Scripts/level_1.gd" id="1_xrdnt"]
+[ext_resource type="Texture2D" uid="uid://banlhg2gngypd" path="res://Assets/Untitled design (4).png" id="2_6r07y"]
+[ext_resource type="PackedScene" uid="uid://okklodmm2vjt" path="res://Scenes/flag.tscn" id="2_7p6j4"]
+[ext_resource type="PackedScene" uid="uid://ckcb5wgxbsfdr" path="res://Scenes/grass2.tscn" id="2_8ffim"]
+[ext_resource type="PackedScene" uid="uid://n2nxc6vc5cji" path="res://Scenes/character_body_2d.tscn" id="3_xfk5q"]
+[ext_resource type="PackedScene" uid="uid://cvfmdxl737b2n" path="res://Scenes/GUI.tscn" id="5_6444e"]
+[ext_resource type="PackedScene" uid="uid://bypcrpogu5jea" path="res://Scenes/Portal.tscn" id="6_evi0p"]
+[ext_resource type="PackedScene" uid="uid://drunkmmubpeq6" path="res://Scenes/folder.tscn" id="7_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://chjgdkrnn1y3e" path="res://Scenes/grass4.tscn" id="9_af3po"]
+[ext_resource type="PackedScene" uid="uid://0bd01nysqlx5" path="res://Scenes/grass3.tscn" id="10_uy8f0"]
+
+[node name="Level 1" type="Node2D"]
+position = Vector2(-45, -57)
+script = ExtResource("1_xrdnt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 45.0
+offset_top = 57.0
+offset_right = 898.0
+offset_bottom = 540.0
+texture = ExtResource("2_6r07y")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="Control" parent="CanvasLayer3" instance=ExtResource("5_6444e")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="grass1" parent="CanvasLayer2" instance=ExtResource("1_vk57k")]
+position = Vector2(152, 298)
+
+[node name="Grass2" parent="CanvasLayer2" instance=ExtResource("2_8ffim")]
+position = Vector2(677, 332)
+
+[node name="Folder" parent="CanvasLayer2/Grass2" instance=ExtResource("7_lsmp6")]
+position = Vector2(1, 1)
+
+[node name="Grass2(2)" parent="CanvasLayer2" instance=ExtResource("2_8ffim")]
+position = Vector2(234, 75)
+
+[node name="Folder" parent="CanvasLayer2/Grass2(2)" instance=ExtResource("7_lsmp6")]
+position = Vector2(1, 1)
+
+[node name="Grass3" parent="CanvasLayer2" instance=ExtResource("10_uy8f0")]
+position = Vector2(438, 214)
+
+[node name="Portal" parent="CanvasLayer2/Grass3" instance=ExtResource("6_evi0p")]
+visible = false
+position = Vector2(6, -4)
+
+[node name="flag" parent="CanvasLayer2/Grass3" instance=ExtResource("2_7p6j4")]
+position = Vector2(6, -1)
+
+[node name="Grass4" parent="CanvasLayer2" instance=ExtResource("9_af3po")]
+position = Vector2(699, 135)
+
+[node name="Folder2" parent="CanvasLayer2/Grass4" instance=ExtResource("7_lsmp6")]
+position = Vector2(1.000002, -2.2888184e-05)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Jack" parent="CanvasLayer" instance=ExtResource("3_xfk5q")]
+position = Vector2(716, -62)
+
+[connection signal="body_entered" from="CanvasLayer2/Grass3/Portal" to="." method="_on_portal_body_entered"]
+[connection signal="body_entered" from="CanvasLayer2/Grass3/Portal" to="CanvasLayer3/Control" method="_on_portal_body_entered"]

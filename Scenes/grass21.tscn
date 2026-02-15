@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://yvnub2rke2en"]
+[gd_scene load_steps=5 format=3 uid="uid://yvnub2rke2en"]
 
 [ext_resource type="Script" uid="uid://dhqlc5ljhm347" path="res://Scripts/Snap.gd" id="1_hiqkb"]
 [ext_resource type="Texture2D" uid="uid://cfomj815aeaey" path="res://Assets/Hex Tiles/Grass-2.png (1).png" id="2_cjrkh"]
+[ext_resource type="Texture2D" uid="uid://c63fa3y56xhjt" path="res://Assets/New Piskel-15.png (2).png" id="4_hiqkb"]
 [ext_resource type="PackedScene" uid="uid://t81np4jd8kb4" path="res://Scenes/Wall.tscn" id="4_mls41"]
 
 [node name="Grass1" type="Node2D" groups=["tile"]]
@@ -38,6 +39,10 @@ position = Vector2(-27, 6)
 
 [node name="Dirt18" parent="." instance=ExtResource("4_mls41")]
 position = Vector2(-1, 18)
+
+[node name="NewPiskel15_png(2)" type="Sprite2D" parent="."]
+position = Vector2(26, -7)
+texture = ExtResource("4_hiqkb")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_shape_entered" from="Area2D" to="." method="_on_area_2d_mouse_shape_entered"]

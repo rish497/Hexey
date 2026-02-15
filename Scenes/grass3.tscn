@@ -26,10 +26,6 @@ texture = ExtResource("2_yd0cg")
 position = Vector2(-22, -14)
 texture = ExtResource("4_oaj0v")
 
-[node name="Grass2" type="Sprite2D" parent="."]
-position = Vector2(-74, -14)
-texture = ExtResource("2_yd0cg")
-
 [node name="Grass6" type="Sprite2D" parent="."]
 position = Vector2(30, -14)
 texture = ExtResource("2_yd0cg")
@@ -62,10 +58,6 @@ texture = ExtResource("2_yd0cg")
 position = Vector2(-22, 10)
 texture = ExtResource("4_oaj0v")
 
-[node name="Grass12" type="Sprite2D" parent="."]
-position = Vector2(-74, 10)
-texture = ExtResource("3_y1636")
-
 [node name="Grass13" type="Sprite2D" parent="."]
 position = Vector2(-48, 22)
 texture = ExtResource("2_yd0cg")
@@ -90,11 +82,8 @@ texture = ExtResource("3_y1636")
 position = Vector2(-22, 34)
 texture = ExtResource("2_yd0cg")
 
-[node name="Grass19" type="Sprite2D" parent="."]
-position = Vector2(-74, 34)
-texture = ExtResource("2_yd0cg")
-
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 position = Vector2(-48, 7)
 disable_mode = 2
 
@@ -124,6 +113,15 @@ position = Vector2(-74, -46)
 
 [node name="Dirt4" parent="." instance=ExtResource("6_nfhna")]
 position = Vector2(-48, -34)
+
+[node name="Dirt19" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-74, -22)
+
+[node name="Dirt20" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-74, 2)
+
+[node name="Dirt21" parent="." instance=ExtResource("6_nfhna")]
+position = Vector2(-74, 26)
 
 [node name="Dirt11" parent="." instance=ExtResource("6_nfhna")]
 position = Vector2(-48, 37)

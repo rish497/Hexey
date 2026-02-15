@@ -40,6 +40,7 @@ layer = 9
 
 [node name="Grass1" parent="CanvasLayer2" instance=ExtResource("7_68k2k")]
 position = Vector2(486, 215)
+locked = true
 
 [node name="Folder4" parent="CanvasLayer2/Grass1" instance=ExtResource("7_1csia")]
 position = Vector2(8.000001, -3.0000005)
@@ -54,6 +55,7 @@ scale = Vector2(1.1661284, 1.1661284)
 
 [node name="Grass3" parent="CanvasLayer2" instance=ExtResource("9_wyrn7")]
 position = Vector2(622, 339)
+locked = true
 
 [node name="Folder3" parent="CanvasLayer2/Grass3" instance=ExtResource("7_1csia")]
 position = Vector2(1.000015, 1.9999923)

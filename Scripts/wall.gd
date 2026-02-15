@@ -11,9 +11,12 @@ func _ready() -> void:
 	area.area_entered.connect(_recheck_coverage)
 	area.area_exited.connect(_recheck_coverage)
 
-	_recheck_coverage()
+	call_deferred("_recheck_coverage")
+
 
 func _recheck_coverage(_a: Area2D = null) -> void:
+	await get_tree().physics_frame
+
 	var my_tile := get_top_parent_tile(self)
 	var covered := false
 
@@ -27,7 +30,8 @@ func _recheck_coverage(_a: Area2D = null) -> void:
 			covered = true
 			break
 
-	collision.set_deferred("disabled", covered)
+	collision.disabled = covered
+
 
 func get_top_parent_tile(node: Node) -> Node2D:
 	var current := node
